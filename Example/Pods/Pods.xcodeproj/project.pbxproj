@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		091C57312DB6B780D14D87EEAFF84343 /* HFAdmobManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BB80A8EB090C4C8B2865702BC81B1A /* HFAdmobManager-dummy.m */; };
+		19C5510FD679858B0C98668CD1D2268D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		4400BF24DC7730EC992E0F69E0DD8F4F /* HFAdmobManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F368C61768E89ADB2F8656558F223C7B /* HFAdmobManager.m */; };
+		65C629D5E2EC17B88A776DBF223E0046 /* Pods-HFAdmobManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F064C65E340005EB264AC7D39168E217 /* Pods-HFAdmobManager_Example-dummy.m */; };
+		794AD8068494DD360158A4DE095BC7E6 /* HFAdmobManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A0211D74ABFA879974360436C54EF032 /* HFAdmobManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84DD3298304F42C9AEDFF912AB06B7C2 /* Pods-HFAdmobManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A43EED69C602B7AD8C29BA2298DAB6 /* Pods-HFAdmobManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85D1B74233D53629BE9FFA0FA443FB54 /* Pods-HFAdmobManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD07CAB98412421A2CA97C006B88B7 /* Pods-HFAdmobManager_Tests-dummy.m */; };
+		A29A1017DDB5656A0195C7F14F733970 /* Pods-HFAdmobManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A298CE20B657A802C72D69869F84905 /* Pods-HFAdmobManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE0293AAE79B8F9EBE594F690BB8F85D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EFAE215FAF0520B30B21018BFA0F6BE2 /* HFAdmobManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E96E1FE322CAA0882B926387B92FE305 /* HFAdmobManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF42340079B03FDE4E9B30CF7CAC76C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F47BD7EFC1A156E3C87D9A5CBFD6A45E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDEAE5AC6D68027BF2767FC0F66BD613;
+			remoteInfo = "Pods-HFAdmobManager_Example";
+		};
+		F6EF1FB7A702C2175B73947E901E4816 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8A00C00657400C4A6AB0A9DB32EC9BE;
+			remoteInfo = HFAdmobManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		060BAAB2CA7262AB45ED3CE962FDEBBD /* Pods-HFAdmobManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HFAdmobManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		08C0FBD7C95E543512CE75156F99D5CF /* Pods_HFAdmobManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HFAdmobManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A7F3ABE89200791B55910A2F0F92E11 /* Pods-HFAdmobManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HFAdmobManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1A7C1FE2B7DE535FF7E8EED80AFE6E73 /* Pods-HFAdmobManager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HFAdmobManager_Example-Info.plist"; sourceTree = "<group>"; };
+		26C410CE3CBBB354232B837938C991D5 /* Pods_HFAdmobManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HFAdmobManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A298CE20B657A802C72D69869F84905 /* Pods-HFAdmobManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HFAdmobManager_Example-umbrella.h"; sourceTree = "<group>"; };
+		2CAD07CAB98412421A2CA97C006B88B7 /* Pods-HFAdmobManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HFAdmobManager_Tests-dummy.m"; sourceTree = "<group>"; };
+		3EB7590E94D76C5C3A537A8BC80A639E /* HFAdmobManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HFAdmobManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		468E95F7508BFDAC377572ED4A42435F /* HFAdmobManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HFAdmobManager.modulemap; sourceTree = "<group>"; };
+		48BB80A8EB090C4C8B2865702BC81B1A /* HFAdmobManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HFAdmobManager-dummy.m"; sourceTree = "<group>"; };
+		48E073BC4F4470BE5630B41BF4EF2911 /* HFAdmobManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HFAdmobManager-prefix.pch"; sourceTree = "<group>"; };
+		6031749F1258A508CEC83171537C39D4 /* Pods-HFAdmobManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HFAdmobManager_Example.release.xcconfig"; sourceTree = "<group>"; };
+		611C7F0EC275A5E0AA6D779EC1966A33 /* Pods-HFAdmobManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HFAdmobManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6203F4C98B3B41D8B4CC24D063BB6C11 /* HFAdmobManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HFAdmobManager.debug.xcconfig; sourceTree = "<group>"; };
+		630FD16896802975CCBA3C1DB05C0AEF /* Pods-HFAdmobManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HFAdmobManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		6702BA327953E3CBEB6136FC040DDF74 /* Pods-HFAdmobManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HFAdmobManager_Example.modulemap"; sourceTree = "<group>"; };
+		6ACCE47A3C3F1D639EB74DE5EC450F0F /* Pods-HFAdmobManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HFAdmobManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6BC85238FAE9F2C1B6EEC263B37997AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6DE7F4E5788A7464A52F04F35540F902 /* HFAdmobManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HFAdmobManager.release.xcconfig; sourceTree = "<group>"; };
+		70AFF22B75568EAB3D6A696D6B8B2DCB /* Pods-HFAdmobManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HFAdmobManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8559849002D26E79AC8CE18C73E45ECD /* HFAdmobManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HFAdmobManager.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		9D82BE3D89B95F5FD6F994F4398C2445 /* Pods-HFAdmobManager_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HFAdmobManager_Tests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0211D74ABFA879974360436C54EF032 /* HFAdmobManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HFAdmobManager.h; path = HFAdmobManager/Classes/HFAdmobManager.h; sourceTree = "<group>"; };
+		A529A590E9455B042FD03489EE9E8918 /* Pods-HFAdmobManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HFAdmobManager_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B7A7C8089E5B9A69A8F0A6496CC27BAE /* Pods-HFAdmobManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HFAdmobManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C5A43EED69C602B7AD8C29BA2298DAB6 /* Pods-HFAdmobManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HFAdmobManager_Tests-umbrella.h"; sourceTree = "<group>"; };
+		D916C5EF7CA13082A361DB372D04A900 /* HFAdmobManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HFAdmobManager-Info.plist"; sourceTree = "<group>"; };
+		E96E1FE322CAA0882B926387B92FE305 /* HFAdmobManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HFAdmobManager-umbrella.h"; sourceTree = "<group>"; };
+		F064C65E340005EB264AC7D39168E217 /* Pods-HFAdmobManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HFAdmobManager_Example-dummy.m"; sourceTree = "<group>"; };
+		F368C61768E89ADB2F8656558F223C7B /* HFAdmobManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HFAdmobManager.m; path = HFAdmobManager/Classes/HFAdmobManager.m; sourceTree = "<group>"; };
+		FA6AA1B398B91B57362DFECD61C0672C /* Pods-HFAdmobManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HFAdmobManager_Tests.modulemap"; sourceTree = "<group>"; };
+		FB5DFEB189C5B45E0280961ABECF663D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		789F8BADC1B44A24A3F92ACE45118766 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0293AAE79B8F9EBE594F690BB8F85D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2DD55535999EDE4B03E422A55EC07C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C5510FD679858B0C98668CD1D2268D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF7DF54F60E8066251555615C59782DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF42340079B03FDE4E9B30CF7CAC76C1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00EB80B493BBD33655B990442ECE782D /* Pods-HFAdmobManager_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6702BA327953E3CBEB6136FC040DDF74 /* Pods-HFAdmobManager_Example.modulemap */,
+				B7A7C8089E5B9A69A8F0A6496CC27BAE /* Pods-HFAdmobManager_Example-acknowledgements.markdown */,
+				630FD16896802975CCBA3C1DB05C0AEF /* Pods-HFAdmobManager_Example-acknowledgements.plist */,
+				F064C65E340005EB264AC7D39168E217 /* Pods-HFAdmobManager_Example-dummy.m */,
+				A529A590E9455B042FD03489EE9E8918 /* Pods-HFAdmobManager_Example-frameworks.sh */,
+				1A7C1FE2B7DE535FF7E8EED80AFE6E73 /* Pods-HFAdmobManager_Example-Info.plist */,
+				2A298CE20B657A802C72D69869F84905 /* Pods-HFAdmobManager_Example-umbrella.h */,
+				060BAAB2CA7262AB45ED3CE962FDEBBD /* Pods-HFAdmobManager_Example.debug.xcconfig */,
+				6031749F1258A508CEC83171537C39D4 /* Pods-HFAdmobManager_Example.release.xcconfig */,
+			);
+			name = "Pods-HFAdmobManager_Example";
+			path = "Target Support Files/Pods-HFAdmobManager_Example";
+			sourceTree = "<group>";
+		};
+		3CC606DDB74DC4D3E40D6A91D8226A77 /* Pods-HFAdmobManager_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FA6AA1B398B91B57362DFECD61C0672C /* Pods-HFAdmobManager_Tests.modulemap */,
+				0A7F3ABE89200791B55910A2F0F92E11 /* Pods-HFAdmobManager_Tests-acknowledgements.markdown */,
+				70AFF22B75568EAB3D6A696D6B8B2DCB /* Pods-HFAdmobManager_Tests-acknowledgements.plist */,
+				2CAD07CAB98412421A2CA97C006B88B7 /* Pods-HFAdmobManager_Tests-dummy.m */,
+				9D82BE3D89B95F5FD6F994F4398C2445 /* Pods-HFAdmobManager_Tests-Info.plist */,
+				C5A43EED69C602B7AD8C29BA2298DAB6 /* Pods-HFAdmobManager_Tests-umbrella.h */,
+				611C7F0EC275A5E0AA6D779EC1966A33 /* Pods-HFAdmobManager_Tests.debug.xcconfig */,
+				6ACCE47A3C3F1D639EB74DE5EC450F0F /* Pods-HFAdmobManager_Tests.release.xcconfig */,
+			);
+			name = "Pods-HFAdmobManager_Tests";
+			path = "Target Support Files/Pods-HFAdmobManager_Tests";
+			sourceTree = "<group>";
+		};
+		4F1DFBB6B303D9917B1208F828B353DD /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8559849002D26E79AC8CE18C73E45ECD /* HFAdmobManager.podspec */,
+				6BC85238FAE9F2C1B6EEC263B37997AB /* LICENSE */,
+				FB5DFEB189C5B45E0280961ABECF663D /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		57A51E65374C56D5DB20C7690F9BE3F4 /* HFAdmobManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0211D74ABFA879974360436C54EF032 /* HFAdmobManager.h */,
+				F368C61768E89ADB2F8656558F223C7B /* HFAdmobManager.m */,
+				4F1DFBB6B303D9917B1208F828B353DD /* Pod */,
+				A622922C6C49340DDB222960ED21653B /* Support Files */,
+			);
+			name = HFAdmobManager;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		822BC7F33D1B7B8A283E907415D8A850 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57A51E65374C56D5DB20C7690F9BE3F4 /* HFAdmobManager */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A622922C6C49340DDB222960ED21653B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				468E95F7508BFDAC377572ED4A42435F /* HFAdmobManager.modulemap */,
+				48BB80A8EB090C4C8B2865702BC81B1A /* HFAdmobManager-dummy.m */,
+				D916C5EF7CA13082A361DB372D04A900 /* HFAdmobManager-Info.plist */,
+				48E073BC4F4470BE5630B41BF4EF2911 /* HFAdmobManager-prefix.pch */,
+				E96E1FE322CAA0882B926387B92FE305 /* HFAdmobManager-umbrella.h */,
+				6203F4C98B3B41D8B4CC24D063BB6C11 /* HFAdmobManager.debug.xcconfig */,
+				6DE7F4E5788A7464A52F04F35540F902 /* HFAdmobManager.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HFAdmobManager";
+			sourceTree = "<group>";
+		};
+		AD7D7D59CDFDAD2B47920B0E58425874 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				00EB80B493BBD33655B990442ECE782D /* Pods-HFAdmobManager_Example */,
+				3CC606DDB74DC4D3E40D6A91D8226A77 /* Pods-HFAdmobManager_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B5B2A1542111B9506B53202FF839FB57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EB7590E94D76C5C3A537A8BC80A639E /* HFAdmobManager.framework */,
+				08C0FBD7C95E543512CE75156F99D5CF /* Pods_HFAdmobManager_Example.framework */,
+				26C410CE3CBBB354232B837938C991D5 /* Pods_HFAdmobManager_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				822BC7F33D1B7B8A283E907415D8A850 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				B5B2A1542111B9506B53202FF839FB57 /* Products */,
+				AD7D7D59CDFDAD2B47920B0E58425874 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4B3047D38544072BD45E37875378D9DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29A1017DDB5656A0195C7F14F733970 /* Pods-HFAdmobManager_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7EFBAB6F4AC66F984549E303AF40E24 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAE215FAF0520B30B21018BFA0F6BE2 /* HFAdmobManager-umbrella.h in Headers */,
+				794AD8068494DD360158A4DE095BC7E6 /* HFAdmobManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C478FFCB93EBFC3DF8A76774D28FCF79 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DD3298304F42C9AEDFF912AB06B7C2 /* Pods-HFAdmobManager_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B67DD2BE1C372544071DE4D1E0C4D1B2 /* Pods-HFAdmobManager_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB4E2F1E678BBEBD37AB08BB3298DAC3 /* Build configuration list for PBXNativeTarget "Pods-HFAdmobManager_Tests" */;
+			buildPhases = (
+				C478FFCB93EBFC3DF8A76774D28FCF79 /* Headers */,
+				C430DF0FDE70EA608F29FDED266F574A /* Sources */,
+				EF2DD55535999EDE4B03E422A55EC07C /* Frameworks */,
+				2EAD8DCCECCB3B0303D08C42401B6B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E526CF27B002B907A8253E189E3F0BD /* PBXTargetDependency */,
+			);
+			name = "Pods-HFAdmobManager_Tests";
+			productName = "Pods-HFAdmobManager_Tests";
+			productReference = 26C410CE3CBBB354232B837938C991D5 /* Pods_HFAdmobManager_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DDEAE5AC6D68027BF2767FC0F66BD613 /* Pods-HFAdmobManager_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2F14FBF6CA3BBD2B7E946EC3EFE4CB9 /* Build configuration list for PBXNativeTarget "Pods-HFAdmobManager_Example" */;
+			buildPhases = (
+				4B3047D38544072BD45E37875378D9DF /* Headers */,
+				A2D69F4CB4CD80EFB70B2D4326C6B555 /* Sources */,
+				EF7DF54F60E8066251555615C59782DE /* Frameworks */,
+				8C38F9CD1F812C196EC93BCD62AE212E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54153DEB0E537B35A79DDB6C829E426C /* PBXTargetDependency */,
+			);
+			name = "Pods-HFAdmobManager_Example";
+			productName = "Pods-HFAdmobManager_Example";
+			productReference = 08C0FBD7C95E543512CE75156F99D5CF /* Pods_HFAdmobManager_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8A00C00657400C4A6AB0A9DB32EC9BE /* HFAdmobManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F57AA9305AF902B81C94C8F3EA35C542 /* Build configuration list for PBXNativeTarget "HFAdmobManager" */;
+			buildPhases = (
+				B7EFBAB6F4AC66F984549E303AF40E24 /* Headers */,
+				AD25E46EA9816F88D4FAC270A7163A05 /* Sources */,
+				789F8BADC1B44A24A3F92ACE45118766 /* Frameworks */,
+				3C995DB27BE6856BBFDF8AE98A6B650C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HFAdmobManager;
+			productName = HFAdmobManager;
+			productReference = 3EB7590E94D76C5C3A537A8BC80A639E /* HFAdmobManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B5B2A1542111B9506B53202FF839FB57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8A00C00657400C4A6AB0A9DB32EC9BE /* HFAdmobManager */,
+				DDEAE5AC6D68027BF2767FC0F66BD613 /* Pods-HFAdmobManager_Example */,
+				B67DD2BE1C372544071DE4D1E0C4D1B2 /* Pods-HFAdmobManager_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EAD8DCCECCB3B0303D08C42401B6B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C995DB27BE6856BBFDF8AE98A6B650C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C38F9CD1F812C196EC93BCD62AE212E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2D69F4CB4CD80EFB70B2D4326C6B555 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C629D5E2EC17B88A776DBF223E0046 /* Pods-HFAdmobManager_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD25E46EA9816F88D4FAC270A7163A05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091C57312DB6B780D14D87EEAFF84343 /* HFAdmobManager-dummy.m in Sources */,
+				4400BF24DC7730EC992E0F69E0DD8F4F /* HFAdmobManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C430DF0FDE70EA608F29FDED266F574A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D1B74233D53629BE9FFA0FA443FB54 /* Pods-HFAdmobManager_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E526CF27B002B907A8253E189E3F0BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HFAdmobManager_Example";
+			target = DDEAE5AC6D68027BF2767FC0F66BD613 /* Pods-HFAdmobManager_Example */;
+			targetProxy = F47BD7EFC1A156E3C87D9A5CBFD6A45E /* PBXContainerItemProxy */;
+		};
+		54153DEB0E537B35A79DDB6C829E426C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HFAdmobManager;
+			target = F8A00C00657400C4A6AB0A9DB32EC9BE /* HFAdmobManager */;
+			targetProxy = F6EF1FB7A702C2175B73947E901E4816 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24B556A5287A340941A381ACA1F48A62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 060BAAB2CA7262AB45ED3CE962FDEBBD /* Pods-HFAdmobManager_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9B44595F41289D2013C6E02999E8B6E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 611C7F0EC275A5E0AA6D779EC1966A33 /* Pods-HFAdmobManager_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HFAdmobManager_Tests/Pods-HFAdmobManager_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HFAdmobManager_Tests/Pods-HFAdmobManager_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9F0E6D03FE6E60EF823CE863F427C897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ACCE47A3C3F1D639EB74DE5EC450F0F /* Pods-HFAdmobManager_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HFAdmobManager_Tests/Pods-HFAdmobManager_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HFAdmobManager_Tests/Pods-HFAdmobManager_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB79727F0EEA89C6434C7D325CF72071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6031749F1258A508CEC83171537C39D4 /* Pods-HFAdmobManager_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C263F10C6416D3FE4122ED1436F35567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DE7F4E5788A7464A52F04F35540F902 /* HFAdmobManager.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HFAdmobManager/HFAdmobManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HFAdmobManager/HFAdmobManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HFAdmobManager/HFAdmobManager.modulemap";
+				PRODUCT_MODULE_NAME = HFAdmobManager;
+				PRODUCT_NAME = HFAdmobManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D885FD7F59DCC113FD508212AE9FED9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6203F4C98B3B41D8B4CC24D063BB6C11 /* HFAdmobManager.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HFAdmobManager/HFAdmobManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HFAdmobManager/HFAdmobManager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HFAdmobManager/HFAdmobManager.modulemap";
+				PRODUCT_MODULE_NAME = HFAdmobManager;
+				PRODUCT_NAME = HFAdmobManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB4E2F1E678BBEBD37AB08BB3298DAC3 /* Build configuration list for PBXNativeTarget "Pods-HFAdmobManager_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B44595F41289D2013C6E02999E8B6E3 /* Debug */,
+				9F0E6D03FE6E60EF823CE863F427C897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2F14FBF6CA3BBD2B7E946EC3EFE4CB9 /* Build configuration list for PBXNativeTarget "Pods-HFAdmobManager_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24B556A5287A340941A381ACA1F48A62 /* Debug */,
+				AB79727F0EEA89C6434C7D325CF72071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F57AA9305AF902B81C94C8F3EA35C542 /* Build configuration list for PBXNativeTarget "HFAdmobManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D885FD7F59DCC113FD508212AE9FED9F /* Debug */,
+				C263F10C6416D3FE4122ED1436F35567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

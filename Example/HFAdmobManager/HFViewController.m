@@ -7,6 +7,8 @@
 //
 
 #import "HFViewController.h"
+#import <HFAdmobManager-Prefix.pch>
+
 
 @interface HFViewController ()
 

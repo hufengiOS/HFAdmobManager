@@ -1,0 +1,16 @@
+PODS:
+  - HFAdmobManager (0.1.0)
+
+DEPENDENCIES:
+  - HFAdmobManager (from `../`)
+
+EXTERNAL SOURCES:
+  HFAdmobManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HFAdmobManager: 2052d9508448518f1b41980892ea4bee0085fa1c
+
+PODFILE CHECKSUM: ca7b8974498a7be3cdd305df8719ee6f91e682d9
+
+COCOAPODS: 1.10.0

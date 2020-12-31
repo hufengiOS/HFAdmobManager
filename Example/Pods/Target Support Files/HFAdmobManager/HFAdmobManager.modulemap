@@ -1,0 +1,6 @@
+framework module HFAdmobManager {
+  umbrella header "HFAdmobManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
