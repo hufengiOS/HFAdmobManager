@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'HFAdmobManager'
   s.version          = '0.0.1'
-  s.summary          = 'A short description of HFAdmobManager.'
+  s.summary          = '加载谷歌广告'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -24,19 +24,67 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/hufengiOS/HFAdmobManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'hufengiOS' => 'hufeng@sinozo.com' }
+  s.author           = { 'hufengiOS' => '1035372726@qq.com' }
   s.source           = { :git => 'https://github.com/hufengiOS/HFAdmobManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-
-  s.source_files = 'HFAdmobManager/Classes/**/*'
+#  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+#  valid_archs = ['armv7s','arm64','x86_64','armv7','arm64e']
+#  s.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   
-  # s.resource_bundles = {
-  #   'HFAdmobManager' => ['HFAdmobManager/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.source_files = 'HFAdmobManager/Classes/*'
+  
+  s.requires_arc = true
+  
+  s.source_files = 'HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}'
+  
+  s.subspec 'NSDate+Helper' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/NSDate+Helper/*.{h,m,textile}'
+  end
+  s.subspec 'VSAdCache' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdCache/*.{h,m}'
+  end
+  
+  s.subspec 'VSAdConfig' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdConfig/*.{h,m}'
+  end
+  
+  s.subspec 'VSAdLoader' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/*.{h,m}'
+  end
+  
+  s.subspec 'VSAdShow' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdShow/*.{h,m}'
+  end
+  
+  s.subspec 'VSAdTemplate' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/*.{h,m,xib}'
+  end
+  
+  s.subspec 'VSGlobalConfigManager' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/*.{h,m}'
+  end
+  s.subspec 'Other' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/Other/*.{h,m}'
+  end
+    
+   s.prefix_header_contents = '#import "PrefixHeader.pch"'
+   s.public_header_files = 'HFAdmobManager/HFAdmobManagerHeader.h'
+    
+#   s.public_header_files = 'Pod/Classes/**/*.h'
+  
+   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.static_framework = true
+  
+    s.dependency 'Google-Mobile-Ads-SDK'
+    s.dependency 'Masonry'
+    s.dependency 'MJExtension'
+    
+    
+   # s.dependency 'GoogleMobileAdsMediationFacebook'
+   # s.dependency 'GoogleMobileAdsMediationUnity'
+    
 end

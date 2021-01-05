@@ -1,7 +1,7 @@
 {
   "name": "HFAdmobManager",
-  "version": "0.1.0",
-  "summary": "A short description of HFAdmobManager.",
+  "version": "0.0.1",
+  "summary": "加载谷歌广告",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hufengiOS/HFAdmobManager",
   "license": {
@@ -9,14 +9,64 @@
     "file": "LICENSE"
   },
   "authors": {
-    "hufengiOS": "hufeng@sinozo.com"
+    "hufengiOS": "1035372726@qq.com"
   },
   "source": {
     "git": "https://github.com/hufengiOS/HFAdmobManager.git",
-    "tag": "0.1.0"
+    "tag": "0.0.1"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "HFAdmobManager/Classes/**/*"
+  "source_files": "HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}",
+  "requires_arc": true,
+  "prefix_header_contents": "#import \"PrefixHeader.pch\"",
+  "public_header_files": "HFAdmobManager/HFAdmobManagerHeader.h",
+  "frameworks": "UIKit",
+  "static_framework": true,
+  "dependencies": {
+    "Google-Mobile-Ads-SDK": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "MJExtension": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "NSDate+Helper",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/NSDate+Helper/*.{h,m,textile}"
+    },
+    {
+      "name": "VSAdCache",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdCache/*.{h,m}"
+    },
+    {
+      "name": "VSAdConfig",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdConfig/*.{h,m}"
+    },
+    {
+      "name": "VSAdLoader",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/*.{h,m}"
+    },
+    {
+      "name": "VSAdShow",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdShow/*.{h,m}"
+    },
+    {
+      "name": "VSAdTemplate",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/*.{h,m,xib}"
+    },
+    {
+      "name": "VSGlobalConfigManager",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/*.{h,m}"
+    },
+    {
+      "name": "Other",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/Other/*.{h,m}"
+    }
+  ]
 }

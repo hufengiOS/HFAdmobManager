@@ -7,7 +7,8 @@
 //
 
 #import "HFViewController.h"
-#import <HFAdmobManager-Prefix.pch>
+
+
 
 
 @interface HFViewController ()
@@ -19,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+	 
 }
 
 - (void)didReceiveMemoryWarning

@@ -11,6 +11,28 @@
 #endif
 
 #import "HFAdmobManager.h"
+#import "VSAdMacro.h"
+#import "VSAdManagerHeader.h"
+#import "NSDate+Helper.h"
+#import "HFAppConfiger.h"
+#import "NSArray+Map.h"
+#import "UIView+Extension.h"
+#import "VSAdPlaceManager.h"
+#import "VSAdUnit.h"
+#import "VSAdCacheManager.h"
+#import "VSAdConfig.h"
+#import "VSAdIntLoader.h"
+#import "VSAdNavLoader.h"
+#import "VSAdIntShowManager.h"
+#import "VSAdNavShowManager.h"
+#import "VSAdShowClickAdsManager.h"
+#import "VSAdNavTemplateBase.h"
+#import "VSAdNavTemplateCell.h"
+#import "VSAdNavTemplateFullScreen.h"
+#import "VSAdNavTemplateHomeBottom.h"
+#import "VSTableAdsCell.h"
+#import "VSGlobalConfigManager.h"
+#import "VSGlobalConfigModel.h"
 
 FOUNDATION_EXPORT double HFAdmobManagerVersionNumber;
 FOUNDATION_EXPORT const unsigned char HFAdmobManagerVersionString[];

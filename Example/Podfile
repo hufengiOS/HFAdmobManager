@@ -7,7 +7,7 @@ target 'HFAdmobManager_Example' do
 
   target 'HFAdmobManager_Tests' do
     inherit! :search_paths
-
+    
     
   end
 end
