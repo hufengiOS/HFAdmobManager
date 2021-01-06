@@ -75,7 +75,7 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   
   s.static_framework = true
-  
+    
     s.dependency 'Google-Mobile-Ads-SDK'
     s.dependency 'Masonry'
     s.dependency 'MJExtension'
