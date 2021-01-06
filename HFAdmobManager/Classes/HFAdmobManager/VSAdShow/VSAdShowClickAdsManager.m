@@ -7,7 +7,7 @@
 
 #import "VSAdShowClickAdsManager.h"
 #import "VSAdUnit.h"
-#import "NSDate+Helper.h"
+//#import "NSDate+VSHelper.h"
 #import "VSAdMacro.h"
 #import "VSGlobalConfigManager.h"
 #import "VSAdConfig.h"
@@ -25,7 +25,7 @@ static NSString *const kShowAdsNumber = @"kShowAdsNumber";
 
 + (BOOL)allowClickWithPlaceType:(VSAdShowPlaceType)placeType {
     
-    HFAdDebugLog(@"%@ click number = %ld %ld",[VSAdConfig nameWithPlaceType:placeType], (long)[VSAdShowClickAdsManager numberOfClickAdsWithPlaceType:placeType], (long)[VSAdShowClickAdsManager adClickLimitCount])
+    HFAd_DebugLog(@"%@ click number = %ld %ld",[VSAdConfig nameWithPlaceType:placeType], (long)[VSAdShowClickAdsManager numberOfClickAdsWithPlaceType:placeType], (long)[VSAdShowClickAdsManager adClickLimitCount])
     return [VSAdShowClickAdsManager adClickLimitCount] == 0 ||
     [VSAdShowClickAdsManager numberOfClickAdsWithPlaceType:placeType] < [VSAdShowClickAdsManager adClickLimitCount];
 }
@@ -70,9 +70,11 @@ static NSString *const kShowAdsNumber = @"kShowAdsNumber";
     
     long lastTimeStamp = [VSAdUnit intValueForKey:[self timeStampeWithSaveKey:saveKey]];
     NSDate *lastDate = [NSDate dateWithTimeIntervalSince1970:lastTimeStamp];
-    NSUInteger lastDay = [lastDate day];
+    
+    
+    NSUInteger lastDay = [self dayForDate:lastDate];
     NSDate *nowDate = [NSDate date];
-    NSUInteger nowDay = [nowDate day];
+    NSUInteger nowDay = [self dayForDate:nowDate];
     
 
     if (nowDay > lastDay) {
@@ -114,15 +116,35 @@ static NSString *const kShowAdsNumber = @"kShowAdsNumber";
 /// @param timeStamp 时间戳
 + (BOOL)isFirstTodayWithTimeStamp:(NSTimeInterval)timeStamp {
     NSDate *lastDate = [NSDate dateWithTimeIntervalSince1970:timeStamp];
-    NSUInteger lastDay = [lastDate day];
+    NSUInteger lastDay = [self dayForDate:lastDate];
     
     NSDate *nowDate = [NSDate date];
-    NSUInteger nowDay = [nowDate day];
+    NSUInteger nowDay = [self dayForDate:nowDate];
     if (nowDay > lastDay) {
         return YES;
     } else {
         return NO;
     }
+}
+
+
++ (NSUInteger)dayForDate:(NSDate *)date {
+    NSCalendar *calendar = [[self class] sharedCalendar];
+    NSDateComponents *weekdayComponents = [calendar components:(NSCalendarUnitDay) fromDate:date];
+    return [weekdayComponents day];
+}
+
++ (NSCalendar *)sharedCalendar {
+    static dispatch_once_t onceToken;
+    static NSCalendar *_calendar = nil;
+    dispatch_once(&onceToken, ^{
+        @autoreleasepool {
+            if (_calendar == nil) {
+                _calendar = [NSCalendar currentCalendar];
+            }
+        }
+    });
+    return _calendar;
 }
 
 @end

@@ -7,12 +7,17 @@
 //
 
 #import "HFAppDelegate.h"
+#import <VSAdConfig.h>
+
+
 
 @implementation HFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    [VSAdConfig configAds];
+    
     return YES;
 }
 

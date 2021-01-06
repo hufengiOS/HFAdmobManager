@@ -1,5 +1,5 @@
 //
-//  NSArray+Map.m
+//  NSArray+ad_Map.m
 //  AnyRead
 //
 //  Created by SNAKE on 2019/9/25 15:18.
@@ -9,9 +9,9 @@
 //	
     
 
-#import "NSArray+Map.h"
+#import "NSArray+ad_Map.h"
 
-@implementation NSArray (Map)
+@implementation NSArray (ad_Map)
 
 - (NSArray*)myMap:(id(^)(id))transform {
     NSMutableArray *array = [[NSMutableArray alloc] init];

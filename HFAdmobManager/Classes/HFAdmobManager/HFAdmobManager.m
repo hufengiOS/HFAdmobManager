@@ -118,7 +118,7 @@
             [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId placeType:placeType controller:controller];
         }
     } else {
-        HFAdDebugLog(@"没有广告")
+        HFAd_DebugLog(@"没有广告")
         // 重新拉取广告
         
         [self reloadAdsWithPlaceType:placeType notify:YES];

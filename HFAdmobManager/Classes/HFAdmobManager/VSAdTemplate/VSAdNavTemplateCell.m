@@ -63,7 +63,7 @@
     [self.adLogoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(nativeAdView.mas_top);
         make.leading.equalTo(nativeAdView.mas_leading);
-        make.size.mas_equalTo(CGSizeMake(kScaleWidth(50), kScaleWidth(20)));
+        make.size.mas_equalTo(CGSizeMake(HF_kScaleWidth(50), HF_kScaleWidth(20)));
     }];
     
     nativeAdView.mediaView.backgroundColor = UIColor.whiteColor;
@@ -75,34 +75,34 @@
     }];
     
     [nativeAdView.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(kScaleWidth(50), kScaleWidth(50)));
-        make.top.equalTo(nativeAdView.mas_top).offset(kScaleWidth(20));
-        make.leading.equalTo(nativeAdView.mas_leading).offset(kScaleWidth(20));
+        make.size.mas_equalTo(CGSizeMake(HF_kScaleWidth(50), HF_kScaleWidth(50)));
+        make.top.equalTo(nativeAdView.mas_top).offset(HF_kScaleWidth(20));
+        make.leading.equalTo(nativeAdView.mas_leading).offset(HF_kScaleWidth(20));
     }];
     
     if (nativeAdView.iconView.hidden) {
         [nativeAdView.headlineView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(nativeAdView.mas_leading).offset(kScaleWidth(15));
-            make.trailing.equalTo(nativeAdView.mas_trailing).offset(kScaleWidth(-15));
-            make.top.equalTo(nativeAdView.mas_top).offset(kScaleWidth(20));
-            make.height.mas_equalTo(kScaleWidth(40));
+            make.leading.equalTo(nativeAdView.mas_leading).offset(HF_kScaleWidth(15));
+            make.trailing.equalTo(nativeAdView.mas_trailing).offset(HF_kScaleWidth(-15));
+            make.top.equalTo(nativeAdView.mas_top).offset(HF_kScaleWidth(20));
+            make.height.mas_equalTo(HF_kScaleWidth(40));
         }];
     } else {
         [nativeAdView.headlineView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.leading.equalTo(nativeAdView.mas_leading).offset(kScaleWidth(10 + 50 + 10));
-            make.trailing.equalTo(nativeAdView.mas_trailing).offset(kScaleWidth(-15));
-            make.top.equalTo(nativeAdView.iconView.mas_top).offset(kScaleWidth(0));
-            make.height.mas_equalTo(kScaleWidth(40));
+            make.leading.equalTo(nativeAdView.mas_leading).offset(HF_kScaleWidth(10 + 50 + 10));
+            make.trailing.equalTo(nativeAdView.mas_trailing).offset(HF_kScaleWidth(-15));
+            make.top.equalTo(nativeAdView.iconView.mas_top).offset(HF_kScaleWidth(0));
+            make.height.mas_equalTo(HF_kScaleWidth(40));
         }];
     }
     
     nativeAdView.bodyView.hidden = YES;
     [nativeAdView.callToActionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(nativeAdView).offset(kScaleWidth(50));
-        make.right.equalTo(nativeAdView).offset(kScaleWidth(-50));
-        make.height.mas_equalTo(kScaleWidth(50));
-//        make.top.equalTo(nativeAdView).offset(kScaleWidth(50 + 20 + 10));
-        make.bottom.equalTo(nativeAdView.mas_bottom).offset(kScaleWidth(-10));
+        make.left.equalTo(nativeAdView).offset(HF_kScaleWidth(50));
+        make.right.equalTo(nativeAdView).offset(HF_kScaleWidth(-50));
+        make.height.mas_equalTo(HF_kScaleWidth(50));
+//        make.top.equalTo(nativeAdView).offset(HF_kScaleWidth(50 + 20 + 10));
+        make.bottom.equalTo(nativeAdView.mas_bottom).offset(HF_kScaleWidth(-10));
     }];
     
     

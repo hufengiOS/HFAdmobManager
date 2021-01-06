@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSArray (Map)
+@interface NSArray (ad_Map)
 
 - (NSArray*)myMap:(id(^)(id))transform;
 

@@ -6,12 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "VSAdMacro.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 
 @class VSGlobalConfigCloseBtnModel;
+
 @interface VSAdConfig : NSObject
 
 + (void)configAds;

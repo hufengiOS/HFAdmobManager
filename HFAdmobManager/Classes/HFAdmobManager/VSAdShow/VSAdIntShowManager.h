@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
+#import "VSAdMacro.h"
 
 
 NS_ASSUME_NONNULL_BEGIN

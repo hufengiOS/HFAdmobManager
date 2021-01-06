@@ -15,11 +15,6 @@ typedef NS_ENUM(NSUInteger, VSAdUnitType) {
     VSAdUnitTypeInt
 };
 
-//typedef NS_ENUM(NSUInteger, VSAdShowType) {
-//    VSAdShowTypeFullScreen, // 全屏广告
-//    VSAdShowTypePart        // 局部原生广告
-//};
-
 typedef NS_ENUM(NSUInteger, VSAdShowPlaceType) {
     VSAdShowPlaceTypeUnknown,           // 未知
     VSAdShowPlaceTypeFullStart,         // 全屏广告
@@ -29,20 +24,15 @@ typedef NS_ENUM(NSUInteger, VSAdShowPlaceType) {
     VSAdShowPlaceTypePartOther          // 局部其他广告
 };
 
-@class VSAdNavTemplateHomeBottom;
 
-@protocol VSAdNavTemplateHomeBottomClickDelegate <NSObject>
-- (void)clickAdInHomeBottomAds:(VSAdNavTemplateHomeBottom *)homeBottomAds;
-@end
-
-//kWeakSelf
-#define HFAdWeakSelf(type)          __weak typeof(type) weak##type = type;
-#define HFAdStrongSelf(type)        __strong typeof(type) strong##type = weak##type;
-
-
+////kWeakSelf
+//#define HFAdWeakSelf(type)          __weak typeof(type) weak##type = type;
+//#define HFAdStrongSelf(type)        __strong typeof(type) strong##type = weak##type;
+//
+//
 #ifdef DEBUG
 
-#define HFAdDebugLog(s, ... ) {\
+#define HFAd_DebugLog(s, ... ) {\
 \
 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];\
 [dateFormatter setDateStyle:NSDateFormatterMediumStyle];\
@@ -56,42 +46,31 @@ NSString *str = [dateFormatter stringFromDate:current];\
 printf("< %s:(%d) %s %s> Debug_log %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__ ,__func__, [str UTF8String], [[NSString stringWithFormat:(s), ##__VA_ARGS__] UTF8String] );\
 }
 #else
-#define HFAdDebugLog(s, ... )
+#define HFAd_DebugLog(s, ... )
 #endif
 
 #pragma mark - 布局相关
-#define isIPad                  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define kScreenWidth            (!isIPad ? 375 : 768)
-#define kScreenHeight           (!isIPad ? (isFullScreenDevice ? 812 : 667) : 1024)
+#define HF_isIPad                  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define HF_kScreenWidth            (!HF_isIPad ? 375 : 768)
+#define HF_kScreenHeight           (!HF_isIPad ? (HF_isFullScreenDevice ? 812 : 667) : 1024)
 
-#define kScaleWidth(W)          roundf(kScreenWidthRatio*(W))
-#define kScaleHeight(H)         roundf(kScreenHeightRatio*(H))
-#define kScaleWidthWith(iphoneValue, ipadValue)         (isIPad ? kScaleWidth(ipadValue) : kScaleWidth(iphoneValue))
-#define kScaleHeightWith(iphoneValue, ipadValue)        (isIPad ? kScaleHeight(ipadValue) : kScaleHeight(iphoneValue))
+#define HF_kScaleWidth(W)          roundf(HF_kScreenWidthRatio*(W))
+#define HF_kScaleHeight(H)         roundf(HF_kScreenHeightRatio*(H))
+#define HF_kScaleWidthWith(iphoneValue, ipadValue)         (HF_isIPad ? HF_kScaleWidth(ipadValue) : HF_kScaleWidth(iphoneValue))
+#define HF_kScaleHeightWith(iphoneValue, ipadValue)        (HF_isIPad ? HF_kScaleHeight(ipadValue) : HF_kScaleHeight(iphoneValue))
 
-#define kSizeValue(iphoneValue, ipadValue)        (isIPad ? ipadValue : iphoneValue)
-
-#define kFrameValue(iphoneNormalScreenValue, iphoneFullScreenValue, iPadNormalScreenValue, iPadFullScreenValue)      (isIPad ? (isFullScreenDevice ? iPadFullScreenValue:iPadNormalScreenValue) : (isFullScreenDevice ? iphoneFullScreenValue: iphoneNormalScreenValue))
+#define HF_kFrameValue(iphoneNormalScreenValue, iphoneFullScreenValue, iPadNormalScreenValue, iPadFullScreenValue)      (HF_isIPad ? (HF_isFullScreenDevice ? iPadFullScreenValue:iPadNormalScreenValue) : (HF_isFullScreenDevice ? iphoneFullScreenValue: iphoneNormalScreenValue))
 
 // MainScreen Height&Width
-#define MainScreen_Height       [[UIScreen mainScreen] bounds].size.height
-#define MainScreen_Width        [[UIScreen mainScreen] bounds].size.width
-#define MainScreen_bounds       [[UIScreen mainScreen] bounds]
+#define HF_MainScreen_Height       [[UIScreen mainScreen] bounds].size.height
+#define HF_MainScreen_Width        [[UIScreen mainScreen] bounds].size.width
 
-#define kScreenWidthRatio       (UIScreen.mainScreen.bounds.size.width / kScreenWidth)
-#define kScreenHeightRatio      (UIScreen.mainScreen.bounds.size.height / kScreenHeight)
-#define WidthHeightRatio        MainScreen_Width/MainScreen_Height
+#define HF_kScreenWidthRatio       (UIScreen.mainScreen.bounds.size.width / HF_kScreenWidth)
+#define HF_kScreenHeightRatio      (UIScreen.mainScreen.bounds.size.height / HF_kScreenHeight)
 
 
 
-// 字体大小(常规/粗体)
-#define FONTSYSTEMBold(FONTSIZE)        [UIFont boldSystemFontOfSize:kScreenWidthRatio*(FONTSIZE)]
-#define FONT(FONTSIZE)                  [UIFont systemFontOfSize:kScreenWidthRatio*(FONTSIZE)]
-#define FONTWeight(FONTSIZE, Weight)    [UIFont systemFontOfSize:kScreenWidthRatio*(FONTSIZE) weight:(Weight)]
 
-#define FONTPingFang(FONTSIZE)          [UIFont fontWithName:@"PingFang SC" size:kScreenWidthRatio*(FONTSIZE)]
-#define FONTMedium(FONTSIZE)            [UIFont fontWithName:@"PingFangSC-Medium" size:kScreenWidthRatio*(FONTSIZE)]
-#define FONTRegular(FONTSIZE)           [UIFont fontWithName:@"PingFangSC-Regular" size:kScreenWidthRatio*(FONTSIZE)]
 
 
 #endif /* VSAdMacro_h */

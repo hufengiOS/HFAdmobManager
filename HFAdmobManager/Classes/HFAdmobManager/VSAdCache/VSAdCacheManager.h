@@ -6,6 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VSAdMacro.h"
+
+
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -1,5 +1,5 @@
 //
-//  HFAppConfiger.h
+//  Ad_AppConfiger.h
 //  AnyRead
 //
 //  Created by 布灵布灵 on 2019/8/25.
@@ -11,14 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-#define kStatusBarHeight  [HFAppConfiger sharedConfig].statusBarHeight
-#define kNavBarHeight     [HFAppConfiger sharedConfig].navBarHeight
-#define kTabBarHeight     [HFAppConfiger sharedConfig].tabBarHeight
-#define kHomeBarHeight    [HFAppConfiger sharedConfig].homeHeight
+#define HF_kStatusBarHeight  [Ad_AppConfiger sharedConfig].statusBarHeight
+#define HF_kNavBarHeight     [Ad_AppConfiger sharedConfig].navBarHeight
+#define HF_kHomeBarHeight    [Ad_AppConfiger sharedConfig].homeHeight
 
-#define isFullScreenDevice (kHomeBarHeight > 0)
+#define HF_isFullScreenDevice (HF_kHomeBarHeight > 0)
 
-@interface HFAppConfiger : NSObject
+@interface Ad_AppConfiger : NSObject
 
 + (instancetype)sharedConfig;
 

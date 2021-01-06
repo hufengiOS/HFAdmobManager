@@ -33,35 +33,38 @@ TODO: Add long description of the pod here.
 #  valid_archs = ['armv7s','arm64','x86_64','armv7','arm64e']
 #  s.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   
-  s.source_files = 'HFAdmobManager/Classes/*'
-  
   s.requires_arc = true
   
-  s.source_files = 'HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}'
   
-  s.subspec 'NSDate+Helper' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/NSDate+Helper/*.{h,m,textile}'
+#  s.prefix_header_contents = '#import "PrefixHeader.pch"'
+  s.public_header_files = 'HFAdmobManager/Classes/HFAdmobManager/HFAdmobManagerHeader.h'
+  
+  #   s.public_header_files = 'Pod/Classes/**/*.h'
+#  s.source_files = 'HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}'
+  
+  s.source_files = 'HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}'
+  s.subspec 'NSDate+VSHelper' do |ss|
+    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/NSDate+VSHelper/*.{h,m,textile}'
   end
   s.subspec 'VSAdCache' do |ss|
     ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdCache/*.{h,m}'
   end
-  
   s.subspec 'VSAdConfig' do |ss|
     ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdConfig/*.{h,m}'
   end
-  
+#
   s.subspec 'VSAdLoader' do |ss|
     ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/*.{h,m}'
   end
-  
+#
   s.subspec 'VSAdShow' do |ss|
     ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdShow/*.{h,m}'
   end
-  
+#
   s.subspec 'VSAdTemplate' do |ss|
     ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/*.{h,m,xib}'
   end
-  
+#
   s.subspec 'VSGlobalConfigManager' do |ss|
     ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/*.{h,m}'
   end
@@ -69,10 +72,9 @@ TODO: Add long description of the pod here.
     ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/Other/*.{h,m}'
   end
     
-   s.prefix_header_contents = '#import "PrefixHeader.pch"'
-   s.public_header_files = 'HFAdmobManager/HFAdmobManagerHeader.h'
+   
     
-#   s.public_header_files = 'Pod/Classes/**/*.h'
+
   
    s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'

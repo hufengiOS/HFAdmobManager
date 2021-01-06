@@ -6,6 +6,8 @@
 //
 
 #import "VSAdUnit.h"
+#import "VSAdMacro.h"
+
 
 @implementation VSAdUnit
 
@@ -106,7 +108,7 @@
     }
     docDir = [docDir stringByAppendingPathComponent:fileName];
     
-//    HFAdDebugLog(@"沙盒路径 %@", docDir);
+    HFAd_DebugLog(@"沙盒路径 %@", docDir);
     
     return docDir;
 }
@@ -159,6 +161,18 @@
         return nil;
     }
     return dic;
+}
+
+
++ (NSArray*)hf_sourceArray:(NSArray *)sourceArray filter:(BOOL(^)(id element))includeElement {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    
+    [sourceArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (includeElement(obj)) {
+            [array addObject:obj];
+        }
+    }];
+    return array;
 }
 
 @end

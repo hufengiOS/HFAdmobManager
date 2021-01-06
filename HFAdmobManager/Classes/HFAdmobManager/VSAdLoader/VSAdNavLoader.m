@@ -6,6 +6,7 @@
 //
 
 #import "VSAdNavLoader.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 
 
@@ -62,7 +63,7 @@
 
 - (void)updateAds {
     if (self.adLoader.isLoading) {
-        HFAdDebugLog(@"正在加载广告。。。")
+        HFAd_DebugLog(@"正在加载广告。。。")
         return;
     }
     
@@ -76,7 +77,7 @@
 #pragma mark - GADUnifiedNativeAdLoaderDelegate
 - (void)adLoader:(nonnull GADAdLoader *)adLoader
 didReceiveUnifiedNativeAd:(nonnull GADUnifiedNativeAd *)nativeAd {
-    HFAdDebugLog(@"*广告数据* adUnitId(nav):%@, %@, %@", adLoader.adUnitID, nativeAd.headline, nativeAd.body)
+    HFAd_DebugLog(@"*广告数据* adUnitId(nav):%@, %@, %@", adLoader.adUnitID, nativeAd.headline, nativeAd.body)
     self.nativeAd = nativeAd;
     self.isLoadFinish = YES;
     // 用数组存储
@@ -88,7 +89,7 @@ didReceiveUnifiedNativeAd:(nonnull GADUnifiedNativeAd *)nativeAd {
 
 - (void)adLoader:(nonnull GADAdLoader *)adLoader
 didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
-    HFAdDebugLog(@"*广告数据* adUnitId(nav):%@, %@", adLoader.adUnitID, error.localizedDescription)
+    HFAd_DebugLog(@"*广告数据* adUnitId(nav):%@, %@", adLoader.adUnitID, error.localizedDescription)
     !_loadCompletionHandler ? : _loadCompletionHandler(nil, _placeType, error);
 }
 

@@ -18,10 +18,9 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}",
   "requires_arc": true,
-  "prefix_header_contents": "#import \"PrefixHeader.pch\"",
-  "public_header_files": "HFAdmobManager/HFAdmobManagerHeader.h",
+  "public_header_files": "HFAdmobManager/Classes/HFAdmobManager/HFAdmobManagerHeader.h",
+  "source_files": "HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}",
   "frameworks": "UIKit",
   "static_framework": true,
   "dependencies": {
@@ -37,8 +36,8 @@
   },
   "subspecs": [
     {
-      "name": "NSDate+Helper",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/NSDate+Helper/*.{h,m,textile}"
+      "name": "NSDate+VSHelper",
+      "source_files": "HFAdmobManager/Classes/HFAdmobManager/NSDate+VSHelper/*.{h,m,textile}"
     },
     {
       "name": "VSAdCache",

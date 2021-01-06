@@ -6,9 +6,12 @@
 //
 
 #import "VSAdPlaceManager.h"
-
-
-
+#import "VSAdNavLoader.h"
+#import "VSAdIntLoader.h"
+#import "VSAdCacheManager.h"
+#import "VSGlobalConfigManager.h"
+#import "VSAdConfig.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 
 /*
@@ -58,8 +61,8 @@
         if (!self.isLoading) {
             self.isLoading = YES;
             VSGlobalConfigAdsConfigAdPlaceModel *configModel = configArray[index];
-            HFAdWeakSelf(self)
             
+            __weak typeof(self) weakself = self;
             __block NSInteger currentIndex = index;
             [self loadAdsWithAdUnit:configModel.adPlaceID type:configModel.adUnitType adWeight:configModel.adWeight placeType:placeType completionHandler:^(BOOL success) {
                 currentIndex ++;

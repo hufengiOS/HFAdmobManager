@@ -6,7 +6,7 @@
 //
 
 #import "VSAdNavTemplateBase.h"
-
+#import "VSAdShowClickAdsManager.h"
 
 
 @interface VSAdNavTemplateBase ()<GADUnifiedNativeAdDelegate, GADVideoControllerDelegate>
@@ -85,6 +85,7 @@
     
 //    [VPNEventManager logEventWithName:kFireEvent_Ads_AdClick param:@{@"adUnitId": self.adUnitId, @"place": self.showAdPlaceId}];
 //    [LNToolManager addClickAdsWithAdPlaceId:self.showAdPlaceId];
+    
     [VSAdShowClickAdsManager addClickAdsWithPlaceType:self.placeType];
 }
 
@@ -137,7 +138,7 @@
 #pragma mark - lazy
 - (UILabel *)adLogoLabel {
     if (!_adLogoLabel) {
-        _adLogoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScaleWidth(30), kScaleWidth(15))];
+        _adLogoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, HF_kScaleWidth(30), HF_kScaleWidth(15))];
         _adLogoLabel.text = @"AD";
         _adLogoLabel.textAlignment = NSTextAlignmentCenter;
         _adLogoLabel.textColor = UIColor.whiteColor;
@@ -156,6 +157,8 @@
 
 - (void)dealloc
 {
-    HFAdDebugLog(@"--- 释放 --- %@",self)
+#ifdef DEBUG
+    NSLog(@"--- 释放 --- %@",self);
+#endif
 }
 @end

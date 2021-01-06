@@ -66,7 +66,9 @@
 }
 
 - (void)dealloc {
-    HFAdDebugLog(@"--- 释放 --- %@",self)
+#ifdef DEBUG
+    NSLog(@"--- 释放 --- %@",self);
+#endif
 }
 
 

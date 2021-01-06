@@ -6,9 +6,8 @@
 //
 
 #import "VSAdCacheManager.h"
-#import "NSArray+Map.h"
 #import "VSAdConfig.h"
-
+#import "VSAdUnit.h"
 
 //static nsinterger
 
@@ -36,8 +35,7 @@
     VSAdCacheData *data = [VSAdCacheData cacheDataWithUnitType:unitType placeType:placeType adUnitId:adUnitId adWeight:adWeigth obj:obj];
     @synchronized (manager.cahceArray) {
         [manager.cahceArray addObject:data];
-        HFAdDebugLog(@"广告管理添加 %@ 剩余%ld", data.description, manager.cahceArray.count)
-    }
+    };
 }
 
 + (VSAdCacheData *)adsWithPlaceType:(VSAdShowPlaceType)placeType {
@@ -46,17 +44,18 @@
 
 + (VSAdCacheData *)adsWithPlaceType:(VSAdShowPlaceType)placeType allowShare:(BOOL)allowShare {
     VSAdCacheManager *manager = [self shareInstance];
-    NSArray *array = [manager.cahceArray myFilter:^BOOL(VSAdCacheData  * _Nonnull obj) {
+    
+    NSArray *array = [VSAdUnit hf_sourceArray:manager.cahceArray filter:^BOOL(VSAdCacheData * _Nonnull element) {
         if (allowShare) {
             if (placeType == VSAdShowPlaceTypePartHome || placeType == VSAdShowPlaceTypePartOther) {
-                return obj.placeType == VSAdShowPlaceTypePartOther || obj.placeType == VSAdShowPlaceTypePartHome;
+                return element.placeType == VSAdShowPlaceTypePartOther || element.placeType == VSAdShowPlaceTypePartHome;
             } else if (placeType == VSAdShowPlaceTypeFullStart || placeType == VSAdShowPlaceTypeFullConnect || placeType == VSAdShowPlaceTypeFullExtra) {
-                return obj.placeType == VSAdShowPlaceTypeFullStart || obj.placeType == VSAdShowPlaceTypeFullConnect || obj.placeType == VSAdShowPlaceTypeFullExtra;
+                return element.placeType == VSAdShowPlaceTypeFullStart || element.placeType == VSAdShowPlaceTypeFullConnect || element.placeType == VSAdShowPlaceTypeFullExtra;
             } else {
                 return NO;
             }
         } else {
-            return obj.placeType == placeType;
+            return element.placeType == placeType;
         }
     }];
     
@@ -72,8 +71,7 @@
 //    [manager.cahce removeObjectForKey:data.cacheKey];
     @synchronized (manager.cahceArray) {
         [manager.cahceArray removeObject:data];
-        HFAdDebugLog(@"广告管理移除 %@ 剩余%ld", data.description, manager.cahceArray.count)
-    }
+    };
 }
 
 @end

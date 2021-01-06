@@ -40,6 +40,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nullable NSString*)jsonStringWithObject:(id _Nullable)object;
 + (id _Nullable)objectWithJsonString:(NSString * _Nullable)jsonString;
+
+
++ (NSArray*)hf_sourceArray:(NSArray *)sourceArray filter:(BOOL(^)(id element))includeElement;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

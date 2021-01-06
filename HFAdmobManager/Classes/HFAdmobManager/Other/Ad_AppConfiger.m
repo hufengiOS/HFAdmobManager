@@ -1,17 +1,17 @@
 //
-//  HFAppConfiger.m
+//  Ad_AppConfiger.m
 //  AnyRead
 //
 //  Created by 布灵布灵 on 2019/8/25.
 //  Copyright © 2019 布灵布灵. All rights reserved.
 //
 
-#import "HFAppConfiger.h"
+#import "Ad_AppConfiger.h"
 
-@implementation HFAppConfiger
+@implementation Ad_AppConfiger
 
 + (instancetype)sharedConfig {
-    static HFAppConfiger *_sharedSingleton = nil;
+    static Ad_AppConfiger *_sharedSingleton = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //不能再使用alloc方法
@@ -24,17 +24,17 @@
 
 // 防止外部调用alloc 或者 new
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
-    return [HFAppConfiger sharedConfig];
+    return [Ad_AppConfiger sharedConfig];
 }
 
 // 防止外部调用copy
 - (id)copyWithZone:(nullable NSZone *)zone {
-    return [HFAppConfiger sharedConfig];
+    return [Ad_AppConfiger sharedConfig];
 }
 
 // 防止外部调用mutableCopy
 - (id)mutableCopyWithZone:(nullable NSZone *)zone {
-    return [HFAppConfiger sharedConfig];
+    return [Ad_AppConfiger sharedConfig];
 }
 
 - (void)restConfig {

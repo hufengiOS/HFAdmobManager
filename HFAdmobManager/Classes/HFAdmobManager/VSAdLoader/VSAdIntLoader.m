@@ -8,7 +8,7 @@
 #import "VSAdIntLoader.h"
 //#import <VungleAdapter/VungleAdapter.h>
 //#import <GoogleMobileAdsMediationTestSuite/GoogleMobileAdsMediationTestSuite.h>
-
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 
 @interface VSAdIntLoader ()<GADInterstitialDelegate>
@@ -43,14 +43,14 @@
 
 #pragma mark - GADInterstitialDelegate
 - (void)interstitialDidReceiveAd:(nonnull GADInterstitial *)ad {
-    HFAdDebugLog(@"*广告数据* adUnitId(int):%@ %@",ad.adUnitID, ad.responseInfo.adNetworkClassName)
+    HFAd_DebugLog(@"*广告数据* adUnitId(int):%@ %@",ad.adUnitID, ad.responseInfo.adNetworkClassName)
 
     !_loadCompletionHandler ? : _loadCompletionHandler(ad, nil);
 }
 
 - (void)interstitial:(nonnull GADInterstitial *)ad
 didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
-    HFAdDebugLog(@"*广告数据* adUnitId(int):%@, %@", ad.adUnitID, error.debugDescription)
+    HFAd_DebugLog(@"*广告数据* adUnitId(int):%@, %@", ad.adUnitID, error.debugDescription)
     
     !_loadCompletionHandler ? : _loadCompletionHandler(nil, error);
 }

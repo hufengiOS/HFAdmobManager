@@ -7,7 +7,7 @@
 //
 
 #import "HFViewController.h"
-
+#import <HFAdmobManager/HFAdmobManager.h>
 
 
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	 
+    [HFAdmobManager preloadAllAds];
 }
 
 - (void)didReceiveMemoryWarning
