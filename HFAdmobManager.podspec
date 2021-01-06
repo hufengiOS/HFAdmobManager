@@ -34,9 +34,7 @@ TODO: Add long description of the pod here.
 #  s.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   
   s.requires_arc = true
-  
-  
-#  s.prefix_header_contents = '#import "PrefixHeader.pch"'
+    
   s.public_header_files = 'HFAdmobManager/Classes/HFAdmobManager/HFAdmobManagerHeader.h'
   
   #   s.public_header_files = 'Pod/Classes/**/*.h'
