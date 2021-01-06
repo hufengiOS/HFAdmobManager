@@ -13,4 +13,9 @@
 #import <HFAdmobManager/VSGlobalConfigManager.h>
 
 
+#import <MJExtension/MJExtension.h>
+#import <Masonry/Masonry.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
+
+
 #endif /* HFAdmobManagerHeader_h */
