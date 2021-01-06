@@ -7,7 +7,7 @@
 //
 
 #import "HFViewController.h"
-#import <HFAdmobManager/HFAdmobManager.h>
+#import <HFAdmobManager/HFAdmobManagerHeader.h>
 
 
 

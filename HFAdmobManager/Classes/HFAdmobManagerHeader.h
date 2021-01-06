@@ -9,6 +9,8 @@
 #define HFAdmobManagerHeader_h
 
 #import <HFAdmobManager/VSAdPlaceManager.h>
-//#import <hfad>
+#import <HFAdmobManager/HFAdmobManager.h>
+#import <HFAdmobManager/VSGlobalConfigManager.h>
+
 
 #endif /* HFAdmobManagerHeader_h */

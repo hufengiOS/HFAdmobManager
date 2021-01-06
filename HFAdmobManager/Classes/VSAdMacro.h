@@ -24,12 +24,6 @@ typedef NS_ENUM(NSUInteger, VSAdShowPlaceType) {
     VSAdShowPlaceTypePartOther          // 局部其他广告
 };
 
-
-////kWeakSelf
-//#define HFAdWeakSelf(type)          __weak typeof(type) weak##type = type;
-//#define HFAdStrongSelf(type)        __strong typeof(type) strong##type = weak##type;
-//
-//
 #ifdef DEBUG
 
 #define HFAd_DebugLog(s, ... ) {\

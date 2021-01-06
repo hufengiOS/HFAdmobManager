@@ -11,8 +11,8 @@
 #endif
 
 #import "HFAdmobManager.h"
+#import "HFAdmobManagerHeader.h"
 #import "VSAdMacro.h"
-#import "VSAdManagerHeader.h"
 #import "Ad_AppConfiger.h"
 #import "NSArray+ad_Map.h"
 #import "VSAdPlaceManager.h"

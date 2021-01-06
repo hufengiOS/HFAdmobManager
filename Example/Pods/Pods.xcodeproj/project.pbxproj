@@ -44,30 +44,33 @@
 
 /* Begin PBXBuildFile section */
 		009117123A39B8C07364F7B390EBEE32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */; };
+		00F1D63E964CE9B25B0626DFCC9EA33B /* VSAdNavTemplateCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E43967FD3D9EE95A23274BEC35E98526 /* VSAdNavTemplateCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0156B1BC38E945BAB6196C289577F61C /* FBLPromise+Do.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2F4727AEDD2A16FE87A143EB98CAC8 /* FBLPromise+Do.m */; };
-		02B5A1D7D7869043D2FAB468A8CE742E /* VSAdIntLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D3EC3EC7684458129AB6F74F5651E5C /* VSAdIntLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		020E594AE4E52904DE3DAB0874A0CE2A /* VSTableAdsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A271076933F4488AFA2CA50936DAC7 /* VSTableAdsCell.m */; };
+		0228B6ECA97104DDFDF73C8508A43486 /* VSAdConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = BA6FEE963F6AFBBA076CEF34E8CCEB8C /* VSAdConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03A494548B62A9AA79759E848B04E594 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 43BD7F3D0C3437C77699ED0B664435F8 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D1E341A6510AB8C85365A333198DF2 /* FBLPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A0A7DB484ADE106C1ABD5E6643F9A3 /* FBLPromise.m */; };
 		066858E7050EB54101EE703D1A8ED2A8 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E3471B392646D5C1A1AEB25D84BD9AD1 /* NSString+MJExtension.m */; };
-		08E6A5CDBBE227C5195D394D38FAFA65 /* VSAdConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C23AD0436146700BE56400814A51D0 /* VSAdConfig.m */; };
+		0878A26E03890112C879826718EAD6CF /* VSAdCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA6DE3A6DB29A7C012C6B18A01193AD /* VSAdCacheManager.m */; };
 		0A25FEE108E1A63917B9058C0E1AC9BA /* Pods-HFAdmobManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F064C65E340005EB264AC7D39168E217 /* Pods-HFAdmobManager_Example-dummy.m */; };
+		0A452C1C9BBFD4A265ABD6CA4C82553B /* Ad_AppConfiger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0653E9436992294E4659690A70C75164 /* Ad_AppConfiger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B4FA8A1F2CA6FB09DBB10251CBDBC19 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C684F1301D7AAAB8D4482688A0DFB83 /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B57607C824FFC60977AF1D760D05F3F /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E320EF63E46514E17069D952345B9C02 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C0E220E198BFFD70F02C84D8427ADDB /* FBLPromise+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9C650A61FD33A6B769ACB579D7C781 /* FBLPromise+Timeout.m */; };
-		0D8852F9F190B138A51387197C020A90 /* VSAdShowClickAdsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAF1CD1383A89E7D2E7B1F1F8D2F2AF /* VSAdShowClickAdsManager.m */; };
 		0D8C64134344E1FEDF2F2A42E424B72A /* FBLPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB45C734FF7391446D927C4364FAF0B /* FBLPromise+Any.m */; };
+		0EE83579E10743A40CBAFA0D5934F0AD /* VSAdNavShowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDE4E1B5967FAD5685F093CBBEA19EA /* VSAdNavShowManager.m */; };
 		1153AD0A5F6FF2041E28EA560D3AA7BF /* FBLPromise+Validate.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = A40C41BB780EDC4155FA21BED080CF2F /* FBLPromise+Validate.h */; };
 		1171DE9B79C8BB9611BCA991E11C24B0 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C92F1E677AD42765E01E263A74993666 /* Masonry-dummy.m */; };
+		12899FFA3F31305937DC46418799B648 /* VSAdIntShowManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AFB35733B41C2D0660BB59713B649CD4 /* VSAdIntShowManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1295646933D0E062E479899FEA34C7C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */; };
 		1305EA982A6B14EA09F85C02026B81E7 /* GULSceneDelegateSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CAD5D82E694BD81E158066A00DD71F2 /* GULSceneDelegateSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14E7B2824B874993D2640C5D1E10D37C /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F38DA292904F635ADF635599F12ECA53 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14E972D448005ADBEC7F06A26E90E002 /* GoogleUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1FE474674D9C8C96F00E5F639E9A0D /* GoogleUtilities-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19C5510FD679858B0C98668CD1D2268D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */; };
 		19E3A9768EE7577C8F64FE47598787C1 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CCBB5BDFB99BCD30E9DFE1057327740 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B10DE3DFA72E0A2330829036CDD12BE /* VSAdNavTemplateCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 73520C86037BC07F88503B9EBD520F3E /* VSAdNavTemplateCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C56045A7FC44D1D7912412A590654B3 /* FBLPromise+Recover.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 392412C8575B30AA00407B9B6B2772DC /* FBLPromise+Recover.h */; };
 		1CF6D92E4873C3C346B114E692CCE736 /* GULHeartbeatDateStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CCAF27762773634408572FB2FCED34 /* GULHeartbeatDateStorage.m */; };
-		1D6D9BB248CEAFBDA691A5439F2D1020 /* HFAdmobManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 21741828CE2673C5401B67EE401C007C /* HFAdmobManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E4B52201C2966EAD1E531B36BFB6D84 /* VSAdNavTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A6EC674723083EDAE4BE7489FD6FA9 /* VSAdNavTemplateCell.m */; };
 		1EF31D6F2301C362B485A5AAA739EF8B /* FBLPromise+Delay.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = F645AC2A49B94670AF22BAB5DBEC33E8 /* FBLPromise+Delay.h */; };
 		1F31BE5D96B96EBA94C5498AE47498AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F24BE140CED8645B9F96D594BB3E2B /* Security.framework */; };
 		1F35B153EC0683D68CA7B71BA118F62F /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 212444695708A75A74174ACCB105D238 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
@@ -75,21 +78,24 @@
 		2331D30104F2C9AE68A139755A23ED29 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3458F54F3C86B6CC08C0464A0FF23C /* MJPropertyKey.m */; };
 		235F72610F79D3B438F3725F2F28B65F /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A66F6544ED84B46A9CE7D50185620A1 /* NSObject+MJKeyValue.m */; };
 		24624C3CEF92D5119B95A072B636639C /* GULNetworkURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D16F35433A36C36BE94A0329586EA /* GULNetworkURLSession.m */; };
+		24EF585407ED9E29FED9015EB2981FBE /* VSAdNavTemplateBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 241FED39E2798B4FDD5A940FEF51448E /* VSAdNavTemplateBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		257E6E86812C353224336840D448AFC4 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8D9CB0940F79994FE11A9939C3593F /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26D05CA1F06C3B05C951659F1044F65D /* VSAdNavTemplateView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 3CB11006ECB88379AF01FBD028992C3E /* VSAdNavTemplateView.xib */; };
+		282531534068BEA115B46BEDFF611279 /* VSAdPlaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75205E3B89FC684075E623F15CC7766F /* VSAdPlaceManager.m */; };
+		2967C74D4BC3C890007C19FA173B679A /* VSAdPlaceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D11AF53AD5A7083FB6AEEF013A606353 /* VSAdPlaceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C7C824F566D5A4BF65E5BDD81FC9715 /* GULNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = A67892018D05A69F50FC7948293C3E4B /* GULNSData+zlib.m */; };
 		2CB7EEB523039513B0A95695FF0AA202 /* FBLPromise+Reduce.m in Sources */ = {isa = PBXBuildFile; fileRef = 716A58BA1DF23CEB98B0DC91F31CA7A0 /* FBLPromise+Reduce.m */; };
 		2CBE0D8E79CE23180679A195EA336D81 /* GULMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = CD305C7C6888ECE1F22B59E9E74B0DDD /* GULMutableDictionary.m */; };
 		2D0FA9706BC5626B9A3A1C39687B8B05 /* FBLPromise+Reduce.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 530AED94D0144DE571C9273E04C65DBE /* FBLPromise+Reduce.h */; };
 		2D6E6C75FA20E38CD17BFD9632172F3D /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CA84A8D8C412A0D0447D11C6B99559 /* NSArray+MASAdditions.m */; };
 		2E10DC687D06CD2780B5DD2E32A16342 /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = A71B0E317175D8D432E76D948901ABE3 /* MJPropertyKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E5C083094D2D7773AC4462299CA91A6 /* VSAdIntLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 928B50B17F7DAE95E889BF30510394AF /* VSAdIntLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F040B6F0E27F446F032C2793F900D6A /* NSURLSession+GULPromises.h in Headers */ = {isa = PBXBuildFile; fileRef = D7124B9D2971C11B1D94A24298F3F4E6 /* NSURLSession+GULPromises.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		30852701E3951F3E570B7ABA73749449 /* GULNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E621D3530CA95CC40290080B15DDA6DA /* GULNetwork.m */; };
 		3085BD262D734CFBB4574F6829434EB7 /* GULKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E950D0D0CF46B4D6D9DF6ECDA11C218D /* GULKeychainUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31A9A7F41FC6D2EE42D6674C55A22912 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C256FF955509CE0443B2AF51BE79481 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		31FB8DE53442AEA7DC09249A286DC72F /* VSAdNavTemplateHomeBottom.h in Headers */ = {isa = PBXBuildFile; fileRef = 6170923B4DB0A0215193580B9CBB3FF7 /* VSAdNavTemplateHomeBottom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32DF7EB6D90A3C3AC7D4A0819DD2489D /* FBLPromises.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E3D497688E9B75DB072D6F07916BA1 /* FBLPromises.h */; };
 		33C0CF8A4DFCCFDCE61155F38C7EE8F7 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 646DDE88A505E4FA293AC99871A8E6FE /* ViewController+MASAdditions.m */; };
-		343A5FD63286DD8CBB8B61F2F3FD8C93 /* VSAdPlaceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DFFF759E9E0FB2F3D7673D0224D77E /* VSAdPlaceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		344B994EFF96CDC5E780D739F39D250D /* FBLPromise+Always.h in Headers */ = {isa = PBXBuildFile; fileRef = FD779884AC1AB7030D0D15B1756774BB /* FBLPromise+Always.h */; };
 		3593C5C1E1C5B048B6BF4823F53A666A /* FBLPromise+Race.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 9E9638B3FE768CE50114C92BD555C5B2 /* FBLPromise+Race.h */; };
 		38B9FC61510D7C6E5530EE2F7D82B678 /* FBLPromise+Race.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9638B3FE768CE50114C92BD555C5B2 /* FBLPromise+Race.h */; };
@@ -100,43 +106,39 @@
 		3A63683004FCF884ECFDE887312052A2 /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = EC30DDBA52A9C8D8ECE46EEFB30E0858 /* NSObject+MJKeyValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB41D4FDBD196B11B8CDA2905C5E5E1 /* FBLPromise+Await.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEED1A523E5F72097250559E95BDC7D /* FBLPromise+Await.m */; };
 		3D39F176F20347649DE54A5C18E514B6 /* GULOriginalIMPConvenienceMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F3644714F6074F79A89323B48A66C7D /* GULOriginalIMPConvenienceMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DECB4093A21E3363CBD91364AFA5A30 /* VSAdNavTemplateHomeBottom.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ECB97E2D2A673391A7AEFDBB76D60A4 /* VSAdNavTemplateHomeBottom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42B2FACDAB7050DACEC34E71BFA52B52 /* GULReachabilityMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B4136237E1CB9F66A08B546B2391DC4 /* GULReachabilityMessageCode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		45F7033EE1518440A47FCED827E16470 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 08AD2BF6A42296566D281F2ACE3DDF73 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4661A014BED17837A24A0C2D5452BCD8 /* VSGlobalConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB6F166233110C706A30B9E3EBB897A /* VSGlobalConfigManager.m */; };
+		4640D14D98CDBCF9A2D3CE3F8E1FE550 /* VSAdIntLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B1526D18E97A8ED85351DE88D4906BAF /* VSAdIntLoader.m */; };
 		48BE5DD2491C50962FB89EB2124F28B3 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCB375165284D207F6068E00F0340FF /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48C4920BF194E1108A8F0F01A9EEC431 /* FBLPromise+Any.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D94B5E8974CC6F9B74F74434EA27969 /* FBLPromise+Any.h */; };
 		492DB2399CC61CCBE6794883893BD5EF /* FBLPromise+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = 87876D158F5086B032BD50A4A525297B /* FBLPromise+Delay.m */; };
 		495DB7A2ED821B4BF94A663BDD7FFF7E /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA7C4502BF9DAC73AAC7A812662453D /* MJProperty.m */; };
 		49E81F2C587AEE1F89E1129D4409FD6D /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = BAF758A1699166A7B0E644B643C6CED1 /* MJExtensionConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B4C577CBE3DD90E4DB129F6E3A3BCB9 /* GULSecureCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 26174FB07B909020DB2540A2191509B3 /* GULSecureCoding.m */; };
+		4B8D18AC17F5B11C2CFFDD03946B0488 /* VSTableAdsCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F132971831764EED9DCB4AEB1A323BA /* VSTableAdsCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		509C047A9B526B28372BAA3A87FEFF81 /* VSAdNavTemplateFullScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 18517AC95AA63780CB70F4195C1A3FA8 /* VSAdNavTemplateFullScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50A19DBE3D6C559D3C909A5DB6277421 /* FBLPromise+Always.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = FD779884AC1AB7030D0D15B1756774BB /* FBLPromise+Always.h */; };
 		512029EFB6549E4FDF03AEE6BBA02ABE /* FBLPromise+Then.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA47212240953BC53D5F54D4F486880 /* FBLPromise+Then.h */; };
 		516F4D7038531E814D8612D8CFD75CB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */; };
-		5238C385D33EA2500BED5181888C9B4C /* VSAdIntLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C59FE212A085AF06C99E8D3A88D0219C /* VSAdIntLoader.m */; };
-		53B97E88A8C838E7AABC7D1B8DBBCDDF /* VSAdIntShowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA420F9933D883C25526D2D8106E841E /* VSAdIntShowManager.m */; };
 		56372728738D4131D8343BAEDA36E048 /* FBLPromise+Then.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA72E5B1AD2ACE88F9BE05B50C7375F /* FBLPromise+Then.m */; };
 		57F30E7AEF31F45B2AC0B4D6E6F3AFCA /* FBLPromise+Validate.h in Headers */ = {isa = PBXBuildFile; fileRef = A40C41BB780EDC4155FA21BED080CF2F /* FBLPromise+Validate.h */; };
 		5ABD4AC6491E7F09130B8148542BBE69 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F89FC1594B9190134BEDE5B7B66605F /* FBLPromises.framework */; };
-		5BB403A7CB4E706184340FC19EBBD6BC /* VSTableAdsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8F153048179A077C5762323F183B65 /* VSTableAdsCell.m */; };
 		5E2F2EFF3F5243D30C0DA9ADD2BB64A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */; };
 		5E59AEAE1BB71D7DB0F2928A29519651 /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B253E9DF0CD2C4F0280771A7A07DEDE /* NSObject+MJCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E5F6A0012A5B6987053A0FD8A24A522 /* HFAdmobManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9E4C81C6758D0E33B550097DDC4A75D /* HFAdmobManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EA1CE9AA45F37611FA852F1E6BDA15A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */; };
 		6119757010E73CF3C26C1E6161FF3CBA /* GULHeartbeatDateStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 927D860BDD8D322DF40916A2FD614800 /* GULHeartbeatDateStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		619C969A412A93C89426B8F813ECA4DB /* VSGlobalConfigModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D451E32C33438F5A7B9702CBCE65DB1F /* VSGlobalConfigModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61D827EBF72DA609CBDAC96FAA9E2097 /* FBLPromisePrivate.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = 9D7FF9817C63C34C0DDE1728A543ACF0 /* FBLPromisePrivate.h */; };
 		61E4065651605FB7D7142C7741319CAF /* GULNetworkLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A7899B01CD1538037921F32AABB4CF1 /* GULNetworkLoggerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62873834165BFF2625DE34D44D81C71E /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9A042ADE71F12E7870A4D0150426AC /* View+MASAdditions.m */; };
 		64A77158C4F33710636D935B685F7ACB /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 8325F5315E480C950830FC42324B4CE0 /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
-		659AB44EE03D057E923315B39CD5143D /* VSAdPlaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B00D61FAEAD3EC1130810DDDF17CC5 /* VSAdPlaceManager.m */; };
 		66EAACBBDA09125D5FD7E315E08FE2B7 /* GULAppEnvironmentUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F32ACA1CA18285E2B1A30CA5236815 /* GULAppEnvironmentUtil.m */; };
-		67AF54A0ADC9ED818E7885D308842117 /* VSAdConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B93505210B4D872C1BA59F4D837DC3 /* VSAdConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		696B02C61C23B21962DC80F004BE351E /* GULAppDelegateSwizzler_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCD6759195AE600E6F80BD2B578C823 /* GULAppDelegateSwizzler_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6AA9DD9ACE142811E6ECF3AE17F1DC85 /* FBLPromise+Wrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5576B780724A6082B02D464D74987BD5 /* FBLPromise+Wrap.h */; };
 		6B5D636361E1BBE225DD691706165B11 /* FBLPromise+Async.h in Headers */ = {isa = PBXBuildFile; fileRef = DBF982F7DA8176A0940DA5463F52EF2C /* FBLPromise+Async.h */; };
 		6BAA9D171E66A9CC9AA3786476026F00 /* FBLPromise+Do.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8EDF8F6AE7DBCB67F24CBAE49198D105 /* FBLPromise+Do.h */; };
-		6E3108E3EE5C23288129AD5470801D11 /* NSArray+ad_Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C2551BB902E3319113AE313166F426 /* NSArray+ad_Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FB60E7868BB97E07B710718AB55B05E /* GULNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 45AC3069103F14E6CFA821796BBC1C91 /* GULNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7106A7E02A14CFF328C6F4B24BD54D94 /* VSGlobalConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 620A365A2EACECA6A1EE4A3E265228F8 /* VSGlobalConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72863433D457E4AA76ACDC9BC259EF7E /* GULReachabilityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351F88F22AC78149B528783875058BF /* GULReachabilityChecker.m */; };
 		72D453F83BB49E1DE2D3ED076F2F8257 /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A855C06F323F4018BBC7238FCE7817D /* pb_encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73C78DE14E4BC83A829FC08EBEB1C772 /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF295CAF830DA34320CFC0413C0CF336 /* MJExtension-dummy.m */; };
@@ -148,21 +150,23 @@
 		7B3F5051B4203702CD78EB9BECEBEEB5 /* GULKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC988704251D4E95B855ECB1F98F01 /* GULKeychainUtils.m */; };
 		7BA05C659692DA24EDCFEC68068545AB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3073B30DCF53CD0C34505528272EB300 /* SystemConfiguration.framework */; };
 		7CB7B610F9E8C2633814741B70BA00F8 /* GULNetworkMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = D9B5D19629E35B3096C2D840618004DC /* GULNetworkMessageCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CF510161B31947B837B7E0493556425 /* VSAdCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF3E81203C6DF31A0A872C38B2BA9EE5 /* VSAdCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D5F7A58CA7471E1CD707387F1C27C26 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDAF891EE96669292A45B9788E597B2F /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F186E22BDB43380F09DF1C7ED745AC9 /* VSAdCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB28EC69514AAEA85741AD5D343775 /* VSAdCacheManager.m */; };
+		7E682E5BC82EF90268A703954C752758 /* VSGlobalConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D5C38FCACCEC0E5F7FB6562AD34FF8 /* VSGlobalConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F2E8F41C986DD50A6A94FAC0D1AB833 /* VSAdConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF659988404BF136C977058E1DFB359 /* VSAdConfig.m */; };
+		813F7B7FDEFD073236031F8B89DF9C5B /* VSAdNavLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 907AE627EDC0601A056771857CE3DE1A /* VSAdNavLoader.m */; };
+		828A4322F252988F529FBF0CFFA19959 /* VSGlobalConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0815EC07A2F0092B7EC48FEC88361E52 /* VSGlobalConfigManager.m */; };
 		83457DA1ABAC2A3FAC84D3BE422777F0 /* GULSceneDelegateSwizzler_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A85071E2C438D380CF87F098E62856 /* GULSceneDelegateSwizzler_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		837E268CA9F1274F9BE135E09561D898 /* FBLPromise+Wrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2B2BE8B42142E4C949D230B5FE0D3B /* FBLPromise+Wrap.m */; };
 		84C74A19A018ADF6CFCB843D75B2EA08 /* FBLPromise+Await.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = E5463E0B0322D19C5CFE86947CA7C93F /* FBLPromise+Await.h */; };
 		84CD088EB1334A9C5089E586807618FF /* PromisesObjC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F87C0E9580719F808B17CA2F86764 /* PromisesObjC-dummy.m */; };
 		84DD3298304F42C9AEDFF912AB06B7C2 /* Pods-HFAdmobManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A43EED69C602B7AD8C29BA2298DAB6 /* Pods-HFAdmobManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85D1B74233D53629BE9FFA0FA443FB54 /* Pods-HFAdmobManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD07CAB98412421A2CA97C006B88B7 /* Pods-HFAdmobManager_Tests-dummy.m */; };
-		87ADBA7A7FB6A7758A67D713D80A305D /* VSAdIntShowManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BF3B9CA183CFB8801A4F1E38B25CC07 /* VSAdIntShowManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88915D9A91D1D8DE01F8B38C244834FA /* VSAdNavTemplateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5383C035FD21A2052380BB13DB68B /* VSAdNavTemplateBase.m */; };
-		88E10ED44D3E03B50872D844C86861A7 /* VSTableAdsCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 13520BD431D75277D7BA17DD6DB8A462 /* VSTableAdsCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8910484CE1BA77FFA769A8D38160CFD9 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 86C797BEEA1D3919E816A21B0F97FCF5 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		893DD7AE45186E81C50489E49238667C /* VSAdNavShowManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 64F3AC4F75A1D1F5887EF02D82F5000F /* VSAdNavShowManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A8175E9437C3DE3CDB3032E72A65BFF /* VSAdIntShowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2885A2C1CB7F72C2F11532703F7FB514 /* VSAdIntShowManager.m */; };
 		8CC21159DD61FF2DE8D63CD828AEBD0D /* FBLPromise+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376267EC200F8EE8631E7A5066D610D /* FBLPromise+Async.m */; };
 		8EF452D392939C288BC92E30186C950E /* FBLPromise+Then.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = CEA47212240953BC53D5F54D4F486880 /* FBLPromise+Then.h */; };
+		9094C3CA496EB3155247E2B655D06899 /* HFAdmobManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D682597A7C50DDD991A791A9AECA9D /* HFAdmobManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		913EEC0B790FD61AD8595F29E0170F9F /* GULAppDelegateSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = C1DBC3032BDD395C394701ABD0311755 /* GULAppDelegateSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		939065A68A97C4A03141D6BE8BB2451E /* GULApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = D36FB4536D5BCEE728789AC6F078D908 /* GULApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94A33FDFA9B090857D56F6AB322ECF5B /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FB975F69C975FD78FDFB5E8CDD215B43 /* MASViewConstraint.m */; };
@@ -174,17 +178,17 @@
 		98E0BDBD83CBEAD5A9F3CF994053E855 /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 7449E3E014BE7A73CB4981110049903B /* NSString+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A0B27954E0BCB098256B61AD2004A77 /* FBLPromise+Delay.h in Headers */ = {isa = PBXBuildFile; fileRef = F645AC2A49B94670AF22BAB5DBEC33E8 /* FBLPromise+Delay.h */; };
 		9AC4CAB2EAA1107043844B33CA92BBFF /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FEED45C6658D6899ECA4A08A0557FDA /* MJFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9AC7426B25A859080316D091BF4B6750 /* VSAdNavLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B882D6520CE64C41DD0AB8AD42212217 /* VSAdNavLoader.m */; };
 		9ACB3871726A4299372A0E61C0BA802E /* FBLPromiseError.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B9F802311AD45F0B3BDA041AACF876F9 /* FBLPromiseError.h */; };
 		9C3DEBA23B282337D0A04933F361FAF9 /* FBLPromiseError.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F802311AD45F0B3BDA041AACF876F9 /* FBLPromiseError.h */; };
-		9C6736C52F93767A225B2FDA9CC7370C /* Ad_AppConfiger.m in Sources */ = {isa = PBXBuildFile; fileRef = D0232CB7636FB4D0E5E167119A3A6BC8 /* Ad_AppConfiger.m */; };
 		9E294B4EF21AD9AAF258A1538A7C7236 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 29986401FD9C3CDC3F34C5BC9C78D957 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E8796942DD79CA4FD087A17BDBBA8DD /* NSArray+ad_Map.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF5D3C02792DDD869EF06F04F883E32 /* NSArray+ad_Map.m */; };
 		9F8DC47999CD39B34D3287C8EE85798B /* GULSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 31F1466F3285964764E4351086FB4229 /* GULSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A14F11963FCBD853D153FB243393DC01 /* GULMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 8833D8541658C229D024AFA5EB4670AF /* GULMutableDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1EBB83BF01C509B9B246F009526F1A6 /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B7EACDCAEA9AF16B4FACDB3A4C1C35A /* MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A30FC0E49E7BE0E412CB76104DF7E105 /* FBLPromise.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 31C2E4610E4045ED57AA380F5E9AEDEB /* FBLPromise.h */; };
 		A50DDEAF043548380DEEF16DBFDFC279 /* GULKeychainStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6BF11FEBC27A66EDFB01C6FBD2B0AB /* GULKeychainStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5935A8A1D34109B729C509418515682 /* NSArray+ad_Map.m in Sources */ = {isa = PBXBuildFile; fileRef = D055944F0E120CB8C45CCD5CB3A62D89 /* NSArray+ad_Map.m */; };
+		A5DD6845FCFBA1807C2A5094AB96BEE3 /* HFAdmobManagerHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A98E7BEDB8ABD3E55C67E6351C641D6 /* HFAdmobManagerHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A60D59263038A6B8ADF392D62AC84518 /* VSAdCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 219B6EB82C34DDC97EE20453AA2C6A8B /* VSAdCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8F3BA1D5A2F8D9C96370176A86FA22D /* FBLPromise+Any.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 4D94B5E8974CC6F9B74F74434EA27969 /* FBLPromise+Any.h */; };
 		A921C3BAC123E06087247482702697B0 /* FBLPromise+Catch.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = C4CCDD552CF97A8D273205C0C2C20523 /* FBLPromise+Catch.h */; };
 		A97650F260CD7D7CCB565832125D52C8 /* GULURLSessionDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C0180F63284604133E2309973A17FE7F /* GULURLSessionDataResponse.m */; };
@@ -192,51 +196,47 @@
 		ABEBFA0270B4C2EB2A19DE8EC5A4CBD4 /* PromisesObjC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06C58E253E017939D87AAC4BC2BCA967 /* PromisesObjC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACC69C9D8DF240C15E68A808E2ECBB30 /* FBLPromiseError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C51F4D528C939F953FAAFCAFA0377E4 /* FBLPromiseError.m */; };
 		AD0793B9878A130891F6BF3F1213D308 /* GULNetworkInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9417E3C72A115FC6244E6BBA063AA315 /* GULNetworkInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AD4792094C1F28928729144D90387168 /* VSAdNavShowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 219DB5C0BC38AAE834184A0E62D16DA5 /* VSAdNavShowManager.m */; };
 		ADA1A47F86B0EDE9ABFAF59E527EFB82 /* FBLPromises.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 69E3D497688E9B75DB072D6F07916BA1 /* FBLPromises.h */; };
 		AE07FEF4DB845F260DB286C6A37DC900 /* FBLPromise+All.h in Headers */ = {isa = PBXBuildFile; fileRef = F61863577EC9BCC65BC165A511DC8D9D /* FBLPromise+All.h */; };
-		AE1721391964709CDBA39FAF419C835D /* VSAdNavTemplateHomeBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 701BC4009CAA230FC66E3A4B60939C5A /* VSAdNavTemplateHomeBottom.m */; };
 		AE1E8AB5848F044E98589693AE8A9F25 /* FBLPromise+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A73175E271B0599827EE48EEB9C0061 /* FBLPromise+Validate.m */; };
-		AEB39EAD8C7580B3B4DDF806DDD09493 /* VSGlobalConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8688A7BD6740D4B49DD6CD1310BD22 /* VSGlobalConfigModel.m */; };
+		B034CF1145EDBB2A7CC5102660B2E253 /* VSAdUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 96CD65B28449F4831237ECEE36565549 /* VSAdUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0B8D1D967A1936FD502631F647EAFC9 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 352E72658F236AD8F2824D22A71EED5C /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0BF823B404DF3EDFDF5C0F2A2F1966C /* GULReachabilityChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F29A6B80C56948A576CA3292C2FF4E /* GULReachabilityChecker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B14295E036C8618FD5FBC4BFB105C759 /* VSAdNavShowManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A5EDE210509DC464593A434FCAA5B71 /* VSAdNavShowManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B31B2910B3072673A6012C5B240C5191 /* FBLPromise+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = D84D680907DCDA15702E95A860452E00 /* FBLPromise+Testing.m */; };
-		B3E307E53C64266BB22D693AD805030C /* VSAdMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = BBD28858456BDCD38E7AF6632162376D /* VSAdMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B466E8E70CD1845E40A68048875A0A21 /* HFAdmobManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DA3D2553DA5488CA9CAF36E7BDB165 /* HFAdmobManager.m */; };
 		B49B1565BA89928E474260037A4631F3 /* FBLPromise+Do.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EDF8F6AE7DBCB67F24CBAE49198D105 /* FBLPromise+Do.h */; };
 		B523BBB7B422DC77C12C28989FA37A8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */; };
 		B64B94ECE593E63B2B443CBD8DDD88DF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA48841827602D3E36EB6A226C123D4 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		B7008F8A28A03E5DD4FE9243A208288B /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F03824E262F5620175EF045EADDFE25 /* NSObject+MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B71CBB5DA7D43A57AB5E84B21BD79279 /* VSAdNavTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C998BDACCC35BC06828CBE998C6D9184 /* VSAdNavTemplateCell.m */; };
 		B7AAB8F0B0204235B2ED084B7163AA33 /* GULNetworkURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 10FD0023598D3D58929C89B01ECC8F01 /* GULNetworkURLSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8E3C0B3EBB4982BFC68A243A8C11325 /* GULLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 89995F3F3CC17EFEABD5B81BEBD88EFE /* GULLogger.m */; };
 		BAFA68C75E20FF73C708F4124300009F /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB863BFC9C17EB08B72EFD746316337 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB428C7AB27944DAECC05063B0CEC330 /* FBLPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 31C2E4610E4045ED57AA380F5E9AEDEB /* FBLPromise.h */; };
+		BC8F3FCD1783DA9D94A26DEA6D1BBD8D /* VSAdNavTemplateFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E87605D7DF5CD6C02C1757DE49C023A /* VSAdNavTemplateFullScreen.m */; };
+		BCA53F0A4C653054207EC421DA7A0140 /* VSGlobalConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B07DD66128DBB7F8FA3EED6A62AF7F1 /* VSGlobalConfigModel.m */; };
 		BE6EA0A00BD9A6C9D700B838610E4DC3 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2FC769093B72C3FBD6AE3AF618AC9 /* NSObject+MJProperty.m */; };
 		BF165F5DE8A733B9ADD31121A42AB5BE /* FBLPromisePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D7FF9817C63C34C0DDE1728A543ACF0 /* FBLPromisePrivate.h */; };
 		C078F831E8E87CD7E036F3CE54C29F85 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 6772A05021CE75488A154CC53E1A03AB /* MASViewAttribute.m */; };
 		C0D29C142E8C77E704FAA3B7E30825BB /* FBLPromise+Await.h in Headers */ = {isa = PBXBuildFile; fileRef = E5463E0B0322D19C5CFE86947CA7C93F /* FBLPromise+Await.h */; };
 		C183E1A893164528CB511BF7496FAD15 /* GULKeychainStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD567FBAF6C0D2EB4F1C4E9FEB780F7 /* GULKeychainStorage.m */; };
+		C19F680FA65E88D4F5D9BC73EAAE2C4D /* VSAdNavTemplateView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4FAE8A356DA9D3103BF4CA24B585296B /* VSAdNavTemplateView.xib */; };
 		C1C3453A89674F03056AB13E05BB3544 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8F9E4FF62274B88C658115FD281E9 /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C22768B76CA0017B8A02805C7D42A24E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */; };
 		C5AB2B642EC0EE027645421F0D9B882F /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 285D39B774E5E73DC0952DAF48A62231 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7FA4A6B83F27A6C65C53EE708FE1813 /* VSAdManagerHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4580680F2F5E67644FB3E5D9D49EA4C3 /* VSAdManagerHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8251F71670F11C54ABDDE49A77F4E3D /* FBLPromise+Async.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DBF982F7DA8176A0940DA5463F52EF2C /* FBLPromise+Async.h */; };
 		C93776D199D1E4F0CF6AF982BD9841A1 /* GULNetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 381108DCFAA788042150BB98FE092B72 /* GULNetworkConstants.m */; };
-		C964F749ED68054DBAB89AA0C3D11437 /* VSGlobalConfigModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FC565E86A24B5951AB279AD386D050BE /* VSGlobalConfigModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA5B274B9A4667D379554591FDE0005D /* VSAdMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = E7917415B0520C62283148656176127D /* VSAdMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB829613904AD77B5B2C8FF71BC0EFFE /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC59062318FCEEFA1610C57208DE6C /* NSObject+MJCoding.m */; };
 		CCF0E2520C89DABF1B49B4AF3B7FE0E4 /* FBLPromise+All.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = F61863577EC9BCC65BC165A511DC8D9D /* FBLPromise+All.h */; };
 		CD3DDC5E41592469E6DAD268BFC083E5 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C848A0BB5A6EA779A52C0E1B7B7EB56 /* MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD68FCC1F7AABB62AF89092FA628C546 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB44DCBC542BE273A311817D67EA8A7C /* MJFoundation.m */; };
 		CF9BAFF0D535C2E709F2E8A43F69B4FA /* FBLPromise+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 222B94E9F819A7B6C144FBA36CE71528 /* FBLPromise+Testing.h */; };
-		CFCCEACC48EFF67D4364AB7177304A78 /* VSAdNavTemplateFullScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 91E5BD21B0BC8E85F1DD31862961D52C /* VSAdNavTemplateFullScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D07787105A9D859735F03C5A36E84166 /* GULAppEnvironmentUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = A000BFB2522733BD4FD4D35DD856008B /* GULAppEnvironmentUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D30E33EE48F2C560FA70570D548A6653 /* GULLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F656D864E561B4CF8AAB056FBABD601F /* GULLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D30E87B5664A4C23964EF8B2E1C3383F /* VSAdNavTemplateFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 200860DBFC63E721D031D61ABACDD639 /* VSAdNavTemplateFullScreen.m */; };
 		D60885304356DE230095DFC43995725E /* GULAppDelegateSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = AA624AD8DD0BE504A37904CFB675AFA5 /* GULAppDelegateSwizzler.m */; };
 		D6410D915C3CEFC81B6231833B84972A /* GULSceneDelegateSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6EE7E21BA90C906AF42543C25ADC55 /* GULSceneDelegateSwizzler.m */; };
 		D697506D3B844FD6A98D89B90D43E2DD /* MJExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7233B040AACA9CA09FF705EDE97231AA /* MJExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D77EA9068C87D9296C3870899F136095 /* VSAdShowClickAdsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CA283474A1E00AC29EBFB5FEA600B330 /* VSAdShowClickAdsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9540D3A15347341C5ECEC1EC25D0992 /* VSAdNavTemplateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 432EF36E7F951A876A86D26DB8BAAA02 /* VSAdNavTemplateBase.m */; };
 		DAD42D5A129281E74FAF956CCBFC8583 /* FBLPromise+All.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E858B31072BD44270121E45E38CFD3 /* FBLPromise+All.m */; };
 		DB8578FBE6C85A2BCDFF4EDB1E84C62B /* FBLPromise+Retry.h in Headers */ = {isa = PBXBuildFile; fileRef = 905048815BC2D4299A8A0686A4B92023 /* FBLPromise+Retry.h */; };
 		DBCACCC6CE4A9A77C16D553122281BDF /* FBLPromise+Wrap.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 5576B780724A6082B02D464D74987BD5 /* FBLPromise+Wrap.h */; };
@@ -245,32 +245,32 @@
 		DCBD74EE568D79D1FB6084E2C51089EE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 512ADBAB743339771C6A76B35A37FC60 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD9CF4176B445B9FBA2F4A832FE93DC7 /* FBLPromise+Retry.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 905048815BC2D4299A8A0686A4B92023 /* FBLPromise+Retry.h */; };
 		DDA2144078119842A1EE4B8BCA754F76 /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D96250C83DF670535FFAB07BBE35505 /* MJPropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE99F1032B20FADE81A03F53F882030D /* HFAdmobManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57CD12A6150984AF60E448E903014077 /* HFAdmobManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF1FD35801F104C12B6779FE147B9888 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C32AC99C90A6F9B709DEA0B6E899A4C4 /* MASConstraint.m */; };
 		E13C52C800D697C3C36AC58216413468 /* FBLPromise+Timeout.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 7077AC6EE6BEBFBC42535BDE8B2739CF /* FBLPromise+Timeout.h */; };
 		E1516BA3DAD827D51BA7BE74685B5297 /* NSURLSession+GULPromises.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E835B95583B21AEDEDDA9D157DACE42 /* NSURLSession+GULPromises.m */; };
+		E371084C8E63C7AB9BDA93FA781E2BF3 /* VSAdUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8FE8724BBDEDFAFF54AB2F1978CE7 /* VSAdUnit.m */; };
 		E4650D8BAED695A02CB6937E2D7A4FE5 /* FBLPromise+Catch.h in Headers */ = {isa = PBXBuildFile; fileRef = C4CCDD552CF97A8D273205C0C2C20523 /* FBLPromise+Catch.h */; };
 		E5D12070D04366B95DF2286163736100 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 006B4C08407D02584129718F172C7F9A /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E677B1E0BC04CEE1CC8278975BA5064F /* GULLoggerLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 98C5793C2EF02A7101A94FCD68AA84E6 /* GULLoggerLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E84EA4B3FFF496C2C1B124FC2500E17A /* GULSecureCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A74FD766A9029C8AC5B27FC1F727C42 /* GULSecureCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8C9493508BEF482CD5C1A1CCB24BAE1 /* VSAdShowClickAdsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE786D9437F3DF409A21919289EAD11 /* VSAdShowClickAdsManager.m */; };
 		EA39196D9BAAA417D26BAFC938FF24AB /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 07684EBF6B07F798CEC34B66F1BA673C /* MASCompositeConstraint.m */; };
 		EB052EE4D8DDF56558ADDD27F9555853 /* GULLoggerCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B2F802834139F64355D1E859E4B2F4 /* GULLoggerCodes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EB4E1D91A6298CAFB65D7B1AE3D872A5 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCBB41F36C5797EA5CA6598BF145002 /* MJPropertyType.m */; };
-		EB89159664A526B9A45C75BC8DC30C6B /* VSAdShowClickAdsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CE5AD04FB05C5988566AF047D33CEA /* VSAdShowClickAdsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBDEE30E053425B3590846A16EB0DB7F /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDED1D0613829A2BA32284102C21F85 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF1526106B854DBBF12FBCE5661375CE /* HFAdmobManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5ADF897AEB482E6D2C2A1F2ABF93DB /* HFAdmobManager.m */; };
+		EFAE75BFF2022DF2C058589F2887CD97 /* VSAdNavTemplateHomeBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B92D0C883928D1B3954EBDEB0B8CC6 /* VSAdNavTemplateHomeBottom.m */; };
 		EFF3EDAA4A82BD7D206DA0F580C10B0D /* FBLPromise+Retry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D35F985BA0C9D7CA55EE8060F0C7F6F /* FBLPromise+Retry.m */; };
 		F01194DAE94870465CAF4A3782B53CEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0D2A5B20C112C86429E98687647B9B /* UIKit.framework */; };
-		F03F68818E15AC841AA3A466E140AFDB /* HFAdmobManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F1D1943CB5A171E55A01FCB8762AF /* HFAdmobManager-dummy.m */; };
-		F0DE4DF88CF280839A4E605597ADDDCA /* VSAdUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FAD95CBE9E315DBD6CC8B26DF44B7F1 /* VSAdUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1D6E54E99C6FC241104401C12846C9D /* VSAdUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = C8228860A5848921B30D2D14FDC406C0 /* VSAdUnit.m */; };
-		F395F0D9037723F02932DCB5862BF947 /* VSAdNavTemplateBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 017ED60C2300062F563E990641E03C0F /* VSAdNavTemplateBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F52D2C82006F0A9DA47E92254145321C /* VSAdNavLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = F67923C4102F2440F9822D1A65B3E4DC /* VSAdNavLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F03F68818E15AC841AA3A466E140AFDB /* HFAdmobManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7397332E2BAEC5CD75BF23E08A9C23 /* HFAdmobManager-dummy.m */; };
 		F5471B2547E4839FF7612D75AB393F84 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2A4D1A43FD1ADCB86215733C948936 /* MASConstraintMaker.m */; };
+		F61AE82E43CCBBBA573B42068CAED1CF /* VSAdNavLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D0286FCA2ACDA2D54039F72FF95F0ED /* VSAdNavLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F70417D5995E1FBDB964DB15C901FAF2 /* GoogleUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B847302AFCBA638B8636D73A8775DA4A /* GoogleUtilities-dummy.m */; };
 		F749082DFB2D0A521546D3A6C98E3B2B /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5928FD64BA8A39A8F3B936D12428EEA /* nanopb-dummy.m */; };
+		F7B53BF294FF75B2357926C9B76183F7 /* NSArray+ad_Map.h in Headers */ = {isa = PBXBuildFile; fileRef = 82E605839963B8C8EE2359334E0473B7 /* NSArray+ad_Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F80E0EB25F42E620A13D196464F1180E /* GULNetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = A875522290FF94099162B3EFAE8A6BFA /* GULNetworkConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F92A34B355F2216E66CD152B305DFFCF /* Ad_AppConfiger.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CFF477B540840A3B9156B17E0D3224 /* Ad_AppConfiger.m */; };
 		FD00E504A089423D5ABD9E71E4F2C905 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5645BD8F575A982224BFC05C5439A4 /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEBB3B585B1BF3A434004ED19F2F9CB0 /* Ad_AppConfiger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1633AFB15650EBA4753DC3C2D88314D6 /* Ad_AppConfiger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -448,31 +448,30 @@
 
 /* Begin PBXFileReference section */
 		006B4C08407D02584129718F172C7F9A /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		017ED60C2300062F563E990641E03C0F /* VSAdNavTemplateBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavTemplateBase.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateBase.h; sourceTree = "<group>"; };
+		0206FB796A0D849820F4A1E098450279 /* HFAdmobManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HFAdmobManager-prefix.pch"; sourceTree = "<group>"; };
 		0351F88F22AC78149B528783875058BF /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		060BAAB2CA7262AB45ED3CE962FDEBBD /* Pods-HFAdmobManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HFAdmobManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		0653E9436992294E4659690A70C75164 /* Ad_AppConfiger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ad_AppConfiger.h; path = HFAdmobManager/Classes/Other/Ad_AppConfiger.h; sourceTree = "<group>"; };
 		06C58E253E017939D87AAC4BC2BCA967 /* PromisesObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesObjC-umbrella.h"; sourceTree = "<group>"; };
 		06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07684EBF6B07F798CEC34B66F1BA673C /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		0815EC07A2F0092B7EC48FEC88361E52 /* VSGlobalConfigManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSGlobalConfigManager.m; path = HFAdmobManager/Classes/VSGlobalConfigManager/VSGlobalConfigManager.m; sourceTree = "<group>"; };
 		08AD2BF6A42296566D281F2ACE3DDF73 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		08C0FBD7C95E543512CE75156F99D5CF /* Pods_HFAdmobManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HFAdmobManager_Example.framework; path = "Pods-HFAdmobManager_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7F3ABE89200791B55910A2F0F92E11 /* Pods-HFAdmobManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HFAdmobManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0BD567FBAF6C0D2EB4F1C4E9FEB780F7 /* GULKeychainStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULKeychainStorage.m; path = GoogleUtilities/Environment/SecureStorage/GULKeychainStorage.m; sourceTree = "<group>"; };
+		0D0286FCA2ACDA2D54039F72FF95F0ED /* VSAdNavLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavLoader.h; path = HFAdmobManager/Classes/VSAdLoader/VSAdNavLoader.h; sourceTree = "<group>"; };
 		0D1801EC344B5D441E638753D575AB70 /* PromisesObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromisesObjC.debug.xcconfig; sourceTree = "<group>"; };
 		0EE63030295163181AADA413BE054AFD /* Masonry-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masonry-Info.plist"; sourceTree = "<group>"; };
 		0F89FC1594B9190134BEDE5B7B66605F /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FAD95CBE9E315DBD6CC8B26DF44B7F1 /* VSAdUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdUnit.h; path = HFAdmobManager/Classes/HFAdmobManager/Other/VSAdUnit.h; sourceTree = "<group>"; };
 		105997C81B3525198D710D02041A2DBD /* nanopb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.debug.xcconfig; sourceTree = "<group>"; };
 		10BC7632A3DF214D2E099BCB923EEE85 /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULReachabilityChecker+Internal.h"; path = "GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
 		10FD0023598D3D58929C89B01ECC8F01 /* GULNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkURLSession.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkURLSession.h; sourceTree = "<group>"; };
 		117EE1B8796127DF57E5B566FEC7B5F6 /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
-		13520BD431D75277D7BA17DD6DB8A462 /* VSTableAdsCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSTableAdsCell.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSTableAdsCell.h; sourceTree = "<group>"; };
-		14AFA99F7D668716A8C0695E05D7202B /* HFAdmobManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HFAdmobManager.release.xcconfig; sourceTree = "<group>"; };
+		12D682597A7C50DDD991A791A9AECA9D /* HFAdmobManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HFAdmobManager.h; path = HFAdmobManager/Classes/HFAdmobManager.h; sourceTree = "<group>"; };
 		14E03FC0D22E5E632BE0328C0F0E0858 /* GoogleAppMeasurement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAppMeasurement.release.xcconfig; sourceTree = "<group>"; };
-		1633AFB15650EBA4753DC3C2D88314D6 /* Ad_AppConfiger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ad_AppConfiger.h; path = HFAdmobManager/Classes/HFAdmobManager/Other/Ad_AppConfiger.h; sourceTree = "<group>"; };
+		18517AC95AA63780CB70F4195C1A3FA8 /* VSAdNavTemplateFullScreen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavTemplateFullScreen.h; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateFullScreen.h; sourceTree = "<group>"; };
 		18A85071E2C438D380CF87F098E62856 /* GULSceneDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSceneDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULSceneDelegateSwizzler_Private.h; sourceTree = "<group>"; };
-		18D5383C035FD21A2052380BB13DB68B /* VSAdNavTemplateBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavTemplateBase.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateBase.m; sourceTree = "<group>"; };
-		1A5EDE210509DC464593A434FCAA5B71 /* VSAdNavShowManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavShowManager.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdShow/VSAdNavShowManager.h; sourceTree = "<group>"; };
 		1A7C1FE2B7DE535FF7E8EED80AFE6E73 /* Pods-HFAdmobManager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HFAdmobManager_Example-Info.plist"; sourceTree = "<group>"; };
 		1B4136237E1CB9F66A08B546B2391DC4 /* GULReachabilityMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityMessageCode.h; path = GoogleUtilities/Reachability/GULReachabilityMessageCode.h; sourceTree = "<group>"; };
 		1B7EACDCAEA9AF16B4FACDB3A4C1C35A /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
@@ -480,28 +479,31 @@
 		1BB09819F8C70DA639E441F7DBD1D438 /* MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-prefix.pch"; sourceTree = "<group>"; };
 		1C0D2A5B20C112C86429E98687647B9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1C4BFB8284C3405BFCE27F1D6A28391A /* PromisesObjC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromisesObjC-Info.plist"; sourceTree = "<group>"; };
+		1CF659988404BF136C977058E1DFB359 /* VSAdConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdConfig.m; path = HFAdmobManager/Classes/VSAdConfig/VSAdConfig.m; sourceTree = "<group>"; };
+		1F84BD445A32D01391AB796250D22531 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		200860DBFC63E721D031D61ABACDD639 /* VSAdNavTemplateFullScreen.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavTemplateFullScreen.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateFullScreen.m; sourceTree = "<group>"; };
 		20816EDE946D56678A2A652F1FA93E6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		212444695708A75A74174ACCB105D238 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
-		21741828CE2673C5401B67EE401C007C /* HFAdmobManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HFAdmobManager.h; path = HFAdmobManager/Classes/HFAdmobManager/HFAdmobManager.h; sourceTree = "<group>"; };
-		219DB5C0BC38AAE834184A0E62D16DA5 /* VSAdNavShowManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavShowManager.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdShow/VSAdNavShowManager.m; sourceTree = "<group>"; };
+		219B6EB82C34DDC97EE20453AA2C6A8B /* VSAdCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdCacheManager.h; path = HFAdmobManager/Classes/VSAdCache/VSAdCacheManager.h; sourceTree = "<group>"; };
 		222B94E9F819A7B6C144FBA36CE71528 /* FBLPromise+Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Testing.h"; path = "Sources/FBLPromises/include/FBLPromise+Testing.h"; sourceTree = "<group>"; };
 		2376267EC200F8EE8631E7A5066D610D /* FBLPromise+Async.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Async.m"; path = "Sources/FBLPromises/FBLPromise+Async.m"; sourceTree = "<group>"; };
+		241FED39E2798B4FDD5A940FEF51448E /* VSAdNavTemplateBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavTemplateBase.h; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateBase.h; sourceTree = "<group>"; };
 		26174FB07B909020DB2540A2191509B3 /* GULSecureCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSecureCoding.m; path = GoogleUtilities/Environment/GULSecureCoding.m; sourceTree = "<group>"; };
 		26C410CE3CBBB354232B837938C991D5 /* Pods_HFAdmobManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HFAdmobManager_Tests.framework; path = "Pods-HFAdmobManager_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F32ACA1CA18285E2B1A30CA5236815 /* GULAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppEnvironmentUtil.m; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m; sourceTree = "<group>"; };
 		285D39B774E5E73DC0952DAF48A62231 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		2885A2C1CB7F72C2F11532703F7FB514 /* VSAdIntShowManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdIntShowManager.m; path = HFAdmobManager/Classes/VSAdShow/VSAdIntShowManager.m; sourceTree = "<group>"; };
 		295256072DD1DF7CB7CCDB950E37FFDB /* FBLPromise+Always.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Always.m"; path = "Sources/FBLPromises/FBLPromise+Always.m"; sourceTree = "<group>"; };
 		29986401FD9C3CDC3F34C5BC9C78D957 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		2A298CE20B657A802C72D69869F84905 /* Pods-HFAdmobManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HFAdmobManager_Example-umbrella.h"; sourceTree = "<group>"; };
 		2A73175E271B0599827EE48EEB9C0061 /* FBLPromise+Validate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Validate.m"; path = "Sources/FBLPromises/FBLPromise+Validate.m"; sourceTree = "<group>"; };
 		2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJExtension.framework; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7397332E2BAEC5CD75BF23E08A9C23 /* HFAdmobManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HFAdmobManager-dummy.m"; sourceTree = "<group>"; };
 		2CAD07CAB98412421A2CA97C006B88B7 /* Pods-HFAdmobManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HFAdmobManager_Tests-dummy.m"; sourceTree = "<group>"; };
 		2CCD6759195AE600E6F80BD2B578C823 /* GULAppDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h; sourceTree = "<group>"; };
 		2CDED1D0613829A2BA32284102C21F85 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		2E835B95583B21AEDEDDA9D157DACE42 /* NSURLSession+GULPromises.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+GULPromises.m"; path = "GoogleUtilities/Environment/URLSessionPromiseWrapper/NSURLSession+GULPromises.m"; sourceTree = "<group>"; };
-		2ECB97E2D2A673391A7AEFDBB76D60A4 /* VSAdNavTemplateHomeBottom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavTemplateHomeBottom.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateHomeBottom.h; sourceTree = "<group>"; };
+		2F132971831764EED9DCB4AEB1A323BA /* VSTableAdsCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSTableAdsCell.h; path = HFAdmobManager/Classes/VSAdTemplate/VSTableAdsCell.h; sourceTree = "<group>"; };
 		3073B30DCF53CD0C34505528272EB300 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		31C2E4610E4045ED57AA380F5E9AEDEB /* FBLPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromise.h; path = Sources/FBLPromises/include/FBLPromise.h; sourceTree = "<group>"; };
 		31C3030BC93A2A848B0BA76E407FEFB7 /* MJExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MJExtension-Info.plist"; sourceTree = "<group>"; };
@@ -514,85 +516,80 @@
 		381108DCFAA788042150BB98FE092B72 /* GULNetworkConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkConstants.m; path = GoogleUtilities/Network/GULNetworkConstants.m; sourceTree = "<group>"; };
 		392412C8575B30AA00407B9B6B2772DC /* FBLPromise+Recover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Recover.h"; path = "Sources/FBLPromises/include/FBLPromise+Recover.h"; sourceTree = "<group>"; };
 		3A2B2BE8B42142E4C949D230B5FE0D3B /* FBLPromise+Wrap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Wrap.m"; path = "Sources/FBLPromises/FBLPromise+Wrap.m"; sourceTree = "<group>"; };
+		3A5ADF897AEB482E6D2C2A1F2ABF93DB /* HFAdmobManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HFAdmobManager.m; path = HFAdmobManager/Classes/HFAdmobManager.m; sourceTree = "<group>"; };
 		3C256FF955509CE0443B2AF51BE79481 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
 		3C51F4D528C939F953FAAFCAFA0377E4 /* FBLPromiseError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromiseError.m; path = Sources/FBLPromises/FBLPromiseError.m; sourceTree = "<group>"; };
-		3CB11006ECB88379AF01FBD028992C3E /* VSAdNavTemplateView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = VSAdNavTemplateView.xib; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateView.xib; sourceTree = "<group>"; };
 		3EB7590E94D76C5C3A537A8BC80A639E /* HFAdmobManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HFAdmobManager.framework; path = HFAdmobManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4030458E9D57324E57AF5BE74BAC52F3 /* HFAdmobManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HFAdmobManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		403B60FBEF8BBD03E6681A5214F3042E /* HFAdmobManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HFAdmobManager.debug.xcconfig; sourceTree = "<group>"; };
 		42862DA510805EF9FFACAA4ED6CCBEDE /* FBLPromise+Race.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Race.m"; path = "Sources/FBLPromises/FBLPromise+Race.m"; sourceTree = "<group>"; };
-		42B1A096C00A9D851D8F1A573ED5EA1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		432EF36E7F951A876A86D26DB8BAAA02 /* VSAdNavTemplateBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavTemplateBase.m; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateBase.m; sourceTree = "<group>"; };
 		43BD7F3D0C3437C77699ED0B664435F8 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		4580680F2F5E67644FB3E5D9D49EA4C3 /* VSAdManagerHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdManagerHeader.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdManagerHeader.h; sourceTree = "<group>"; };
 		45AC3069103F14E6CFA821796BBC1C91 /* GULNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetwork.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetwork.h; sourceTree = "<group>"; };
+		46AF655CB733CC661FA37AAF8CAF70C6 /* HFAdmobManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HFAdmobManager-Info.plist"; sourceTree = "<group>"; };
 		49D4217A87451BD00DA07F4819B7FE7B /* GoogleUserMessagingPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.release.xcconfig; sourceTree = "<group>"; };
 		4A74FD766A9029C8AC5B27FC1F727C42 /* GULSecureCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSecureCoding.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULSecureCoding.h; sourceTree = "<group>"; };
 		4AB863BFC9C17EB08B72EFD746316337 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		4B8F153048179A077C5762323F183B65 /* VSTableAdsCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSTableAdsCell.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSTableAdsCell.m; sourceTree = "<group>"; };
 		4BCB375165284D207F6068E00F0340FF /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
 		4D1FE474674D9C8C96F00E5F639E9A0D /* GoogleUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleUtilities-umbrella.h"; sourceTree = "<group>"; };
 		4D94B5E8974CC6F9B74F74434EA27969 /* FBLPromise+Any.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Any.h"; path = "Sources/FBLPromises/include/FBLPromise+Any.h"; sourceTree = "<group>"; };
 		4DE4973980D827FF25BF630E6992F223 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
-		4E60D313411566B5188210A2B4B69B04 /* HFAdmobManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HFAdmobManager-Info.plist"; sourceTree = "<group>"; };
 		4F8D9CB0940F79994FE11A9939C3593F /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		4FA2FC769093B72C3FBD6AE3AF618AC9 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		4FAE8A356DA9D3103BF4CA24B585296B /* VSAdNavTemplateView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = VSAdNavTemplateView.xib; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateView.xib; sourceTree = "<group>"; };
 		512ADBAB743339771C6A76B35A37FC60 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		513538F2F6A99E8DCAD8EFD8D49D050C /* GoogleAppMeasurement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAppMeasurement.debug.xcconfig; sourceTree = "<group>"; };
 		530AED94D0144DE571C9273E04C65DBE /* FBLPromise+Reduce.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Reduce.h"; path = "Sources/FBLPromises/include/FBLPromise+Reduce.h"; sourceTree = "<group>"; };
 		5576B780724A6082B02D464D74987BD5 /* FBLPromise+Wrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Wrap.h"; path = "Sources/FBLPromises/include/FBLPromise+Wrap.h"; sourceTree = "<group>"; };
 		56B2F802834139F64355D1E859E4B2F4 /* GULLoggerCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerCodes.h; path = GoogleUtilities/Common/GULLoggerCodes.h; sourceTree = "<group>"; };
 		56F5C5B92FEF3C9EF6997857E649C700 /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
-		57CD12A6150984AF60E448E903014077 /* HFAdmobManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HFAdmobManager-umbrella.h"; sourceTree = "<group>"; };
 		595DC862111751BB5C05FDF4C5762738 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = nanopb.modulemap; sourceTree = "<group>"; };
 		5A6BF11FEBC27A66EDFB01C6FBD2B0AB /* GULKeychainStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULKeychainStorage.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainStorage.h; sourceTree = "<group>"; };
 		5A6F87C0E9580719F808B17CA2F86764 /* PromisesObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromisesObjC-dummy.m"; sourceTree = "<group>"; };
+		5A98E7BEDB8ABD3E55C67E6351C641D6 /* HFAdmobManagerHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HFAdmobManagerHeader.h; path = HFAdmobManager/Classes/HFAdmobManagerHeader.h; sourceTree = "<group>"; };
 		6031749F1258A508CEC83171537C39D4 /* Pods-HFAdmobManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HFAdmobManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		611C7F0EC275A5E0AA6D779EC1966A33 /* Pods-HFAdmobManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HFAdmobManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		620A365A2EACECA6A1EE4A3E265228F8 /* VSGlobalConfigManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSGlobalConfigManager.h; path = HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/VSGlobalConfigManager.h; sourceTree = "<group>"; };
-		625BAF6A4AB296D6ED3BDD9A7FCAE932 /* HFAdmobManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HFAdmobManager-prefix.pch"; sourceTree = "<group>"; };
+		6170923B4DB0A0215193580B9CBB3FF7 /* VSAdNavTemplateHomeBottom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavTemplateHomeBottom.h; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateHomeBottom.h; sourceTree = "<group>"; };
 		630FD16896802975CCBA3C1DB05C0AEF /* Pods-HFAdmobManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HFAdmobManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		63A6EC674723083EDAE4BE7489FD6FA9 /* VSAdNavTemplateCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavTemplateCell.m; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateCell.m; sourceTree = "<group>"; };
 		646DDE88A505E4FA293AC99871A8E6FE /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		6475E8CA151554EB6AA7214ABF411E28 /* PromisesObjC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PromisesObjC.modulemap; sourceTree = "<group>"; };
-		66FB28EC69514AAEA85741AD5D343775 /* VSAdCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdCacheManager.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdCache/VSAdCacheManager.m; sourceTree = "<group>"; };
+		64F3AC4F75A1D1F5887EF02D82F5000F /* VSAdNavShowManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavShowManager.h; path = HFAdmobManager/Classes/VSAdShow/VSAdNavShowManager.h; sourceTree = "<group>"; };
 		6702BA327953E3CBEB6136FC040DDF74 /* Pods-HFAdmobManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HFAdmobManager_Example.modulemap"; sourceTree = "<group>"; };
 		6772A05021CE75488A154CC53E1A03AB /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
 		69E3D497688E9B75DB072D6F07916BA1 /* FBLPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromises.h; path = Sources/FBLPromises/include/FBLPromises.h; sourceTree = "<group>"; };
 		6ACCE47A3C3F1D639EB74DE5EC450F0F /* Pods-HFAdmobManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HFAdmobManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6B07DD66128DBB7F8FA3EED6A62AF7F1 /* VSGlobalConfigModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSGlobalConfigModel.m; path = HFAdmobManager/Classes/VSGlobalConfigManager/VSGlobalConfigModel.m; sourceTree = "<group>"; };
 		6B253E9DF0CD2C4F0280771A7A07DEDE /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		6C26B4177AA4EA05D1C1BF3E2BD17FBA /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleMobileAds.xcframework; path = "Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.xcframework"; sourceTree = "<group>"; };
 		6C848A0BB5A6EA779A52C0E1B7B7EB56 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
 		6CAD5D82E694BD81E158066A00DD71F2 /* GULSceneDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSceneDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULSceneDelegateSwizzler.h; sourceTree = "<group>"; };
+		6CB8FE8724BBDEDFAFF54AB2F1978CE7 /* VSAdUnit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdUnit.m; path = HFAdmobManager/Classes/Other/VSAdUnit.m; sourceTree = "<group>"; };
 		6D96250C83DF670535FFAB07BBE35505 /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
 		6E2FFD313E010487CE4ABD96DFF33D38 /* MJExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MJExtension.modulemap; sourceTree = "<group>"; };
 		6E6628107F5EE4DDE0861AB89282716D /* GoogleUtilities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUtilities.release.xcconfig; sourceTree = "<group>"; };
 		6F3644714F6074F79A89323B48A66C7D /* GULOriginalIMPConvenienceMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULOriginalIMPConvenienceMacros.h; path = GoogleUtilities/MethodSwizzler/Public/GoogleUtilities/GULOriginalIMPConvenienceMacros.h; sourceTree = "<group>"; };
-		701BC4009CAA230FC66E3A4B60939C5A /* VSAdNavTemplateHomeBottom.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavTemplateHomeBottom.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateHomeBottom.m; sourceTree = "<group>"; };
 		7077AC6EE6BEBFBC42535BDE8B2739CF /* FBLPromise+Timeout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Timeout.h"; path = "Sources/FBLPromises/include/FBLPromise+Timeout.h"; sourceTree = "<group>"; };
 		70A0A7DB484ADE106C1ABD5E6643F9A3 /* FBLPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromise.m; path = Sources/FBLPromises/FBLPromise.m; sourceTree = "<group>"; };
 		70AFF22B75568EAB3D6A696D6B8B2DCB /* Pods-HFAdmobManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HFAdmobManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		716A58BA1DF23CEB98B0DC91F31CA7A0 /* FBLPromise+Reduce.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Reduce.m"; path = "Sources/FBLPromises/FBLPromise+Reduce.m"; sourceTree = "<group>"; };
 		7233B040AACA9CA09FF705EDE97231AA /* MJExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-umbrella.h"; sourceTree = "<group>"; };
 		73401801A51420CCCC336B79479FC7FA /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
-		73520C86037BC07F88503B9EBD520F3E /* VSAdNavTemplateCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavTemplateCell.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateCell.h; sourceTree = "<group>"; };
 		7449E3E014BE7A73CB4981110049903B /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
 		74B4D84735D03FFE775CAA0393E2B9C3 /* nanopb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.release.xcconfig; sourceTree = "<group>"; };
+		75205E3B89FC684075E623F15CC7766F /* VSAdPlaceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdPlaceManager.m; path = HFAdmobManager/Classes/Other/VSAdPlaceManager.m; sourceTree = "<group>"; };
 		782A10BE17AF51B247715EEF5865639D /* FBLPromise+Catch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Catch.m"; path = "Sources/FBLPromises/FBLPromise+Catch.m"; sourceTree = "<group>"; };
+		78DE592660478075AA15F638AC597381 /* HFAdmobManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HFAdmobManager.modulemap; sourceTree = "<group>"; };
 		7B2B3CDE8C768689ABE1363D553D6184 /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
-		7BF3B9CA183CFB8801A4F1E38B25CC07 /* VSAdIntShowManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdIntShowManager.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdShow/VSAdIntShowManager.h; sourceTree = "<group>"; };
 		7C684F1301D7AAAB8D4482688A0DFB83 /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
 		7D35F985BA0C9D7CA55EE8060F0C7F6F /* FBLPromise+Retry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Retry.m"; path = "Sources/FBLPromises/FBLPromise+Retry.m"; sourceTree = "<group>"; };
-		7D3EC3EC7684458129AB6F74F5651E5C /* VSAdIntLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdIntLoader.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/VSAdIntLoader.h; sourceTree = "<group>"; };
 		7EDC59062318FCEEFA1610C57208DE6C /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
 		7FEED45C6658D6899ECA4A08A0557FDA /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		82E605839963B8C8EE2359334E0473B7 /* NSArray+ad_Map.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+ad_Map.h"; path = "HFAdmobManager/Classes/Other/NSArray+ad_Map.h"; sourceTree = "<group>"; };
 		8325F5315E480C950830FC42324B4CE0 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
-		83DFFF759E9E0FB2F3D7673D0224D77E /* VSAdPlaceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdPlaceManager.h; path = HFAdmobManager/Classes/HFAdmobManager/Other/VSAdPlaceManager.h; sourceTree = "<group>"; };
-		84B93505210B4D872C1BA59F4D837DC3 /* VSAdConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdConfig.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdConfig/VSAdConfig.h; sourceTree = "<group>"; };
+		856E2E818C1E2A723590F6C740E19751 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		85D81C9A1EDAA133DB5F2A2E8435690F /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
-		864EBC85445594B841D1C66F7C78F424 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		86C797BEEA1D3919E816A21B0F97FCF5 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		87876D158F5086B032BD50A4A525297B /* FBLPromise+Delay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Delay.m"; path = "Sources/FBLPromises/FBLPromise+Delay.m"; sourceTree = "<group>"; };
 		8833D8541658C229D024AFA5EB4670AF /* GULMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULMutableDictionary.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULMutableDictionary.h; sourceTree = "<group>"; };
-		88CE5AD04FB05C5988566AF047D33CEA /* VSAdShowClickAdsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdShowClickAdsManager.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdShow/VSAdShowClickAdsManager.h; sourceTree = "<group>"; };
 		89995F3F3CC17EFEABD5B81BEBD88EFE /* GULLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULLogger.m; path = GoogleUtilities/Logger/GULLogger.m; sourceTree = "<group>"; };
 		8A66F6544ED84B46A9CE7D50185620A1 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		8A7899B01CD1538037921F32AABB4CF1 /* GULNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkLoggerProtocol.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkLoggerProtocol.h; sourceTree = "<group>"; };
@@ -602,22 +599,24 @@
 		8EFB36F4C975EF5830CBBD2EE95A9D04 /* GoogleUtilities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUtilities.debug.xcconfig; sourceTree = "<group>"; };
 		8F03824E262F5620175EF045EADDFE25 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
 		905048815BC2D4299A8A0686A4B92023 /* FBLPromise+Retry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Retry.h"; path = "Sources/FBLPromises/include/FBLPromise+Retry.h"; sourceTree = "<group>"; };
-		91E5BD21B0BC8E85F1DD31862961D52C /* VSAdNavTemplateFullScreen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavTemplateFullScreen.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateFullScreen.h; sourceTree = "<group>"; };
+		907AE627EDC0601A056771857CE3DE1A /* VSAdNavLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavLoader.m; path = HFAdmobManager/Classes/VSAdLoader/VSAdNavLoader.m; sourceTree = "<group>"; };
 		91E858B31072BD44270121E45E38CFD3 /* FBLPromise+All.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+All.m"; path = "Sources/FBLPromises/FBLPromise+All.m"; sourceTree = "<group>"; };
 		927D860BDD8D322DF40916A2FD614800 /* GULHeartbeatDateStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULHeartbeatDateStorage.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorage.h; sourceTree = "<group>"; };
-		92C2551BB902E3319113AE313166F426 /* NSArray+ad_Map.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+ad_Map.h"; path = "HFAdmobManager/Classes/HFAdmobManager/Other/NSArray+ad_Map.h"; sourceTree = "<group>"; };
+		928B50B17F7DAE95E889BF30510394AF /* VSAdIntLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdIntLoader.h; path = HFAdmobManager/Classes/VSAdLoader/VSAdIntLoader.h; sourceTree = "<group>"; };
 		9417E3C72A115FC6244E6BBA063AA315 /* GULNetworkInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkInternal.h; path = GoogleUtilities/Network/GULNetworkInternal.h; sourceTree = "<group>"; };
 		959E047F07FA783E1DC02A79F2F87569 /* GoogleUtilities-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleUtilities-Info.plist"; sourceTree = "<group>"; };
+		96CD65B28449F4831237ECEE36565549 /* VSAdUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdUnit.h; path = HFAdmobManager/Classes/Other/VSAdUnit.h; sourceTree = "<group>"; };
 		97CCAF27762773634408572FB2FCED34 /* GULHeartbeatDateStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULHeartbeatDateStorage.m; path = GoogleUtilities/Environment/GULHeartbeatDateStorage.m; sourceTree = "<group>"; };
 		98C5793C2EF02A7101A94FCD68AA84E6 /* GULLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerLevel.h; path = GoogleUtilities/Logger/Public/GoogleUtilities/GULLoggerLevel.h; sourceTree = "<group>"; };
 		9A855C06F323F4018BBC7238FCE7817D /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
 		9CCBB5BDFB99BCD30E9DFE1057327740 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
 		9D5645BD8F575A982224BFC05C5439A4 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
-		9D5F1D1943CB5A171E55A01FCB8762AF /* HFAdmobManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HFAdmobManager-dummy.m"; sourceTree = "<group>"; };
 		9D7FF9817C63C34C0DDE1728A543ACF0 /* FBLPromisePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromisePrivate.h; path = Sources/FBLPromises/include/FBLPromisePrivate.h; sourceTree = "<group>"; };
 		9D82BE3D89B95F5FD6F994F4398C2445 /* Pods-HFAdmobManager_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HFAdmobManager_Tests-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E87605D7DF5CD6C02C1757DE49C023A /* VSAdNavTemplateFullScreen.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavTemplateFullScreen.m; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateFullScreen.m; sourceTree = "<group>"; };
 		9E9638B3FE768CE50114C92BD555C5B2 /* FBLPromise+Race.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Race.h"; path = "Sources/FBLPromises/include/FBLPromise+Race.h"; sourceTree = "<group>"; };
+		9FE786D9437F3DF409A21919289EAD11 /* VSAdShowClickAdsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdShowClickAdsManager.m; path = HFAdmobManager/Classes/VSAdShow/VSAdShowClickAdsManager.m; sourceTree = "<group>"; };
 		A000BFB2522733BD4FD4D35DD856008B /* GULAppEnvironmentUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppEnvironmentUtil.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULAppEnvironmentUtil.h; sourceTree = "<group>"; };
 		A40C41BB780EDC4155FA21BED080CF2F /* FBLPromise+Validate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Validate.h"; path = "Sources/FBLPromises/include/FBLPromise+Validate.h"; sourceTree = "<group>"; };
 		A529A590E9455B042FD03489EE9E8918 /* Pods-HFAdmobManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HFAdmobManager_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -625,56 +624,53 @@
 		A71B0E317175D8D432E76D948901ABE3 /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
 		A875522290FF94099162B3EFAE8A6BFA /* GULNetworkConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkConstants.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkConstants.h; sourceTree = "<group>"; };
 		AA624AD8DD0BE504A37904CFB675AFA5 /* GULAppDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULAppDelegateSwizzler.m; sourceTree = "<group>"; };
-		ADB6F166233110C706A30B9E3EBB897A /* VSGlobalConfigManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSGlobalConfigManager.m; path = HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/VSGlobalConfigManager.m; sourceTree = "<group>"; };
-		B0B00D61FAEAD3EC1130810DDDF17CC5 /* VSAdPlaceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdPlaceManager.m; path = HFAdmobManager/Classes/HFAdmobManager/Other/VSAdPlaceManager.m; sourceTree = "<group>"; };
+		AFB35733B41C2D0660BB59713B649CD4 /* VSAdIntShowManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdIntShowManager.h; path = HFAdmobManager/Classes/VSAdShow/VSAdIntShowManager.h; sourceTree = "<group>"; };
+		B0D5C38FCACCEC0E5F7FB6562AD34FF8 /* VSGlobalConfigManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSGlobalConfigManager.h; path = HFAdmobManager/Classes/VSGlobalConfigManager/VSGlobalConfigManager.h; sourceTree = "<group>"; };
 		B0D780A248E589F896333772DD3F91A5 /* PromisesObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromisesObjC.release.xcconfig; sourceTree = "<group>"; };
-		B0DA3D2553DA5488CA9CAF36E7BDB165 /* HFAdmobManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HFAdmobManager.m; path = HFAdmobManager/Classes/HFAdmobManager/HFAdmobManager.m; sourceTree = "<group>"; };
+		B1526D18E97A8ED85351DE88D4906BAF /* VSAdIntLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdIntLoader.m; path = HFAdmobManager/Classes/VSAdLoader/VSAdIntLoader.m; sourceTree = "<group>"; };
 		B36597FD01248746C6975A1250506415 /* Google-Mobile-Ads-SDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Google-Mobile-Ads-SDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleUtilities.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6AC988704251D4E95B855ECB1F98F01 /* GULKeychainUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULKeychainUtils.m; path = GoogleUtilities/Environment/SecureStorage/GULKeychainUtils.m; sourceTree = "<group>"; };
+		B724B6E9ADB15285148FC6BA2676B55C /* HFAdmobManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HFAdmobManager.release.xcconfig; sourceTree = "<group>"; };
 		B7A7C8089E5B9A69A8F0A6496CC27BAE /* Pods-HFAdmobManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HFAdmobManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B7BB28A34C38EB3DE3612EFDFAE482D5 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		B847302AFCBA638B8636D73A8775DA4A /* GoogleUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleUtilities-dummy.m"; sourceTree = "<group>"; };
-		B882D6520CE64C41DD0AB8AD42212217 /* VSAdNavLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavLoader.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/VSAdNavLoader.m; sourceTree = "<group>"; };
 		B9F802311AD45F0B3BDA041AACF876F9 /* FBLPromiseError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromiseError.h; path = Sources/FBLPromises/include/FBLPromiseError.h; sourceTree = "<group>"; };
 		BA3458F54F3C86B6CC08C0464A0FF23C /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
-		BA420F9933D883C25526D2D8106E841E /* VSAdIntShowManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdIntShowManager.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdShow/VSAdIntShowManager.m; sourceTree = "<group>"; };
 		BA6EE7E21BA90C906AF42543C25ADC55 /* GULSceneDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSceneDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULSceneDelegateSwizzler.m; sourceTree = "<group>"; };
+		BA6FEE963F6AFBBA076CEF34E8CCEB8C /* VSAdConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdConfig.h; path = HFAdmobManager/Classes/VSAdConfig/VSAdConfig.h; sourceTree = "<group>"; };
 		BAF758A1699166A7B0E644B643C6CED1 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
 		BB2F4727AEDD2A16FE87A143EB98CAC8 /* FBLPromise+Do.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Do.m"; path = "Sources/FBLPromises/FBLPromise+Do.m"; sourceTree = "<group>"; };
 		BB44DCBC542BE273A311817D67EA8A7C /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
-		BBD28858456BDCD38E7AF6632162376D /* VSAdMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdMacro.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdMacro.h; sourceTree = "<group>"; };
 		BDAF891EE96669292A45B9788E597B2F /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
-		BEE9539E008B609A7C65E782430AEB71 /* HFAdmobManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HFAdmobManager.modulemap; sourceTree = "<group>"; };
-		BF3E81203C6DF31A0A872C38B2BA9EE5 /* VSAdCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdCacheManager.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdCache/VSAdCacheManager.h; sourceTree = "<group>"; };
 		C0180F63284604133E2309973A17FE7F /* GULURLSessionDataResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULURLSessionDataResponse.m; path = GoogleUtilities/Environment/URLSessionPromiseWrapper/GULURLSessionDataResponse.m; sourceTree = "<group>"; };
 		C1DBC3032BDD395C394701ABD0311755 /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
 		C32AC99C90A6F9B709DEA0B6E899A4C4 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		C3A271076933F4488AFA2CA50936DAC7 /* VSTableAdsCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSTableAdsCell.m; path = HFAdmobManager/Classes/VSAdTemplate/VSTableAdsCell.m; sourceTree = "<group>"; };
 		C4CCDD552CF97A8D273205C0C2C20523 /* FBLPromise+Catch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Catch.h"; path = "Sources/FBLPromises/include/FBLPromise+Catch.h"; sourceTree = "<group>"; };
 		C4E6483D942155FBFB07729249CC0815 /* GoogleUserMessagingPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUserMessagingPlatform.debug.xcconfig; sourceTree = "<group>"; };
-		C59FE212A085AF06C99E8D3A88D0219C /* VSAdIntLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdIntLoader.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/VSAdIntLoader.m; sourceTree = "<group>"; };
 		C5A43EED69C602B7AD8C29BA2298DAB6 /* Pods-HFAdmobManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HFAdmobManager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		C8228860A5848921B30D2D14FDC406C0 /* VSAdUnit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdUnit.m; path = HFAdmobManager/Classes/HFAdmobManager/Other/VSAdUnit.m; sourceTree = "<group>"; };
+		C5CFF477B540840A3B9156B17E0D3224 /* Ad_AppConfiger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Ad_AppConfiger.m; path = HFAdmobManager/Classes/Other/Ad_AppConfiger.m; sourceTree = "<group>"; };
 		C92F1E677AD42765E01E263A74993666 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
-		C998BDACCC35BC06828CBE998C6D9184 /* VSAdNavTemplateCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavTemplateCell.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/VSAdNavTemplateCell.m; sourceTree = "<group>"; };
+		C9E4C81C6758D0E33B550097DDC4A75D /* HFAdmobManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HFAdmobManager-umbrella.h"; sourceTree = "<group>"; };
+		CA283474A1E00AC29EBFB5FEA600B330 /* VSAdShowClickAdsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdShowClickAdsManager.h; path = HFAdmobManager/Classes/VSAdShow/VSAdShowClickAdsManager.h; sourceTree = "<group>"; };
 		CBDCA87121D2BD9E6485E1056408F99B /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = UserMessagingPlatform.xcframework; path = Frameworks/Release/UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
+		CBECE73A938F1FF4906E15D91E18DF50 /* HFAdmobManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HFAdmobManager.debug.xcconfig; sourceTree = "<group>"; };
 		CD305C7C6888ECE1F22B59E9E74B0DDD /* GULMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULMutableDictionary.m; path = GoogleUtilities/Network/GULMutableDictionary.m; sourceTree = "<group>"; };
 		CD4FBBEF8A5A7F17494061F187DBC44A /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
 		CD9A042ADE71F12E7870A4D0150426AC /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		CDAF1CD1383A89E7D2E7B1F1F8D2F2AF /* VSAdShowClickAdsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdShowClickAdsManager.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdShow/VSAdShowClickAdsManager.m; sourceTree = "<group>"; };
 		CEA47212240953BC53D5F54D4F486880 /* FBLPromise+Then.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Then.h"; path = "Sources/FBLPromises/include/FBLPromise+Then.h"; sourceTree = "<group>"; };
-		D0232CB7636FB4D0E5E167119A3A6BC8 /* Ad_AppConfiger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Ad_AppConfiger.m; path = HFAdmobManager/Classes/HFAdmobManager/Other/Ad_AppConfiger.m; sourceTree = "<group>"; };
-		D055944F0E120CB8C45CCD5CB3A62D89 /* NSArray+ad_Map.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+ad_Map.m"; path = "HFAdmobManager/Classes/HFAdmobManager/Other/NSArray+ad_Map.m"; sourceTree = "<group>"; };
+		D05690C5397F478185A154D221C2E9E8 /* HFAdmobManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HFAdmobManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D11AF53AD5A7083FB6AEEF013A606353 /* VSAdPlaceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdPlaceManager.h; path = HFAdmobManager/Classes/Other/VSAdPlaceManager.h; sourceTree = "<group>"; };
 		D33DF43DC273E1DC6C0C9E604E75AABD /* GoogleUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleUtilities.modulemap; sourceTree = "<group>"; };
 		D36FB4536D5BCEE728789AC6F078D908 /* GULApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULApplication.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULApplication.h; sourceTree = "<group>"; };
 		D3F29A6B80C56948A576CA3292C2FF4E /* GULReachabilityChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityChecker.h; path = GoogleUtilities/Reachability/Public/GoogleUtilities/GULReachabilityChecker.h; sourceTree = "<group>"; };
+		D451E32C33438F5A7B9702CBCE65DB1F /* VSGlobalConfigModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSGlobalConfigModel.h; path = HFAdmobManager/Classes/VSGlobalConfigManager/VSGlobalConfigModel.h; sourceTree = "<group>"; };
 		D5707ABFD8E12E07B7977A8F242F600A /* Google-Mobile-Ads-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.debug.xcconfig"; sourceTree = "<group>"; };
-		D5C23AD0436146700BE56400814A51D0 /* VSAdConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdConfig.m; path = HFAdmobManager/Classes/HFAdmobManager/VSAdConfig/VSAdConfig.m; sourceTree = "<group>"; };
 		D7124B9D2971C11B1D94A24298F3F4E6 /* NSURLSession+GULPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSession+GULPromises.h"; path = "GoogleUtilities/Environment/URLSessionPromiseWrapper/NSURLSession+GULPromises.h"; sourceTree = "<group>"; };
 		D84D680907DCDA15702E95A860452E00 /* FBLPromise+Testing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Testing.m"; path = "Sources/FBLPromises/FBLPromise+Testing.m"; sourceTree = "<group>"; };
 		D9AE2F7715C0F836676380AAF8E4A370 /* Google-Mobile-Ads-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.release.xcconfig"; sourceTree = "<group>"; };
 		D9B5D19629E35B3096C2D840618004DC /* GULNetworkMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkMessageCode.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkMessageCode.h; sourceTree = "<group>"; };
-		DA8688A7BD6740D4B49DD6CD1310BD22 /* VSGlobalConfigModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSGlobalConfigModel.m; path = HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/VSGlobalConfigModel.m; sourceTree = "<group>"; };
 		DBF982F7DA8176A0940DA5463F52EF2C /* FBLPromise+Async.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Async.h"; path = "Sources/FBLPromises/include/FBLPromise+Async.h"; sourceTree = "<group>"; };
 		DD952C1F789E29F341E481B4608072F7 /* FBLPromise+Recover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Recover.m"; path = "Sources/FBLPromises/FBLPromise+Recover.m"; sourceTree = "<group>"; };
 		DDA7C4502BF9DAC73AAC7A812662453D /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
@@ -685,14 +681,17 @@
 		E2CA84A8D8C412A0D0447D11C6B99559 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		E320EF63E46514E17069D952345B9C02 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		E3471B392646D5C1A1AEB25D84BD9AD1 /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		E43967FD3D9EE95A23274BEC35E98526 /* VSAdNavTemplateCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavTemplateCell.h; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateCell.h; sourceTree = "<group>"; };
 		E5463E0B0322D19C5CFE86947CA7C93F /* FBLPromise+Await.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Await.h"; path = "Sources/FBLPromises/include/FBLPromise+Await.h"; sourceTree = "<group>"; };
 		E5928FD64BA8A39A8F3B936D12428EEA /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		E621D3530CA95CC40290080B15DDA6DA /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
+		E7917415B0520C62283148656176127D /* VSAdMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdMacro.h; path = HFAdmobManager/Classes/VSAdMacro.h; sourceTree = "<group>"; };
 		E950D0D0CF46B4D6D9DF6ECDA11C218D /* GULKeychainUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULKeychainUtils.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainUtils.h; sourceTree = "<group>"; };
 		EC30DDBA52A9C8D8ECE46EEFB30E0858 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		ECCC19296EC59F66BB29751EDDC0613D /* GoogleUserMessagingPlatform-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleUserMessagingPlatform-xcframeworks.sh"; sourceTree = "<group>"; };
 		ED9EAAA4D19ED75212F87003C4A49382 /* Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.release.xcconfig; sourceTree = "<group>"; };
 		EE2A4D1A43FD1ADCB86215733C948936 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		EEDE4E1B5967FAD5685F093CBBEA19EA /* VSAdNavShowManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavShowManager.m; path = HFAdmobManager/Classes/VSAdShow/VSAdNavShowManager.m; sourceTree = "<group>"; };
 		EF26D9325ABB391CB39B47EADE60647C /* GULNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULNSData+zlib.h"; path = "GoogleUtilities/NSData+zlib/Public/GoogleUtilities/GULNSData+zlib.h"; sourceTree = "<group>"; };
 		F064C65E340005EB264AC7D39168E217 /* Pods-HFAdmobManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HFAdmobManager_Example-dummy.m"; sourceTree = "<group>"; };
 		F24D16F35433A36C36BE94A0329586EA /* GULNetworkURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkURLSession.m; path = GoogleUtilities/Network/GULNetworkURLSession.m; sourceTree = "<group>"; };
@@ -700,13 +699,14 @@
 		F61863577EC9BCC65BC165A511DC8D9D /* FBLPromise+All.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+All.h"; path = "Sources/FBLPromises/include/FBLPromise+All.h"; sourceTree = "<group>"; };
 		F645AC2A49B94670AF22BAB5DBEC33E8 /* FBLPromise+Delay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Delay.h"; path = "Sources/FBLPromises/include/FBLPromise+Delay.h"; sourceTree = "<group>"; };
 		F656D864E561B4CF8AAB056FBABD601F /* GULLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLogger.h; path = GoogleUtilities/Logger/Public/GoogleUtilities/GULLogger.h; sourceTree = "<group>"; };
-		F67923C4102F2440F9822D1A65B3E4DC /* VSAdNavLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSAdNavLoader.h; path = HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/VSAdNavLoader.h; sourceTree = "<group>"; };
+		F9B92D0C883928D1B3954EBDEB0B8CC6 /* VSAdNavTemplateHomeBottom.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdNavTemplateHomeBottom.m; path = HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateHomeBottom.m; sourceTree = "<group>"; };
 		F9E2533E33B9F8D7EDE6873C06602530 /* MJExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.release.xcconfig; sourceTree = "<group>"; };
 		FA6AA1B398B91B57362DFECD61C0672C /* Pods-HFAdmobManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HFAdmobManager_Tests.modulemap"; sourceTree = "<group>"; };
+		FAA6DE3A6DB29A7C012C6B18A01193AD /* VSAdCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VSAdCacheManager.m; path = HFAdmobManager/Classes/VSAdCache/VSAdCacheManager.m; sourceTree = "<group>"; };
 		FB975F69C975FD78FDFB5E8CDD215B43 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		FBCBB41F36C5797EA5CA6598BF145002 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
-		FC565E86A24B5951AB279AD386D050BE /* VSGlobalConfigModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VSGlobalConfigModel.h; path = HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/VSGlobalConfigModel.h; sourceTree = "<group>"; };
 		FCE53E97E84E0756F2F2E3BB7AACBB8A /* nanopb-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "nanopb-Info.plist"; sourceTree = "<group>"; };
+		FCF5D3C02792DDD869EF06F04F883E32 /* NSArray+ad_Map.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+ad_Map.m"; path = "HFAdmobManager/Classes/Other/NSArray+ad_Map.m"; sourceTree = "<group>"; };
 		FD779884AC1AB7030D0D15B1756774BB /* FBLPromise+Always.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Always.h"; path = "Sources/FBLPromises/include/FBLPromise+Always.h"; sourceTree = "<group>"; };
 		FDB45C734FF7391446D927C4364FAF0B /* FBLPromise+Any.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Any.m"; path = "Sources/FBLPromises/FBLPromise+Any.m"; sourceTree = "<group>"; };
 		FE9C650A61FD33A6B769ACB579D7C781 /* FBLPromise+Timeout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Timeout.m"; path = "Sources/FBLPromises/FBLPromise+Timeout.m"; sourceTree = "<group>"; };
@@ -833,28 +833,39 @@
 			path = GoogleUserMessagingPlatform;
 			sourceTree = "<group>";
 		};
-		2F2981CAFB41C53127EB8462EF8D2F77 /* VSAdLoader */ = {
+		02E327196333B633699961B573F7C27A /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				7D3EC3EC7684458129AB6F74F5651E5C /* VSAdIntLoader.h */,
-				C59FE212A085AF06C99E8D3A88D0219C /* VSAdIntLoader.m */,
-				F67923C4102F2440F9822D1A65B3E4DC /* VSAdNavLoader.h */,
-				B882D6520CE64C41DD0AB8AD42212217 /* VSAdNavLoader.m */,
+				0653E9436992294E4659690A70C75164 /* Ad_AppConfiger.h */,
+				C5CFF477B540840A3B9156B17E0D3224 /* Ad_AppConfiger.m */,
+				82E605839963B8C8EE2359334E0473B7 /* NSArray+ad_Map.h */,
+				FCF5D3C02792DDD869EF06F04F883E32 /* NSArray+ad_Map.m */,
+				D11AF53AD5A7083FB6AEEF013A606353 /* VSAdPlaceManager.h */,
+				75205E3B89FC684075E623F15CC7766F /* VSAdPlaceManager.m */,
+				96CD65B28449F4831237ECEE36565549 /* VSAdUnit.h */,
+				6CB8FE8724BBDEDFAFF54AB2F1978CE7 /* VSAdUnit.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		1880049D4466F9E38CED367A77E7EC46 /* VSAdLoader */ = {
+			isa = PBXGroup;
+			children = (
+				928B50B17F7DAE95E889BF30510394AF /* VSAdIntLoader.h */,
+				B1526D18E97A8ED85351DE88D4906BAF /* VSAdIntLoader.m */,
+				0D0286FCA2ACDA2D54039F72FF95F0ED /* VSAdNavLoader.h */,
+				907AE627EDC0601A056771857CE3DE1A /* VSAdNavLoader.m */,
 			);
 			name = VSAdLoader;
 			sourceTree = "<group>";
 		};
-		340271968357E6AA12DA79C56DA02DFB /* VSAdShow */ = {
+		2D1627B66C8DD38CC4B13D942D2CDA0E /* VSAdCache */ = {
 			isa = PBXGroup;
 			children = (
-				7BF3B9CA183CFB8801A4F1E38B25CC07 /* VSAdIntShowManager.h */,
-				BA420F9933D883C25526D2D8106E841E /* VSAdIntShowManager.m */,
-				1A5EDE210509DC464593A434FCAA5B71 /* VSAdNavShowManager.h */,
-				219DB5C0BC38AAE834184A0E62D16DA5 /* VSAdNavShowManager.m */,
-				88CE5AD04FB05C5988566AF047D33CEA /* VSAdShowClickAdsManager.h */,
-				CDAF1CD1383A89E7D2E7B1F1F8D2F2AF /* VSAdShowClickAdsManager.m */,
+				219B6EB82C34DDC97EE20453AA2C6A8B /* VSAdCacheManager.h */,
+				FAA6DE3A6DB29A7C012C6B18A01193AD /* VSAdCacheManager.m */,
 			);
-			name = VSAdShow;
+			name = VSAdCache;
 			sourceTree = "<group>";
 		};
 		3536D188ACBA7256486B899E183213A3 /* Support Files */ = {
@@ -870,21 +881,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Masonry";
-			sourceTree = "<group>";
-		};
-		372A8A772D2129F09A623D797584B345 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BEE9539E008B609A7C65E782430AEB71 /* HFAdmobManager.modulemap */,
-				9D5F1D1943CB5A171E55A01FCB8762AF /* HFAdmobManager-dummy.m */,
-				4E60D313411566B5188210A2B4B69B04 /* HFAdmobManager-Info.plist */,
-				625BAF6A4AB296D6ED3BDD9A7FCAE932 /* HFAdmobManager-prefix.pch */,
-				57CD12A6150984AF60E448E903014077 /* HFAdmobManager-umbrella.h */,
-				403B60FBEF8BBD03E6681A5214F3042E /* HFAdmobManager.debug.xcconfig */,
-				14AFA99F7D668716A8C0695E05D7202B /* HFAdmobManager.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/HFAdmobManager";
 			sourceTree = "<group>";
 		};
 		3CC606DDB74DC4D3E40D6A91D8226A77 /* Pods-HFAdmobManager_Tests */ = {
@@ -920,21 +916,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		434F70EE77E878695854FB8D2B191A5E /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				1633AFB15650EBA4753DC3C2D88314D6 /* Ad_AppConfiger.h */,
-				D0232CB7636FB4D0E5E167119A3A6BC8 /* Ad_AppConfiger.m */,
-				92C2551BB902E3319113AE313166F426 /* NSArray+ad_Map.h */,
-				D055944F0E120CB8C45CCD5CB3A62D89 /* NSArray+ad_Map.m */,
-				83DFFF759E9E0FB2F3D7673D0224D77E /* VSAdPlaceManager.h */,
-				B0B00D61FAEAD3EC1130810DDDF17CC5 /* VSAdPlaceManager.m */,
-				0FAD95CBE9E315DBD6CC8B26DF44B7F1 /* VSAdUnit.h */,
-				C8228860A5848921B30D2D14FDC406C0 /* VSAdUnit.m */,
-			);
-			name = Other;
-			sourceTree = "<group>";
-		};
 		440CEA6EFB085894AC37689A47DC2129 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,6 +934,24 @@
 				37ECB11E3DF6BC430F9D32413747C027 /* GULSwizzler.m */,
 			);
 			name = MethodSwizzler;
+			sourceTree = "<group>";
+		};
+		49E347BFC7B426E7B9B34584B33E0965 /* VSAdTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				241FED39E2798B4FDD5A940FEF51448E /* VSAdNavTemplateBase.h */,
+				432EF36E7F951A876A86D26DB8BAAA02 /* VSAdNavTemplateBase.m */,
+				E43967FD3D9EE95A23274BEC35E98526 /* VSAdNavTemplateCell.h */,
+				63A6EC674723083EDAE4BE7489FD6FA9 /* VSAdNavTemplateCell.m */,
+				18517AC95AA63780CB70F4195C1A3FA8 /* VSAdNavTemplateFullScreen.h */,
+				9E87605D7DF5CD6C02C1757DE49C023A /* VSAdNavTemplateFullScreen.m */,
+				6170923B4DB0A0215193580B9CBB3FF7 /* VSAdNavTemplateHomeBottom.h */,
+				F9B92D0C883928D1B3954EBDEB0B8CC6 /* VSAdNavTemplateHomeBottom.m */,
+				4FAE8A356DA9D3103BF4CA24B585296B /* VSAdNavTemplateView.xib */,
+				2F132971831764EED9DCB4AEB1A323BA /* VSTableAdsCell.h */,
+				C3A271076933F4488AFA2CA50936DAC7 /* VSTableAdsCell.m */,
+			);
+			name = VSAdTemplate;
 			sourceTree = "<group>";
 		};
 		4EADEE8DCD684ED3E48E04F7FCB6A077 /* Support Files */ = {
@@ -997,6 +996,15 @@
 			path = GoogleAppMeasurement;
 			sourceTree = "<group>";
 		};
+		626C28DE2DC174EFBEF9FE9C8DF55015 /* VSAdConfig */ = {
+			isa = PBXGroup;
+			children = (
+				BA6FEE963F6AFBBA076CEF34E8CCEB8C /* VSAdConfig.h */,
+				1CF659988404BF136C977058E1DFB359 /* VSAdConfig.m */,
+			);
+			name = VSAdConfig;
+			sourceTree = "<group>";
+		};
 		62F611F68F6B6BA594323F57E1A6981E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1011,13 +1019,13 @@
 			path = "../Target Support Files/PromisesObjC";
 			sourceTree = "<group>";
 		};
-		6915A8ACF9446415429B96E561CFFD36 /* VSGlobalConfigManager */ = {
+		6BAF05E25F95B971B072D94F23F4333A /* VSGlobalConfigManager */ = {
 			isa = PBXGroup;
 			children = (
-				620A365A2EACECA6A1EE4A3E265228F8 /* VSGlobalConfigManager.h */,
-				ADB6F166233110C706A30B9E3EBB897A /* VSGlobalConfigManager.m */,
-				FC565E86A24B5951AB279AD386D050BE /* VSGlobalConfigModel.h */,
-				DA8688A7BD6740D4B49DD6CD1310BD22 /* VSGlobalConfigModel.m */,
+				B0D5C38FCACCEC0E5F7FB6562AD34FF8 /* VSGlobalConfigManager.h */,
+				0815EC07A2F0092B7EC48FEC88361E52 /* VSGlobalConfigManager.m */,
+				D451E32C33438F5A7B9702CBCE65DB1F /* VSGlobalConfigModel.h */,
+				6B07DD66128DBB7F8FA3EED6A62AF7F1 /* VSGlobalConfigModel.m */,
 			);
 			name = VSGlobalConfigManager;
 			sourceTree = "<group>";
@@ -1042,48 +1050,9 @@
 		71D6D6F5BFBDFA163374678FC91D4F47 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				79FA2721684C2CDCE237C5E4DC7CF27E /* HFAdmobManager */,
+				B4B461DCD76D480D2BEB7DDE3F860115 /* HFAdmobManager */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		79FA2721684C2CDCE237C5E4DC7CF27E /* HFAdmobManager */ = {
-			isa = PBXGroup;
-			children = (
-				21741828CE2673C5401B67EE401C007C /* HFAdmobManager.h */,
-				B0DA3D2553DA5488CA9CAF36E7BDB165 /* HFAdmobManager.m */,
-				BBD28858456BDCD38E7AF6632162376D /* VSAdMacro.h */,
-				4580680F2F5E67644FB3E5D9D49EA4C3 /* VSAdManagerHeader.h */,
-				434F70EE77E878695854FB8D2B191A5E /* Other */,
-				C45E145F9B3CDABA210F11D6573F4F44 /* Pod */,
-				372A8A772D2129F09A623D797584B345 /* Support Files */,
-				BD84E457AD5453852B2DE392EDD5BB17 /* VSAdCache */,
-				99278392A09CACBEA544EBCCD9B84B0D /* VSAdConfig */,
-				2F2981CAFB41C53127EB8462EF8D2F77 /* VSAdLoader */,
-				340271968357E6AA12DA79C56DA02DFB /* VSAdShow */,
-				7CB98B8A0DCE2F71EB92BFCFD9184FA6 /* VSAdTemplate */,
-				6915A8ACF9446415429B96E561CFFD36 /* VSGlobalConfigManager */,
-			);
-			name = HFAdmobManager;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		7CB98B8A0DCE2F71EB92BFCFD9184FA6 /* VSAdTemplate */ = {
-			isa = PBXGroup;
-			children = (
-				017ED60C2300062F563E990641E03C0F /* VSAdNavTemplateBase.h */,
-				18D5383C035FD21A2052380BB13DB68B /* VSAdNavTemplateBase.m */,
-				73520C86037BC07F88503B9EBD520F3E /* VSAdNavTemplateCell.h */,
-				C998BDACCC35BC06828CBE998C6D9184 /* VSAdNavTemplateCell.m */,
-				91E5BD21B0BC8E85F1DD31862961D52C /* VSAdNavTemplateFullScreen.h */,
-				200860DBFC63E721D031D61ABACDD639 /* VSAdNavTemplateFullScreen.m */,
-				2ECB97E2D2A673391A7AEFDBB76D60A4 /* VSAdNavTemplateHomeBottom.h */,
-				701BC4009CAA230FC66E3A4B60939C5A /* VSAdNavTemplateHomeBottom.m */,
-				3CB11006ECB88379AF01FBD028992C3E /* VSAdNavTemplateView.xib */,
-				13520BD431D75277D7BA17DD6DB8A462 /* VSTableAdsCell.h */,
-				4B8F153048179A077C5762323F183B65 /* VSTableAdsCell.m */,
-			);
-			name = VSAdTemplate;
 			sourceTree = "<group>";
 		};
 		8EFB42883A27F44A65D29F2330FD9767 /* Pods */ = {
@@ -1101,13 +1070,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		99278392A09CACBEA544EBCCD9B84B0D /* VSAdConfig */ = {
+		98F948F43D1ECF315423AB73134168C9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				84B93505210B4D872C1BA59F4D837DC3 /* VSAdConfig.h */,
-				D5C23AD0436146700BE56400814A51D0 /* VSAdConfig.m */,
+				78DE592660478075AA15F638AC597381 /* HFAdmobManager.modulemap */,
+				2B7397332E2BAEC5CD75BF23E08A9C23 /* HFAdmobManager-dummy.m */,
+				46AF655CB733CC661FA37AAF8CAF70C6 /* HFAdmobManager-Info.plist */,
+				0206FB796A0D849820F4A1E098450279 /* HFAdmobManager-prefix.pch */,
+				C9E4C81C6758D0E33B550097DDC4A75D /* HFAdmobManager-umbrella.h */,
+				CBECE73A938F1FF4906E15D91E18DF50 /* HFAdmobManager.debug.xcconfig */,
+				B724B6E9ADB15285148FC6BA2676B55C /* HFAdmobManager.release.xcconfig */,
 			);
-			name = VSAdConfig;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HFAdmobManager";
 			sourceTree = "<group>";
 		};
 		99A0CFF2AE180659D35756D2DB6B973C /* encode */ = {
@@ -1249,6 +1224,27 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		B4B461DCD76D480D2BEB7DDE3F860115 /* HFAdmobManager */ = {
+			isa = PBXGroup;
+			children = (
+				12D682597A7C50DDD991A791A9AECA9D /* HFAdmobManager.h */,
+				3A5ADF897AEB482E6D2C2A1F2ABF93DB /* HFAdmobManager.m */,
+				5A98E7BEDB8ABD3E55C67E6351C641D6 /* HFAdmobManagerHeader.h */,
+				E7917415B0520C62283148656176127D /* VSAdMacro.h */,
+				02E327196333B633699961B573F7C27A /* Other */,
+				FDA8569ACAE9DF14ADB1E00B33316A58 /* Pod */,
+				98F948F43D1ECF315423AB73134168C9 /* Support Files */,
+				2D1627B66C8DD38CC4B13D942D2CDA0E /* VSAdCache */,
+				626C28DE2DC174EFBEF9FE9C8DF55015 /* VSAdConfig */,
+				1880049D4466F9E38CED367A77E7EC46 /* VSAdLoader */,
+				D860E243536439115F3ED58AEB16297C /* VSAdShow */,
+				49E347BFC7B426E7B9B34584B33E0965 /* VSAdTemplate */,
+				6BAF05E25F95B971B072D94F23F4333A /* VSGlobalConfigManager */,
+			);
+			name = HFAdmobManager;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		B501F8A3B73A0F4B37C59E100CF19BDC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1278,25 +1274,6 @@
 			path = nanopb;
 			sourceTree = "<group>";
 		};
-		BD84E457AD5453852B2DE392EDD5BB17 /* VSAdCache */ = {
-			isa = PBXGroup;
-			children = (
-				BF3E81203C6DF31A0A872C38B2BA9EE5 /* VSAdCacheManager.h */,
-				66FB28EC69514AAEA85741AD5D343775 /* VSAdCacheManager.m */,
-			);
-			name = VSAdCache;
-			sourceTree = "<group>";
-		};
-		C45E145F9B3CDABA210F11D6573F4F44 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4030458E9D57324E57AF5BE74BAC52F3 /* HFAdmobManager.podspec */,
-				42B1A096C00A9D851D8F1A573ED5EA1F /* LICENSE */,
-				864EBC85445594B841D1C66F7C78F424 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		CF00E6A63822C75905791CBA9F0CED3A /* GoogleUtilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -1323,6 +1300,19 @@
 				99AA7B96A8F337BF10B373C980A2990E /* Products */,
 				AD7D7D59CDFDAD2B47920B0E58425874 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D860E243536439115F3ED58AEB16297C /* VSAdShow */ = {
+			isa = PBXGroup;
+			children = (
+				AFB35733B41C2D0660BB59713B649CD4 /* VSAdIntShowManager.h */,
+				2885A2C1CB7F72C2F11532703F7FB514 /* VSAdIntShowManager.m */,
+				64F3AC4F75A1D1F5887EF02D82F5000F /* VSAdNavShowManager.h */,
+				EEDE4E1B5967FAD5685F093CBBEA19EA /* VSAdNavShowManager.m */,
+				CA283474A1E00AC29EBFB5FEA600B330 /* VSAdShowClickAdsManager.h */,
+				9FE786D9437F3DF409A21919289EAD11 /* VSAdShowClickAdsManager.m */,
+			);
+			name = VSAdShow;
 			sourceTree = "<group>";
 		};
 		D89BA18E790AF78FA8E982074E63EC38 /* Network */ = {
@@ -1443,6 +1433,16 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		FDA8569ACAE9DF14ADB1E00B33316A58 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D05690C5397F478185A154D221C2E9E8 /* HFAdmobManager.podspec */,
+				1F84BD445A32D01391AB796250D22531 /* LICENSE */,
+				856E2E818C1E2A723590F6C740E19751 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1472,35 +1472,6 @@
 				BF165F5DE8A733B9ADD31121A42AB5BE /* FBLPromisePrivate.h in Headers */,
 				32DF7EB6D90A3C3AC7D4A0819DD2489D /* FBLPromises.h in Headers */,
 				ABEBFA0270B4C2EB2A19DE8EC5A4CBD4 /* PromisesObjC-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2FFD5D63DF16809B5D8F0AB6AF794552 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEBB3B585B1BF3A434004ED19F2F9CB0 /* Ad_AppConfiger.h in Headers */,
-				DE99F1032B20FADE81A03F53F882030D /* HFAdmobManager-umbrella.h in Headers */,
-				1D6D9BB248CEAFBDA691A5439F2D1020 /* HFAdmobManager.h in Headers */,
-				6E3108E3EE5C23288129AD5470801D11 /* NSArray+ad_Map.h in Headers */,
-				7CF510161B31947B837B7E0493556425 /* VSAdCacheManager.h in Headers */,
-				67AF54A0ADC9ED818E7885D308842117 /* VSAdConfig.h in Headers */,
-				02B5A1D7D7869043D2FAB468A8CE742E /* VSAdIntLoader.h in Headers */,
-				87ADBA7A7FB6A7758A67D713D80A305D /* VSAdIntShowManager.h in Headers */,
-				B3E307E53C64266BB22D693AD805030C /* VSAdMacro.h in Headers */,
-				C7FA4A6B83F27A6C65C53EE708FE1813 /* VSAdManagerHeader.h in Headers */,
-				F52D2C82006F0A9DA47E92254145321C /* VSAdNavLoader.h in Headers */,
-				B14295E036C8618FD5FBC4BFB105C759 /* VSAdNavShowManager.h in Headers */,
-				F395F0D9037723F02932DCB5862BF947 /* VSAdNavTemplateBase.h in Headers */,
-				1B10DE3DFA72E0A2330829036CDD12BE /* VSAdNavTemplateCell.h in Headers */,
-				CFCCEACC48EFF67D4364AB7177304A78 /* VSAdNavTemplateFullScreen.h in Headers */,
-				3DECB4093A21E3363CBD91364AFA5A30 /* VSAdNavTemplateHomeBottom.h in Headers */,
-				343A5FD63286DD8CBB8B61F2F3FD8C93 /* VSAdPlaceManager.h in Headers */,
-				EB89159664A526B9A45C75BC8DC30C6B /* VSAdShowClickAdsManager.h in Headers */,
-				F0DE4DF88CF280839A4E605597ADDDCA /* VSAdUnit.h in Headers */,
-				7106A7E02A14CFF328C6F4B24BD54D94 /* VSGlobalConfigManager.h in Headers */,
-				C964F749ED68054DBAB89AA0C3D11437 /* VSGlobalConfigModel.h in Headers */,
-				88E10ED44D3E03B50872D844C86861A7 /* VSTableAdsCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1576,6 +1547,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DD3298304F42C9AEDFF912AB06B7C2 /* Pods-HFAdmobManager_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC8FE15629B463EADDF8100A014A1DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A452C1C9BBFD4A265ABD6CA4C82553B /* Ad_AppConfiger.h in Headers */,
+				5E5F6A0012A5B6987053A0FD8A24A522 /* HFAdmobManager-umbrella.h in Headers */,
+				9094C3CA496EB3155247E2B655D06899 /* HFAdmobManager.h in Headers */,
+				A5DD6845FCFBA1807C2A5094AB96BEE3 /* HFAdmobManagerHeader.h in Headers */,
+				F7B53BF294FF75B2357926C9B76183F7 /* NSArray+ad_Map.h in Headers */,
+				A60D59263038A6B8ADF392D62AC84518 /* VSAdCacheManager.h in Headers */,
+				0228B6ECA97104DDFDF73C8508A43486 /* VSAdConfig.h in Headers */,
+				2E5C083094D2D7773AC4462299CA91A6 /* VSAdIntLoader.h in Headers */,
+				12899FFA3F31305937DC46418799B648 /* VSAdIntShowManager.h in Headers */,
+				CA5B274B9A4667D379554591FDE0005D /* VSAdMacro.h in Headers */,
+				F61AE82E43CCBBBA573B42068CAED1CF /* VSAdNavLoader.h in Headers */,
+				893DD7AE45186E81C50489E49238667C /* VSAdNavShowManager.h in Headers */,
+				24EF585407ED9E29FED9015EB2981FBE /* VSAdNavTemplateBase.h in Headers */,
+				00F1D63E964CE9B25B0626DFCC9EA33B /* VSAdNavTemplateCell.h in Headers */,
+				509C047A9B526B28372BAA3A87FEFF81 /* VSAdNavTemplateFullScreen.h in Headers */,
+				31FB8DE53442AEA7DC09249A286DC72F /* VSAdNavTemplateHomeBottom.h in Headers */,
+				2967C74D4BC3C890007C19FA173B679A /* VSAdPlaceManager.h in Headers */,
+				D77EA9068C87D9296C3870899F136095 /* VSAdShowClickAdsManager.h in Headers */,
+				B034CF1145EDBB2A7CC5102660B2E253 /* VSAdUnit.h in Headers */,
+				7E682E5BC82EF90268A703954C752758 /* VSGlobalConfigManager.h in Headers */,
+				619C969A412A93C89426B8F813ECA4DB /* VSGlobalConfigModel.h in Headers */,
+				4B8D18AC17F5B11C2CFFDD03946B0488 /* VSTableAdsCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1756,7 +1756,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB3EF58162FB727BF1E263A33B7ACF2F /* Build configuration list for PBXNativeTarget "HFAdmobManager" */;
 			buildPhases = (
-				2FFD5D63DF16809B5D8F0AB6AF794552 /* Headers */,
+				DAC8FE15629B463EADDF8100A014A1DF /* Headers */,
 				E677CF84DB598F07C86AB0D36224454F /* Sources */,
 				94FA886BF6713068A839008EF41FA90A /* Frameworks */,
 				AF353F37A8E9A6A40E030070950B1BAF /* Resources */,
@@ -2028,27 +2028,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C6736C52F93767A225B2FDA9CC7370C /* Ad_AppConfiger.m in Sources */,
+				F92A34B355F2216E66CD152B305DFFCF /* Ad_AppConfiger.m in Sources */,
 				F03F68818E15AC841AA3A466E140AFDB /* HFAdmobManager-dummy.m in Sources */,
-				B466E8E70CD1845E40A68048875A0A21 /* HFAdmobManager.m in Sources */,
-				A5935A8A1D34109B729C509418515682 /* NSArray+ad_Map.m in Sources */,
-				7F186E22BDB43380F09DF1C7ED745AC9 /* VSAdCacheManager.m in Sources */,
-				08E6A5CDBBE227C5195D394D38FAFA65 /* VSAdConfig.m in Sources */,
-				5238C385D33EA2500BED5181888C9B4C /* VSAdIntLoader.m in Sources */,
-				53B97E88A8C838E7AABC7D1B8DBBCDDF /* VSAdIntShowManager.m in Sources */,
-				9AC7426B25A859080316D091BF4B6750 /* VSAdNavLoader.m in Sources */,
-				AD4792094C1F28928729144D90387168 /* VSAdNavShowManager.m in Sources */,
-				88915D9A91D1D8DE01F8B38C244834FA /* VSAdNavTemplateBase.m in Sources */,
-				B71CBB5DA7D43A57AB5E84B21BD79279 /* VSAdNavTemplateCell.m in Sources */,
-				D30E87B5664A4C23964EF8B2E1C3383F /* VSAdNavTemplateFullScreen.m in Sources */,
-				AE1721391964709CDBA39FAF419C835D /* VSAdNavTemplateHomeBottom.m in Sources */,
-				26D05CA1F06C3B05C951659F1044F65D /* VSAdNavTemplateView.xib in Sources */,
-				659AB44EE03D057E923315B39CD5143D /* VSAdPlaceManager.m in Sources */,
-				0D8852F9F190B138A51387197C020A90 /* VSAdShowClickAdsManager.m in Sources */,
-				F1D6E54E99C6FC241104401C12846C9D /* VSAdUnit.m in Sources */,
-				4661A014BED17837A24A0C2D5452BCD8 /* VSGlobalConfigManager.m in Sources */,
-				AEB39EAD8C7580B3B4DDF806DDD09493 /* VSGlobalConfigModel.m in Sources */,
-				5BB403A7CB4E706184340FC19EBBD6BC /* VSTableAdsCell.m in Sources */,
+				EF1526106B854DBBF12FBCE5661375CE /* HFAdmobManager.m in Sources */,
+				9E8796942DD79CA4FD087A17BDBBA8DD /* NSArray+ad_Map.m in Sources */,
+				0878A26E03890112C879826718EAD6CF /* VSAdCacheManager.m in Sources */,
+				7F2E8F41C986DD50A6A94FAC0D1AB833 /* VSAdConfig.m in Sources */,
+				4640D14D98CDBCF9A2D3CE3F8E1FE550 /* VSAdIntLoader.m in Sources */,
+				8A8175E9437C3DE3CDB3032E72A65BFF /* VSAdIntShowManager.m in Sources */,
+				813F7B7FDEFD073236031F8B89DF9C5B /* VSAdNavLoader.m in Sources */,
+				0EE83579E10743A40CBAFA0D5934F0AD /* VSAdNavShowManager.m in Sources */,
+				D9540D3A15347341C5ECEC1EC25D0992 /* VSAdNavTemplateBase.m in Sources */,
+				1E4B52201C2966EAD1E531B36BFB6D84 /* VSAdNavTemplateCell.m in Sources */,
+				BC8F3FCD1783DA9D94A26DEA6D1BBD8D /* VSAdNavTemplateFullScreen.m in Sources */,
+				EFAE75BFF2022DF2C058589F2887CD97 /* VSAdNavTemplateHomeBottom.m in Sources */,
+				C19F680FA65E88D4F5D9BC73EAAE2C4D /* VSAdNavTemplateView.xib in Sources */,
+				282531534068BEA115B46BEDFF611279 /* VSAdPlaceManager.m in Sources */,
+				E8C9493508BEF482CD5C1A1CCB24BAE1 /* VSAdShowClickAdsManager.m in Sources */,
+				E371084C8E63C7AB9BDA93FA781E2BF3 /* VSAdUnit.m in Sources */,
+				828A4322F252988F529FBF0CFFA19959 /* VSGlobalConfigManager.m in Sources */,
+				BCA53F0A4C653054207EC421DA7A0140 /* VSGlobalConfigModel.m in Sources */,
+				020E594AE4E52904DE3DAB0874A0CE2A /* VSTableAdsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2381,7 +2381,7 @@
 		};
 		68896931AD1AC5DD706C968981800391 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 403B60FBEF8BBD03E6681A5214F3042E /* HFAdmobManager.debug.xcconfig */;
+			baseConfigurationReference = CBECE73A938F1FF4906E15D91E18DF50 /* HFAdmobManager.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2443,7 +2443,7 @@
 		};
 		70207D31C7BBE56347C5658D3F7A20D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14AFA99F7D668716A8C0695E05D7202B /* HFAdmobManager.release.xcconfig */;
+			baseConfigurationReference = B724B6E9ADB15285148FC6BA2676B55C /* HFAdmobManager.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

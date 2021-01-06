@@ -19,8 +19,7 @@
     "ios": "9.0"
   },
   "requires_arc": true,
-  "public_header_files": "HFAdmobManager/Classes/HFAdmobManager/HFAdmobManagerHeader.h",
-  "source_files": "HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}",
+  "source_files": "HFAdmobManager/Classes/*",
   "frameworks": "UIKit",
   "static_framework": true,
   "dependencies": {
@@ -36,36 +35,32 @@
   },
   "subspecs": [
     {
-      "name": "NSDate+VSHelper",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/NSDate+VSHelper/*.{h,m,textile}"
-    },
-    {
       "name": "VSAdCache",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdCache/*.{h,m}"
+      "source_files": "HFAdmobManager/Classes/VSAdCache/*.{h,m}"
     },
     {
       "name": "VSAdConfig",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdConfig/*.{h,m}"
+      "source_files": "HFAdmobManager/Classes/VSAdConfig/*.{h,m}"
     },
     {
       "name": "VSAdLoader",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/*.{h,m}"
+      "source_files": "HFAdmobManager/Classes/VSAdLoader/*.{h,m}"
     },
     {
       "name": "VSAdShow",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdShow/*.{h,m}"
+      "source_files": "HFAdmobManager/Classes/VSAdShow/*.{h,m}"
     },
     {
       "name": "VSAdTemplate",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/*.{h,m,xib}"
+      "source_files": "HFAdmobManager/Classes/VSAdTemplate/*.{h,m,xib}"
     },
     {
       "name": "VSGlobalConfigManager",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/*.{h,m}"
+      "source_files": "HFAdmobManager/Classes/VSGlobalConfigManager/*.{h,m}"
     },
     {
       "name": "Other",
-      "source_files": "HFAdmobManager/Classes/HFAdmobManager/Other/*.{h,m}"
+      "source_files": "HFAdmobManager/Classes/Other/*.{h,m}"
     }
   ]
 }

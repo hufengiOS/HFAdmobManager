@@ -35,39 +35,36 @@ TODO: Add long description of the pod here.
   
   s.requires_arc = true
     
-  s.public_header_files = 'HFAdmobManager/Classes/HFAdmobManager/HFAdmobManagerHeader.h'
+#  s.public_header_files = 'HFAdmobManager/Classes/HFAdmobManager/HFAdmobManagerHeader.h'
   
   #   s.public_header_files = 'Pod/Classes/**/*.h'
 #  s.source_files = 'HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}'
   
-  s.source_files = 'HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}'
-  s.subspec 'NSDate+VSHelper' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/NSDate+VSHelper/*.{h,m,textile}'
-  end
+  s.source_files = 'HFAdmobManager/Classes/*'
   s.subspec 'VSAdCache' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdCache/*.{h,m}'
+    ss.source_files = 'HFAdmobManager/Classes/VSAdCache/*.{h,m}'
   end
   s.subspec 'VSAdConfig' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdConfig/*.{h,m}'
+    ss.source_files = 'HFAdmobManager/Classes/VSAdConfig/*.{h,m}'
   end
 #
   s.subspec 'VSAdLoader' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdLoader/*.{h,m}'
+    ss.source_files = 'HFAdmobManager/Classes/VSAdLoader/*.{h,m}'
   end
 #
   s.subspec 'VSAdShow' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdShow/*.{h,m}'
+    ss.source_files = 'HFAdmobManager/Classes/VSAdShow/*.{h,m}'
   end
 #
   s.subspec 'VSAdTemplate' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSAdTemplate/*.{h,m,xib}'
+    ss.source_files = 'HFAdmobManager/Classes/VSAdTemplate/*.{h,m,xib}'
   end
 #
   s.subspec 'VSGlobalConfigManager' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/VSGlobalConfigManager/*.{h,m}'
+    ss.source_files = 'HFAdmobManager/Classes/VSGlobalConfigManager/*.{h,m}'
   end
   s.subspec 'Other' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/HFAdmobManager/Other/*.{h,m}'
+    ss.source_files = 'HFAdmobManager/Classes/Other/*.{h,m}'
   end
     
    
