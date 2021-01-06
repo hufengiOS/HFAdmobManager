@@ -11,6 +11,8 @@
 #import <HFAdmobManager/VSAdPlaceManager.h>
 #import <HFAdmobManager/HFAdmobManager.h>
 #import <HFAdmobManager/VSGlobalConfigManager.h>
+#import <HFAdmobManager/VSAdConfig.h>
+
 
 
 #import <MJExtension/MJExtension.h>
