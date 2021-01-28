@@ -19,6 +19,7 @@ static NSString *kNotificationNameFullScreenAdLoadSuccussKey = @"kNotificationNa
     BOOL _isDEBUGMode;
 }
 
++ (instancetype)shareInstance;
 #pragma mark - load
 + (void)preloadAllAds;
 + (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType notify:(BOOL)notify;
