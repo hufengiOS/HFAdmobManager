@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 static NSString *kNotificationNamePartAdLoadSuccussKey = @"kNotificationNamePartAdLoadSuccussKey";
 static NSString *kNotificationNameFullScreenAdLoadSuccussKey = @"kNotificationNameFullScreenAdLoadSuccussKey";
 
-@interface HFAdmobManager : NSObject
+@interface HFAdmobManager : NSObject {
+    BOOL _isDEBUGMode;
+}
 
 #pragma mark - load
 + (void)preloadAllAds;
@@ -33,6 +35,16 @@ static NSString *kNotificationNameFullScreenAdLoadSuccussKey = @"kNotificationNa
 
 #pragma mark - connectVpnLimit
 + (void)finishConnectAuthor;
+
+
+/// 打开测试模式，用测试ID拉取广告
++ (void)openDebugMode;
++ (BOOL)isDEBUGMode;
+
+
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

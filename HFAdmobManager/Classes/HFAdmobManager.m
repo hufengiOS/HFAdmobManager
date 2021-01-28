@@ -22,6 +22,7 @@
 @property (nonatomic, strong) VSAdPlaceManager *homePlaceManager;
 @property (nonatomic, strong) VSAdPlaceManager *cellPlaceManager;
 
+
 @end
 
 @implementation HFAdmobManager
@@ -33,6 +34,20 @@
         manager = [[HFAdmobManager alloc] init];
     });
     return manager;
+}
+
++ (void)openDebugMode {
+    HFAdmobManager *manager = [HFAdmobManager shareInstance];
+    manager->_isDEBUGMode = YES;
+}
+
++ (BOOL)isDEBUGMode {
+    HFAdmobManager *manager = [HFAdmobManager shareInstance];
+#ifdef DEBUG
+    return manager->_isDEBUGMode;
+#else
+    return NO;
+#endif
 }
 
 + (void)preloadAllAdsWithNotify:(BOOL)notify {
@@ -142,7 +157,6 @@
 + (void)closeFullScrenAds {
     [VSAdNavShowManager closeFullscreenAds];
     [VSAdIntShowManager closeFullscreenAds];
-    
 }
 
 #pragma mark - connectVpnLimit

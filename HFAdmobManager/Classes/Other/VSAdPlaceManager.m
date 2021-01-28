@@ -13,6 +13,8 @@
 #import "VSAdConfig.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
+#import <HFAdmobManager/HFAdmobManager.h>
+
 
 /*
  横幅广告                   ca-app-pub-3940256099942544/2934735716
@@ -82,12 +84,10 @@
 
 - (void)loadAdsWithAdUnit:(NSString *)adUnit type:(VSAdUnitType)type adWeight:(float)adWeight placeType:(VSAdShowPlaceType)placeType completionHandler:(void (^)(BOOL success)) completionHandler {
     if (type == VSAdUnitTypeNav) {
-//        if (kSwitchIsDEBUG) {
-////            adUnit = @"ca-app-pub-3940256099942544/3986624511";
-//        }
-#ifdef DEBUG
-//        adUnit = @"ca-app-pub-3940256099942544/3986624511";
-#endif
+        
+        if ([HFAdmobManager isDEBUGMode]) {
+            adUnit = @"ca-app-pub-3940256099942544/3986624511";
+        }
         [self.navLoader loadAdsWithUnitId:adUnit placeType:placeType completionHandler:^(GADUnifiedNativeAd * _Nullable nativeAd, VSAdShowPlaceType placeType, NSError * _Nullable error) {
             if (nativeAd) {
                 [VSAdCacheManager saveAdsWithAdsType:type placeType:placeType adUnitId:adUnit adWeight:adWeight obj:nativeAd];
@@ -95,16 +95,9 @@
             !completionHandler ? : completionHandler(nativeAd != nil);
         }];
     } else if (type == VSAdUnitTypeInt) {
-//        if (kSwitchIsDEBUG) {
-////            // unity
-////            adUnit = @"ca-app-pub-7856983145839071/4123704960";
-////            // vungle
-////            adUnit = @"ca-app-pub-7856983145839071/5889031011";
-////            // appLovin
-////            adUnit = @"ca-app-pub-7856983145839071/4383559418";
-////            adUnit = @"ca-app-pub-3940256099942544/4411468910";
-//        }
-        
+        if ([HFAdmobManager isDEBUGMode]) {
+            adUnit = @"ca-app-pub-3940256099942544/4411468910";
+        }
         [self.intLoader loadAdsWithUnitId:adUnit placeType:placeType completionHander:^(GADInterstitial * _Nullable interstitial, NSError * _Nullable error) {
             if (!error) {
                 [VSAdCacheManager saveAdsWithAdsType:type placeType:placeType adUnitId:adUnit adWeight:adWeight obj:interstitial];
