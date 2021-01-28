@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 static NSString *kNotificationNamePartAdLoadSuccussKey = @"kNotificationNamePartAdLoadSuccussKey";
 static NSString *kNotificationNameFullScreenAdLoadSuccussKey = @"kNotificationNameFullScreenAdLoadSuccussKey";
 
+typedef BOOL (^OpenDebugModeHandler)(void);
+
+
 @interface HFAdmobManager : NSObject {
     BOOL _isDEBUGMode;
 }

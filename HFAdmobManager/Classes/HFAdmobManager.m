@@ -12,7 +12,6 @@
 #import "VSAdNavShowManager.h"
 #import "VSAdConfig.h"
 
-typedef BOOL (^OpenDebugModeHandler)(void);
 
 
 @interface HFAdmobManager() {
