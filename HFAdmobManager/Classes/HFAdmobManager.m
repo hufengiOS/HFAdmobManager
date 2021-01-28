@@ -12,9 +12,12 @@
 #import "VSAdNavShowManager.h"
 #import "VSAdConfig.h"
 
+typedef BOOL (^OpenDebugModeHandler)(void);
 
 
-@interface HFAdmobManager()
+@interface HFAdmobManager() {
+     
+}
 
 @property (nonatomic, strong) VSAdPlaceManager *startPlaceManager;
 @property (nonatomic, strong) VSAdPlaceManager *connectPlaceManager;
@@ -22,6 +25,7 @@
 @property (nonatomic, strong) VSAdPlaceManager *homePlaceManager;
 @property (nonatomic, strong) VSAdPlaceManager *cellPlaceManager;
 
+@property (nonatomic, copy) OpenDebugModeHandler openDebugModeHandler;
 
 @end
 
@@ -36,15 +40,13 @@
     return manager;
 }
 
-+ (void)openDebugMode {
-    HFAdmobManager *manager = [HFAdmobManager shareInstance];
-    manager->_isDEBUGMode = YES;
+- (void)openDebugModeWithHandler:(OpenDebugModeHandler)handler {
+    openDebugModeHandler = handler;
 }
 
-+ (BOOL)isDEBUGMode {
-    HFAdmobManager *manager = [HFAdmobManager shareInstance];
+- (BOOL)isDEBUGMode {
 #ifdef DEBUG
-    return manager->_isDEBUGMode;
+    return !_openDebugModeHandler ? NO : self.openDebugModeHandler();
 #else
     return NO;
 #endif

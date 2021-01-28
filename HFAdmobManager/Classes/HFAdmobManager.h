@@ -38,9 +38,8 @@ static NSString *kNotificationNameFullScreenAdLoadSuccussKey = @"kNotificationNa
 
 
 /// 打开测试模式，用测试ID拉取广告
-+ (void)openDebugMode;
-+ (BOOL)isDEBUGMode;
-
+- (void)openDebugModeWithHandler:(OpenDebugModeHandler)handler;
+- (BOOL)isDEBUGMode;
 
 
 
