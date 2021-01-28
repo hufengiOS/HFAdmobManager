@@ -85,7 +85,7 @@
 - (void)loadAdsWithAdUnit:(NSString *)adUnit type:(VSAdUnitType)type adWeight:(float)adWeight placeType:(VSAdShowPlaceType)placeType completionHandler:(void (^)(BOOL success)) completionHandler {
     if (type == VSAdUnitTypeNav) {
         
-        if ([HFAdmobManager isDEBUGMode]) {
+        if ([HFAdmobManager shareInstance].isDEBUGMode) {
             adUnit = @"ca-app-pub-3940256099942544/3986624511";
         }
         [self.navLoader loadAdsWithUnitId:adUnit placeType:placeType completionHandler:^(GADUnifiedNativeAd * _Nullable nativeAd, VSAdShowPlaceType placeType, NSError * _Nullable error) {
@@ -95,7 +95,7 @@
             !completionHandler ? : completionHandler(nativeAd != nil);
         }];
     } else if (type == VSAdUnitTypeInt) {
-        if ([HFAdmobManager isDEBUGMode]) {
+        if ([HFAdmobManager shareInstance].isDEBUGMode) {
             adUnit = @"ca-app-pub-3940256099942544/4411468910";
         }
         [self.intLoader loadAdsWithUnitId:adUnit placeType:placeType completionHander:^(GADInterstitial * _Nullable interstitial, NSError * _Nullable error) {

@@ -40,7 +40,7 @@
 }
 
 - (void)openDebugModeWithHandler:(OpenDebugModeHandler)handler {
-    openDebugModeHandler = handler;
+    _openDebugModeHandler = handler;
 }
 
 - (BOOL)isDEBUGMode {
