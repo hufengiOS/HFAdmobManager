@@ -60,9 +60,9 @@ TODO: Add long description of the pod here.
   s.subspec 'VSAdTemplate' do |ss|
     ss.source_files = 'HFAdmobManager/Classes/VSAdTemplate/*.{h,m}'
     
-    ss.resource_bundles = {
-      'HFAdmobManager' => ['HFAdmobManager/Assets/*.*']
-    }
+#    ss.resource_bundles = {
+#      'HFAdmobManager' => ['HFAdmobManager/Assets/*.*']
+#    }
 #    ss.resource = "HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateView.xib"
 
   end

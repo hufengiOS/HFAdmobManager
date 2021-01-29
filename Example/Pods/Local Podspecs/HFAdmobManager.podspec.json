@@ -52,12 +52,7 @@
     },
     {
       "name": "VSAdTemplate",
-      "source_files": "HFAdmobManager/Classes/VSAdTemplate/*.{h,m}",
-      "resource_bundles": {
-        "HFAdmobManager": [
-          "HFAdmobManager/Assets/*.*"
-        ]
-      }
+      "source_files": "HFAdmobManager/Classes/VSAdTemplate/*.{h,m}"
     },
     {
       "name": "VSGlobalConfigManager",
