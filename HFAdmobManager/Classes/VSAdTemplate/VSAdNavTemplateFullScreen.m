@@ -13,6 +13,7 @@
 //#import "UIView+ad_Extension.h"
 #import "Ad_AppConfiger.h"
 #import <Masonry/Masonry.h>
+#import <HFAdmobManager/HFAdmobManager.h>
 
 
 #define UIColorHexFromRGB(value) [UIColor colorWithRed:((float)((value & 0xFF0000) >> 16))/255.0 green:((float)((value & 0xFF00) >> 8))/255.0 blue:((float)(value & 0xFF))/255.0 alpha:1.0]
@@ -81,15 +82,21 @@
     }
 }
 
+- (UIImage *)imageNamed:(NSString *)name {
+    return [UIImage imageNamed:name inBundle:MYBUNDLE compatibleWithTraitCollection:nil];
+}
+
 #pragma mark - private
 - (void)configCloseBtnWithPlaceType:(VSAdShowPlaceType)placeType {
     VSGlobalConfigCloseBtnModel *model = [VSAdConfig closeBtnModelWithPlaceType:placeType];
     if (model.isIcon) {
-        [self.closeBtn setImage:[UIImage imageNamed:@"close_ads"] forState:UIControlStateNormal];
+        
+        [self.closeBtn setImage:[self imageNamed:@"close_ads"] forState:UIControlStateNormal];
         [self.closeBtn setTitle:nil forState:UIControlStateNormal];
         
         self.closeBtn.frame = CGRectMake(HF_kScaleWidth(0), HF_kStatusBarHeight, self.closeBtn.frame.size.width, self.closeBtn.frame.size.height);
         self.closeBtn.backgroundColor = UIColor.clearColor;
+        
         CGSize size;
         if ([model.iconType.lowercaseString isEqualToString:@"small"]) {
             size = CGSizeMake(HF_kScaleWidth(22), HF_kScaleWidth(22));

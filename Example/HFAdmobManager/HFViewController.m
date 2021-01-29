@@ -24,9 +24,8 @@
 {
     [super viewDidLoad];
     
-    [HFAdmobManager shareInstance].loadNibHandler = ^NSArray * _Nonnull{
-        return [[NSBundle mainBundle] loadNibNamed:@"VSAdNavTemplateView" owner:nil options:nil];
-    };
+    
+    
     [[HFAdmobManager shareInstance] openDebugModeWithHandler:^BOOL{
         return YES;
     }];

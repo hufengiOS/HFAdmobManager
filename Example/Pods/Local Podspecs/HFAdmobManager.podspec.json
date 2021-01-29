@@ -61,6 +61,10 @@
     {
       "name": "Other",
       "source_files": "HFAdmobManager/Classes/Other/*.{h,m}"
+    },
+    {
+      "name": "Resources",
+      "resources": "HFAdmobManager/HFAdmobManager.bundle"
     }
   ]
 }

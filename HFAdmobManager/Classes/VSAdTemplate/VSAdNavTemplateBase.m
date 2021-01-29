@@ -149,9 +149,8 @@
 
 - (GADUnifiedNativeAdView *)nativeAdView {
     if (!_nativeAdView) {
-        NSArray *array = ![HFAdmobManager shareInstance].loadNibHandler ? nil : [HFAdmobManager shareInstance].loadNibHandler();
-        NSAssert(array.count > 0, @"请在宿主工程中新建VSAdNavTemplateView.xib 文件, 参考demo");
-        _nativeAdView = array.firstObject;
+        NSArray *nibs = [MYBUNDLE loadNibNamed:@"VSAdNavTemplateView" owner:nil options:nil];
+        _nativeAdView = nibs.firstObject;
     }
     return _nativeAdView;
 }

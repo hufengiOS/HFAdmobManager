@@ -15,6 +15,8 @@
 		4F6394ED25C2C87000398AEC /* VSSerializationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6394EC25C2C87000398AEC /* VSSerializationData.m */; };
 		4F8933CD25A4545900E7D9A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F8933CC25A4545900E7D9A6 /* GoogleService-Info.plist */; };
 		4F8FC13625C3D94E006D609C /* VSAdNavTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FC13525C3D94E006D609C /* VSAdNavTemplateView.xib */; };
+		4F8FC20C25C403E5006D609C /* close_ads@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FC20A25C403E5006D609C /* close_ads@2x.png */; };
+		4F8FC20D25C403E5006D609C /* close_ads@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FC20B25C403E5006D609C /* close_ads@3x.png */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -60,6 +62,8 @@
 		4F6394EC25C2C87000398AEC /* VSSerializationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSSerializationData.m; sourceTree = "<group>"; };
 		4F8933CC25A4545900E7D9A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F8FC13525C3D94E006D609C /* VSAdNavTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VSAdNavTemplateView.xib; sourceTree = "<group>"; };
+		4F8FC20A25C403E5006D609C /* close_ads@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_ads@2x.png"; sourceTree = "<group>"; };
+		4F8FC20B25C403E5006D609C /* close_ads@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_ads@3x.png"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* HFAdmobManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFAdmobManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -163,6 +167,15 @@
 			path = VSSerializationData;
 			sourceTree = "<group>";
 		};
+		4F8FC20925C403D4006D609C /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				4F8FC20A25C403E5006D609C /* close_ads@2x.png */,
+				4F8FC20B25C403E5006D609C /* close_ads@3x.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +218,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* HFViewController.h */,
 				6003F5A6195388D20070C39A /* HFViewController.m */,
+				4F8FC20925C403D4006D609C /* resource */,
 				4F8FC13525C3D94E006D609C /* VSAdNavTemplateView.xib */,
 				4F8933CC25A4545900E7D9A6 /* GoogleService-Info.plist */,
 				4F6394BD25C2C70F00398AEC /* Tool */,
@@ -279,6 +293,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				FB989C6C81A1186183FFF4E1 /* [CP] Embed Pods Frameworks */,
+				EB02F8065338E1B66DC61779 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,8 +366,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F8FC20C25C403E5006D609C /* close_ads@2x.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				4F8FC20D25C403E5006D609C /* close_ads@3x.png in Resources */,
 				4F8FC13625C3D94E006D609C /* VSAdNavTemplateView.xib in Resources */,
 				4F8933CD25A4545900E7D9A6 /* GoogleService-Info.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -413,6 +430,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB02F8065338E1B66DC61779 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example-resources.sh",
+				"${PODS_ROOT}/../../HFAdmobManager/HFAdmobManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HFAdmobManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FB989C6C81A1186183FFF4E1 /* [CP] Embed Pods Frameworks */ = {

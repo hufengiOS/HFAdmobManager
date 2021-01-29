@@ -64,7 +64,9 @@ printf("< %s:(%d) %s %s> Debug_log %s\n", [[[NSString stringWithUTF8String:__FIL
 
 
 
-
+#define MYBUNDLE_NAME   @"HFAdmobManager.bundle"
+#define MYBUNDLE_PATH   [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:MYBUNDLE_NAME]
+#define MYBUNDLE        [NSBundle bundleWithPath:MYBUNDLE_PATH]
 
 
 #endif /* VSAdMacro_h */
