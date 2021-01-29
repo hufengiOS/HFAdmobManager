@@ -11,6 +11,10 @@
 #import "VSAdUnit.h"
 
 static NSString *const kGlobalConfigFileName = @"kGlobalConfigFileName";
+
+
+
+
 @interface VSGlobalConfigManager ()
 
 @property (nonatomic, strong) VSGlobalConfigModel *model;
@@ -45,9 +49,7 @@ static NSString *const kGlobalConfigFileName = @"kGlobalConfigFileName";
         NSDictionary *cacheDic = [VSAdUnit readFileWithFileName:kGlobalConfigFileName];
         VSGlobalConfigModel *model;
         if (!cacheDic) {
-            NSString *filePath = [[NSBundle mainBundle] pathForResource:kGlobalConfigFileName ofType:@"txt"];
-            NSString *configStr = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-            NSDictionary *localDic = [VSAdUnit objectWithJsonString:configStr];
+            NSDictionary *localDic = !_defaultConfigHandler ? nil : _defaultConfigHandler();
             if ([localDic.allKeys containsObject:@"data"]) {
                 model = [VSGlobalConfigModel mj_objectWithKeyValues:localDic[@"data"]];
             }

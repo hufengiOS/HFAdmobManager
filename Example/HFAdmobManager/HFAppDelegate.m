@@ -16,7 +16,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    
     [VSAdConfig configAds];
+    
+    
     
     return YES;
 }

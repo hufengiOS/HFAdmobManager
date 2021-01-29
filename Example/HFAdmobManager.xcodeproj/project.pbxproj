@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0BC39DBB2A1BB7A19C941C43 /* Pods_HFAdmobManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4F696FE12CC29EE60A0DE /* Pods_HFAdmobManager_Tests.framework */; };
+		4F6394AB25C2C60500398AEC /* SCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6394A925C2C60500398AEC /* SCRequest.m */; };
+		4F6394AC25C2C60500398AEC /* HFNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6394AA25C2C60500398AEC /* HFNetwork.m */; };
+		4F6394C125C2C71800398AEC /* HFDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6394BF25C2C71800398AEC /* HFDeviceInfo.m */; };
+		4F6394E725C2C82200398AEC /* AESTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6394E525C2C82200398AEC /* AESTool.m */; };
+		4F6394ED25C2C87000398AEC /* VSSerializationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6394EC25C2C87000398AEC /* VSSerializationData.m */; };
 		4F8933CD25A4545900E7D9A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F8933CC25A4545900E7D9A6 /* GoogleService-Info.plist */; };
+		4F8FC13625C3D94E006D609C /* VSAdNavTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FC13525C3D94E006D609C /* VSAdNavTemplateView.xib */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -42,7 +48,18 @@
 		31FE20593071D3AF68BA545F /* Pods-HFAdmobManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFAdmobManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3A13AA944491C7FA3C340A04 /* Pods-HFAdmobManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFAdmobManager_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HFAdmobManager_Tests/Pods-HFAdmobManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		473D2AF55B83DEED4D514F24 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4F6394A725C2C60500398AEC /* SCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRequest.h; sourceTree = "<group>"; };
+		4F6394A825C2C60500398AEC /* HFNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFNetwork.h; sourceTree = "<group>"; };
+		4F6394A925C2C60500398AEC /* SCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRequest.m; sourceTree = "<group>"; };
+		4F6394AA25C2C60500398AEC /* HFNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFNetwork.m; sourceTree = "<group>"; };
+		4F6394BF25C2C71800398AEC /* HFDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDeviceInfo.m; sourceTree = "<group>"; };
+		4F6394C025C2C71800398AEC /* HFDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDeviceInfo.h; sourceTree = "<group>"; };
+		4F6394E525C2C82200398AEC /* AESTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESTool.m; sourceTree = "<group>"; };
+		4F6394E625C2C82200398AEC /* AESTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESTool.h; sourceTree = "<group>"; };
+		4F6394EB25C2C87000398AEC /* VSSerializationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSSerializationData.h; sourceTree = "<group>"; };
+		4F6394EC25C2C87000398AEC /* VSSerializationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSSerializationData.m; sourceTree = "<group>"; };
 		4F8933CC25A4545900E7D9A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F8FC13525C3D94E006D609C /* VSAdNavTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VSAdNavTemplateView.xib; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* HFAdmobManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFAdmobManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +114,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F6394A625C2C60500398AEC /* HFNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4F6394A825C2C60500398AEC /* HFNetwork.h */,
+				4F6394AA25C2C60500398AEC /* HFNetwork.m */,
+				4F6394A725C2C60500398AEC /* SCRequest.h */,
+				4F6394A925C2C60500398AEC /* SCRequest.m */,
+			);
+			path = HFNetwork;
+			sourceTree = "<group>";
+		};
+		4F6394BD25C2C70F00398AEC /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4F6394EA25C2C87000398AEC /* VSSerializationData */,
+				4F6394E425C2C82200398AEC /* AESTool */,
+				4F6394A625C2C60500398AEC /* HFNetwork */,
+				4F6394BE25C2C71800398AEC /* HFDeviceInfo */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		4F6394BE25C2C71800398AEC /* HFDeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4F6394C025C2C71800398AEC /* HFDeviceInfo.h */,
+				4F6394BF25C2C71800398AEC /* HFDeviceInfo.m */,
+			);
+			path = HFDeviceInfo;
+			sourceTree = "<group>";
+		};
+		4F6394E425C2C82200398AEC /* AESTool */ = {
+			isa = PBXGroup;
+			children = (
+				4F6394E525C2C82200398AEC /* AESTool.m */,
+				4F6394E625C2C82200398AEC /* AESTool.h */,
+			);
+			path = AESTool;
+			sourceTree = "<group>";
+		};
+		4F6394EA25C2C87000398AEC /* VSSerializationData */ = {
+			isa = PBXGroup;
+			children = (
+				4F6394EB25C2C87000398AEC /* VSSerializationData.h */,
+				4F6394EC25C2C87000398AEC /* VSSerializationData.m */,
+			);
+			path = VSSerializationData;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +205,9 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* HFViewController.h */,
 				6003F5A6195388D20070C39A /* HFViewController.m */,
+				4F8FC13525C3D94E006D609C /* VSAdNavTemplateView.xib */,
 				4F8933CC25A4545900E7D9A6 /* GoogleService-Info.plist */,
+				4F6394BD25C2C70F00398AEC /* Tool */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -211,6 +279,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				FB989C6C81A1186183FFF4E1 /* [CP] Embed Pods Frameworks */,
+				B07E020A73934877494199F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,7 +320,7 @@
 				ORGANIZATIONNAME = hufengiOS;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 6H9LKYK6VH;
+						DevelopmentTeam = 8Z57UX9583;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -285,6 +354,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				4F8FC13625C3D94E006D609C /* VSAdNavTemplateView.xib in Resources */,
 				4F8933CD25A4545900E7D9A6 /* GoogleService-Info.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -324,6 +394,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B07E020A73934877494199F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/HFAdmobManager/HFAdmobManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HFAdmobManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D9CF563AC483133BF01F2CB0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +441,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HFAdmobManager_Example/Pods-HFAdmobManager_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/GZIP/GZIP.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -361,6 +451,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GZIP.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
@@ -380,8 +472,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* HFAppDelegate.m in Sources */,
+				4F6394ED25C2C87000398AEC /* VSSerializationData.m in Sources */,
+				4F6394AB25C2C60500398AEC /* SCRequest.m in Sources */,
 				6003F5A7195388D20070C39A /* HFViewController.m in Sources */,
+				4F6394AC25C2C60500398AEC /* HFNetwork.m in Sources */,
+				4F6394E725C2C82200398AEC /* AESTool.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				4F6394C125C2C71800398AEC /* HFDeviceInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,12 +606,12 @@
 			baseConfigurationReference = 31FE20593071D3AF68BA545F /* Pods-HFAdmobManager_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6H9LKYK6VH;
+				DEVELOPMENT_TEAM = 8Z57UX9583;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFAdmobManager/HFAdmobManager-Prefix.pch";
 				INFOPLIST_FILE = "HFAdmobManager/HFAdmobManager-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sk.vp2.VPN-SpeedPro";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yt.smartCleaner.SmartCleaner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -526,12 +623,12 @@
 			baseConfigurationReference = 9E012B462FEA8689F9848B6C /* Pods-HFAdmobManager_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6H9LKYK6VH;
+				DEVELOPMENT_TEAM = 8Z57UX9583;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFAdmobManager/HFAdmobManager-Prefix.pch";
 				INFOPLIST_FILE = "HFAdmobManager/HFAdmobManager-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sk.vp2.VPN-SpeedPro";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yt.smartCleaner.SmartCleaner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

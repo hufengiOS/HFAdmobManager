@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HFAdmobManager'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = '添加了测试模式，用测试ID加载广告'
 
 # This description is used to generate tags and improve search results.
@@ -40,6 +40,7 @@ TODO: Add long description of the pod here.
   #   s.public_header_files = 'Pod/Classes/**/*.h'
 #  s.source_files = 'HFAdmobManager/Classes/HFAdmobManager/*.{h,m,pch}'
   
+  
   s.source_files = 'HFAdmobManager/Classes/*'
   s.subspec 'VSAdCache' do |ss|
     ss.source_files = 'HFAdmobManager/Classes/VSAdCache/*.{h,m}'
@@ -57,7 +58,13 @@ TODO: Add long description of the pod here.
   end
 #
   s.subspec 'VSAdTemplate' do |ss|
-    ss.source_files = 'HFAdmobManager/Classes/VSAdTemplate/*.{h,m,xib}'
+    ss.source_files = 'HFAdmobManager/Classes/VSAdTemplate/*.{h,m}'
+    
+    ss.resource_bundles = {
+      'HFAdmobManager' => ['HFAdmobManager/Assets/*.*']
+    }
+#    ss.resource = "HFAdmobManager/Classes/VSAdTemplate/VSAdNavTemplateView.xib"
+
   end
 #
   s.subspec 'VSGlobalConfigManager' do |ss|

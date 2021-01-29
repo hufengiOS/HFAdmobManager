@@ -46,6 +46,7 @@ typedef BOOL (^OpenDebugModeHandler)(void);
 - (BOOL)isDEBUGMode;
 
 
+@property (nonatomic, copy) NSArray *(^ loadNibHandler)(void);
 
 
 @end

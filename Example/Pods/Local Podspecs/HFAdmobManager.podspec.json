@@ -1,7 +1,7 @@
 {
   "name": "HFAdmobManager",
-  "version": "0.0.1",
-  "summary": "加载谷歌广告",
+  "version": "0.0.4",
+  "summary": "添加了测试模式，用测试ID加载广告",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hufengiOS/HFAdmobManager",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hufengiOS/HFAdmobManager.git",
-    "tag": "0.0.1"
+    "tag": "0.0.4"
   },
   "platforms": {
     "ios": "9.0"
@@ -52,7 +52,12 @@
     },
     {
       "name": "VSAdTemplate",
-      "source_files": "HFAdmobManager/Classes/VSAdTemplate/*.{h,m,xib}"
+      "source_files": "HFAdmobManager/Classes/VSAdTemplate/*.{h,m}",
+      "resource_bundles": {
+        "HFAdmobManager": [
+          "HFAdmobManager/Assets/*.*"
+        ]
+      }
     },
     {
       "name": "VSGlobalConfigManager",

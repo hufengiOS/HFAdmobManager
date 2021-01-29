@@ -10,4 +10,11 @@ target 'HFAdmobManager_Example' do
     
     
   end
+  
+  
+  pod 'AFNetworking', '~> 3.0', :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession']
+  pod 'GZIP', '~> 1.2'
+  pod "MJExtension"
+  
+  
 end

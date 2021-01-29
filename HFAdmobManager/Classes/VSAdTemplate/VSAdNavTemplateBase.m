@@ -7,6 +7,7 @@
 
 #import "VSAdNavTemplateBase.h"
 #import "VSAdShowClickAdsManager.h"
+#import <HFAdmobManager/HFAdmobManager.h>
 
 
 @interface VSAdNavTemplateBase ()<GADUnifiedNativeAdDelegate, GADVideoControllerDelegate>
@@ -20,7 +21,6 @@
     self = [super init];
     if (self) {
         [self.nativeAdView addSubview:self.adLogoLabel];
-        NSAssert(self.nativeAdView != nil, @"bala");
     }
     return self;
 }
@@ -149,8 +149,9 @@
 
 - (GADUnifiedNativeAdView *)nativeAdView {
     if (!_nativeAdView) {
-        NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"VSAdNavTemplateView" owner:nil options:nil];
-        _nativeAdView = nibObjects.firstObject;
+        NSArray *array = ![HFAdmobManager shareInstance].loadNibHandler ? nil : [HFAdmobManager shareInstance].loadNibHandler();
+        NSAssert(array.count > 0, @"请在宿主工程中新建VSAdNavTemplateView.xib 文件, 参考demo");
+        _nativeAdView = array.firstObject;
     }
     return _nativeAdView;
 }

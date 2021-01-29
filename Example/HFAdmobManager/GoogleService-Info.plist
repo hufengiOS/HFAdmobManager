@@ -3,36 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>513979799745-tgoafmtc9uircv2msg43en00h77l1l7o.apps.googleusercontent.com</string>
+	<string>657675816459-lkfodvn3niga9anqg5clgacmm1g1idqo.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.513979799745-tgoafmtc9uircv2msg43en00h77l1l7o</string>
+	<string>com.googleusercontent.apps.657675816459-lkfodvn3niga9anqg5clgacmm1g1idqo</string>
 	<key>API_KEY</key>
-	<string>AIzaSyABrqbfo8tRmQA_um55s8kDjlPkgsmxWOg</string>
+	<string>AIzaSyCwH0N3FD0FRX9udqjwi5qdiIb_3hCH_Sg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>513979799745</string>
+	<string>657675816459</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.sk.vp2.VPN-SpeedPro</string>
+	<string>com.yt.smartCleaner.SmartCleaner</string>
 	<key>PROJECT_ID</key>
-	<string>club-vpn</string>
+	<string>clean-master-add49</string>
 	<key>STORAGE_BUCKET</key>
-	<string>club-vpn.appspot.com</string>
+	<string>clean-master-add49.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:513979799745:ios:c4ba05bbf5fb15f8259c40</string>
-	<key>DATABASE_URL</key>
-	<string>https://club-vpn.firebaseio.com</string>
-	<key>ADMOB_APP_ID</key>
-	<string>ca-app-pub-7856983145839071~6121361115</string>
+	<string>1:657675816459:ios:d8a8dcda43f1760227810e</string>
 </dict>
 </plist>

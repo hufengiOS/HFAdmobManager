@@ -13,6 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 static NSString *kNotificationNameVSGlobalConfigManagerLoadSuccess = @"kNotificationNameVSGlobalConfigManagerLoadSuccess";
+
+typedef NSDictionary * _Nullable (^kDefaultConfigHandler)(void);
+
+
+
 @interface VSGlobalConfigManager : NSObject
 
 
@@ -31,6 +36,9 @@ static NSString *kNotificationNameVSGlobalConfigManagerLoadSuccess = @"kNotifica
 #pragma mark - vp服务相关
 /// vpn 服务优先连接国家
 + (NSString *)VPNOptimalConnectCountry;
+
+@property (nonatomic, copy) kDefaultConfigHandler defaultConfigHandler;
+
 @end
 
 NS_ASSUME_NONNULL_END
