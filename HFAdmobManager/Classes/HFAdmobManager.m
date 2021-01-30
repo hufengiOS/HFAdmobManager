@@ -97,11 +97,11 @@
     }];
 }
 
-+ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType controller:(UIViewController *_Nullable)controller {
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller {
     return [self showAdsWithPlaceType:placeType controller:controller cell:nil containView:nil containViewDelegate:nil];
 }
 
-+ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate>)delegate {
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate {
     return [self showAdsWithPlaceType:placeType controller:nil cell:nil containView:containView containViewDelegate:delegate];
 }
 

@@ -158,7 +158,6 @@
 #pragma mark - VSAdNavTemplateLayoutDelegate
 - (void)layoutTemplateWithNativeAdView:(GADUnifiedNativeAdView *)nativeAdView {
     
-    self.nativeAdView.backgroundColor = UIColor.clearColor;
     [self.nativeAdView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.trailing.equalTo(self.mainController.view);
         make.top.equalTo(self.mainController.view.mas_top).offset(HF_kStatusBarHeight);
@@ -208,13 +207,6 @@
         make.bottom.equalTo(nativeAdView.mas_bottom).offset(HF_kScaleWidth(-40));
     }];
     
-    
-    nativeAdView.imageView.hidden = YES;
-    nativeAdView.starRatingView.hidden = YES;
-    nativeAdView.advertiserView.hidden = YES;
-    nativeAdView.adChoicesView.hidden = YES;
-    nativeAdView.storeView.hidden = YES;
-    nativeAdView.priceView.hidden = YES;
 }
 
 #pragma mark - lazy

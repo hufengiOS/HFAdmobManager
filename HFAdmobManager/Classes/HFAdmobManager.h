@@ -29,8 +29,8 @@ typedef BOOL (^OpenDebugModeHandler)(void);
 + (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType notify:(BOOL)notify completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler;
 
 #pragma mark - show
-+ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType controller:(UIViewController *_Nullable)controller;
-+ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate>)delegate;
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller;
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate;
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType cell:(UITableViewCell *)cell;
 + (BOOL)isReadyWithPlaceType:(VSAdShowPlaceType)placeType;
 

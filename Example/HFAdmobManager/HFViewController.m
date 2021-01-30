@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) UIButton *showAdsBtn;
 
+@property (nonatomic, strong) UIView *adContentView;
+
 @end
 
 @implementation HFViewController
@@ -32,7 +34,15 @@
     [self requestConfigInfo];
     
     [self.view addSubview:self.showAdsBtn];
+    [self.view addSubview:self.adContentView];
+    self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500) - 80, HF_MainScreen_Width, HF_kScaleWidth(250));
+    self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500) - 80, HF_MainScreen_Width, HF_kScaleWidth(250));
+    
     [self.showAdsBtn addTarget:self action:@selector(showAdAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeAdsLoadSuccess:) name:kNotificationNamePartAdLoadSuccussKey object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,8 +51,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - private
 - (void)showAdAction {
-    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullStart controller:self];
+//    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullStart controller:self];
+    
+    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypePartHome containView:self.adContentView delegate:nil];
+    
 }
 
 - (void)requestConfigInfo {
@@ -56,13 +70,15 @@
         }
         
         [HFAdmobManager preloadAllAds];
-        
     }];
 }
 
-//            NSString *filePath = [[NSBundle mainBundle] pathForResource:kGlobalConfigFileName ofType:@"txt"];
-//            NSString *configStr = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-//            NSDictionary *localDic = [VSAdUnit objectWithJsonString:configStr];
+- (void)homeAdsLoadSuccess:(NSNotification *)notification {
+    if (self.adContentView.subviews.count == 0) {
+        
+//        [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypePartHome containView:self.adContentView delegate:nil];
+    }
+}
 
 - (UIButton *)showAdsBtn {
     if (!_showAdsBtn) {
@@ -72,6 +88,14 @@
         _showAdsBtn.frame = CGRectMake(100, 100, 80, 40);
     }
     return _showAdsBtn;
+}
+
+- (UIView *)adContentView {
+    if (!_adContentView) {
+        _adContentView = [[UIView alloc] init];
+        _adContentView.backgroundColor = UIColor.blackColor;
+    }
+    return _adContentView;
 }
 @end
 

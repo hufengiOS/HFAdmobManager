@@ -34,47 +34,47 @@ PODS:
   - GoogleUtilities/Reachability (7.2.0):
     - GoogleUtilities/Logger
   - GZIP (1.3.0)
-  - HFAdmobManager (0.0.4):
+  - HFAdmobManager (0.0.5):
     - Google-Mobile-Ads-SDK
-    - HFAdmobManager/Other (= 0.0.4)
-    - HFAdmobManager/Resources (= 0.0.4)
-    - HFAdmobManager/VSAdCache (= 0.0.4)
-    - HFAdmobManager/VSAdConfig (= 0.0.4)
-    - HFAdmobManager/VSAdLoader (= 0.0.4)
-    - HFAdmobManager/VSAdShow (= 0.0.4)
-    - HFAdmobManager/VSAdTemplate (= 0.0.4)
-    - HFAdmobManager/VSGlobalConfigManager (= 0.0.4)
+    - HFAdmobManager/Other (= 0.0.5)
+    - HFAdmobManager/Resources (= 0.0.5)
+    - HFAdmobManager/VSAdCache (= 0.0.5)
+    - HFAdmobManager/VSAdConfig (= 0.0.5)
+    - HFAdmobManager/VSAdLoader (= 0.0.5)
+    - HFAdmobManager/VSAdShow (= 0.0.5)
+    - HFAdmobManager/VSAdTemplate (= 0.0.5)
+    - HFAdmobManager/VSGlobalConfigManager (= 0.0.5)
     - Masonry
     - MJExtension
-  - HFAdmobManager/Other (0.0.4):
-    - Google-Mobile-Ads-SDK
-    - Masonry
-    - MJExtension
-  - HFAdmobManager/Resources (0.0.4):
+  - HFAdmobManager/Other (0.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdCache (0.0.4):
+  - HFAdmobManager/Resources (0.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdConfig (0.0.4):
+  - HFAdmobManager/VSAdCache (0.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdLoader (0.0.4):
+  - HFAdmobManager/VSAdConfig (0.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdShow (0.0.4):
+  - HFAdmobManager/VSAdLoader (0.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdTemplate (0.0.4):
+  - HFAdmobManager/VSAdShow (0.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSGlobalConfigManager (0.0.4):
+  - HFAdmobManager/VSAdTemplate (0.0.5):
+    - Google-Mobile-Ads-SDK
+    - Masonry
+    - MJExtension
+  - HFAdmobManager/VSGlobalConfigManager (0.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
@@ -120,7 +120,7 @@ SPEC CHECKSUMS:
   GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
   GoogleUtilities: d866834472f1324d080496bc67ab3ce5d0d46027
   GZIP: 416858efbe66b41b206895ac6dfd5493200d95b3
-  HFAdmobManager: b1f37b4f4c043621fe2239069a482ea04644c635
+  HFAdmobManager: 88a82ecbf2ca453bd9bfa4b22a0f97dfaa59118f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e

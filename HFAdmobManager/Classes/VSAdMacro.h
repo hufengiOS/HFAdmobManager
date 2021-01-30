@@ -55,6 +55,11 @@ printf("< %s:(%d) %s %s> Debug_log %s\n", [[[NSString stringWithUTF8String:__FIL
 
 #define HF_kFrameValue(iphoneNormalScreenValue, iphoneFullScreenValue, iPadNormalScreenValue, iPadFullScreenValue)      (HF_isIPad ? (HF_isFullScreenDevice ? iPadFullScreenValue:iPadNormalScreenValue) : (HF_isFullScreenDevice ? iphoneFullScreenValue: iphoneNormalScreenValue))
 
+#define HF_kFrameValueForDevice(iphoneFullScreenValue, iPadNormalScreenValue) HF_kFrameValue(iphoneFullScreenValue, iphoneFullScreenValue, iPadNormalScreenValue, iPadNormalScreenValue)
+#define HF_kFrameValueForIphone(iphoneNormalScreenValue, iphoneFullScreenValue, iPadValue) HF_kFrameValue(iphoneNormalScreenValue, iphoneFullScreenValue, iPadValue, iPadValue)
+
+
+
 // MainScreen Height&Width
 #define HF_MainScreen_Height       [[UIScreen mainScreen] bounds].size.height
 #define HF_MainScreen_Width        [[UIScreen mainScreen] bounds].size.width

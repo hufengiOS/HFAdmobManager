@@ -1,7 +1,7 @@
 {
   "name": "HFAdmobManager",
-  "version": "0.0.4",
-  "summary": "添加了测试模式，用测试ID加载广告",
+  "version": "0.0.5",
+  "summary": "修改原生广告的布局",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hufengiOS/HFAdmobManager",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hufengiOS/HFAdmobManager.git",
-    "tag": "0.0.4"
+    "tag": "0.0.5"
   },
   "platforms": {
     "ios": "9.0"

@@ -28,16 +28,25 @@
 #pragma mark - public
 #pragma mark - private
 - (void)configWithNativeAd:(GADUnifiedNativeAd *)nativeAd {
-    [self layoutTemplateWithNativeAdView:self.nativeAdView];
     
     GADUnifiedNativeAdView *nativeAdView = self.nativeAdView;
     nativeAdView.nativeAd = nativeAd;
     nativeAd.delegate = self;
     
     nativeAdView.mediaView.mediaContent = nativeAd.mediaContent;
-    nativeAdView.mediaView.contentMode = UIViewContentModeScaleAspectFill;
+    nativeAdView.mediaView.contentMode = UIViewContentModeScaleToFill;
     nativeAdView.clipsToBounds = YES;
     nativeAdView.mediaView.clipsToBounds = YES;
+    
+    nativeAdView.mediaView.backgroundColor = UIColor.clearColor;
+    
+    nativeAdView.backgroundColor = UIColor.clearColor;
+
+    
+    // title
+    ((UILabel *)nativeAdView.headlineView).textAlignment = NSTextAlignmentNatural;
+    // 内容
+    ((UILabel *)nativeAdView.bodyView).textAlignment = NSTextAlignmentNatural;
     
     if (nativeAd.mediaContent.hasVideoContent) {
         nativeAd.mediaContent.videoController.delegate = self;
@@ -59,6 +68,7 @@
     ((UILabel *)nativeAdView.bodyView).text = nativeAd.body;
     ((UILabel *)nativeAdView.bodyView).textColor = UIColor.whiteColor;
     nativeAdView.bodyView.hidden = nativeAd.body ? NO : YES;
+    nativeAdView.bodyView.hidden = NO;
     
     // 安装应用
     [((UIButton *)nativeAdView.callToActionView) setTitle:nativeAd.callToAction
@@ -66,6 +76,17 @@
     nativeAdView.callToActionView.hidden = nativeAd.callToAction ? NO : YES;
     nativeAdView.callToActionView.userInteractionEnabled = NO;
     
+    nativeAdView.imageView.hidden = YES;
+    nativeAdView.starRatingView.hidden = YES;
+    nativeAdView.advertiserView.hidden = YES;
+    nativeAdView.adChoicesView.hidden = YES;
+    nativeAdView.storeView.hidden = YES;
+    nativeAdView.priceView.hidden = YES;
+    
+    
+    // 先处理数据，在根据数据调整布局
+    [self layoutTemplateWithNativeAdView:self.nativeAdView];
+
 }
 
 #pragma mark - VSAdNavTemplateLayoutDelegate
