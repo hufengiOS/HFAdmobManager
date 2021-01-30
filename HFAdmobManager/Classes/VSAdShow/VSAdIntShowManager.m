@@ -10,6 +10,7 @@
 
 #import "VSAdMacro.h"
 #import "VSAdShowClickAdsManager.h"
+#import <HFAdmobManager/HFAdmobManager.h>
 
 
 @interface VSAdIntShowManager()<GADInterstitialDelegate>
@@ -85,16 +86,19 @@
 #pragma mark Ad Request Lifecycle Notifications
 - (void)interstitialDidReceiveAd:(nonnull GADInterstitial *)ad {
 //    [VSEventManager logAdsMatchWithPlaceType:self.placeType unitId:ad.adUnitID];
+    [[HFAdmobManager shareInstance] eventWithEventName:@"receiveAd" placeType:self.placeType unitId:ad.adUnitID];
+
 }
 
 - (void)interstitial:(nonnull GADInterstitial *)ad
 didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
-    
+    [[HFAdmobManager shareInstance] eventWithEventName:@"receiveAdFail" placeType:self.placeType unitId:ad.adUnitID];
 }
 
 #pragma mark Display-Time Lifecycle Notifications
 - (void)interstitialWillPresentScreen:(nonnull GADInterstitial *)ad {
-//    [VSEventManager logAdsShowStartWithPlace:self.placeType];
+    [[HFAdmobManager shareInstance] eventWithEventName:@"adShow" placeType:self.placeType unitId:ad.adUnitID];
+
 }
 
 /// Called when |ad| fails to present.
@@ -104,7 +108,8 @@ didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
 
 /// Called before the interstitial is to be animated off the screen.
 - (void)interstitialWillDismissScreen:(nonnull GADInterstitial *)ad {
-//    [VSEventManager logAdsShowEndWithPlace:self.placeType unitId:ad.adUnitID];
+    [[HFAdmobManager shareInstance] eventWithEventName:@"adHidden" placeType:self.placeType unitId:ad.adUnitID];
+
 }
 
 /// Called just after dismissing an interstitial and it has animated off the screen.
@@ -114,7 +119,8 @@ didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
 
 - (void)interstitialWillLeaveApplication:(nonnull GADInterstitial *)ad {
 //    [VSEventManager logAdsClickWithPlaceType:self.placeType unitId:ad.adUnitID];
-    
+    [[HFAdmobManager shareInstance] eventWithEventName:@"adClick" placeType:self.placeType unitId:ad.adUnitID];
+
     [VSAdShowClickAdsManager addClickAdsWithPlaceType:self.placeType];
 }
 @end

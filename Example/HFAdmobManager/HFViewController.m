@@ -12,7 +12,7 @@
 
 
 
-@interface HFViewController ()
+@interface HFViewController ()<HFAdmobManagerEventDelegate>
 
 @property (nonatomic, strong) UIButton *showAdsBtn;
 
@@ -31,6 +31,8 @@
     [[HFAdmobManager shareInstance] openDebugModeWithHandler:^BOOL{
         return YES;
     }];
+    [HFAdmobManager shareInstance].delegate = self;
+    
     [self requestConfigInfo];
     
     [self.view addSubview:self.showAdsBtn];
@@ -80,6 +82,12 @@
     }
 }
 
+#pragma mark - HFAdmobManagerEventDelegate
+- (void)admobManagerEventName:(NSString *)eventName placeType:(VSAdShowPlaceType)placeType unitId:(NSString *)unitId {
+    HFAd_DebugLog(@"jjjjjjjj %@ %tu %@", eventName, placeType, unitId)
+}
+
+#pragma mark - lazy
 - (UIButton *)showAdsBtn {
     if (!_showAdsBtn) {
         _showAdsBtn = [UIButton buttonWithType:UIButtonTypeCustom];

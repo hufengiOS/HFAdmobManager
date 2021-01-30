@@ -160,6 +160,14 @@
     [VSAdIntShowManager closeFullscreenAds];
 }
 
+#pragma mark - event
+- (void)eventWithEventName:(NSString *)eventName placeType:(VSAdShowPlaceType)placeType unitId:(NSString *)unitId {
+    if ([[HFAdmobManager shareInstance].delegate respondsToSelector:@selector(admobManagerEventName:placeType:unitId:)]) {
+        [[HFAdmobManager shareInstance].delegate admobManagerEventName:@"start_request" placeType:placeType unitId:unitId];
+    }
+}
+
+
 #pragma mark - connectVpnLimit
 + (void)finishConnectAuthor {
     [VSAdConfig finishConnectAuthor];

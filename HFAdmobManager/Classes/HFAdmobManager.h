@@ -18,11 +18,26 @@ static NSString *kNotificationNameFullScreenAdLoadSuccussKey = @"kNotificationNa
 typedef BOOL (^OpenDebugModeHandler)(void);
 
 
+@protocol HFAdmobManagerEventDelegate <NSObject>
+
+/// 广告相关的事件
+/// @param eventName start_request、adClick、adHidden、adShow、receiveAdFail、receiveAd
+/// @param placeType placeType description
+/// @param unitId unitId description
+- (void)admobManagerEventName:(NSString *)eventName
+                    placeType:(VSAdShowPlaceType)placeType
+                       unitId:(NSString *)unitId;
+@end
+
 @interface HFAdmobManager : NSObject {
     BOOL _isDEBUGMode;
 }
 
 + (instancetype)shareInstance;
+
+@property (nonatomic, weak) id<HFAdmobManagerEventDelegate> delegate;
+
+
 #pragma mark - load
 + (void)preloadAllAds;
 + (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType notify:(BOOL)notify;
@@ -45,6 +60,7 @@ typedef BOOL (^OpenDebugModeHandler)(void);
 - (void)openDebugModeWithHandler:(OpenDebugModeHandler)handler;
 - (BOOL)isDEBUGMode;
 
+- (void)eventWithEventName:(NSString *)eventName placeType:(VSAdShowPlaceType)placeType unitId:(NSString *)unitId;
 
 @end
 

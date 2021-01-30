@@ -7,7 +7,7 @@
 
 #import "VSAdNavLoader.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
-
+#import <HFAdmobManager/HFAdmobManager.h>
 
 
 @interface VSAdNavLoader()<GADUnifiedNativeAdLoaderDelegate>
@@ -30,7 +30,7 @@
     _placeType = placeType;
     _loadCompletionHandler = completionHandler;
     
-//    [VSEventManager logAdsRequestWithPlaceType:self.placeType unitId:adUnit];
+    [[HFAdmobManager shareInstance] eventWithEventName:@"start_request" placeType:placeType unitId:adUnit];
 }
 
 - (GADAdLoader *)adLoaderWithUnitId:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType {
@@ -83,8 +83,8 @@ didReceiveUnifiedNativeAd:(nonnull GADUnifiedNativeAd *)nativeAd {
     // 用数组存储
     !_loadCompletionHandler ? : _loadCompletionHandler(nativeAd, _placeType, nil);
     
+    [[HFAdmobManager shareInstance] eventWithEventName:@"end_request" placeType:_placeType unitId:adLoader.adUnitID];
     
-//    [VSEventManager logAdsMatchWithPlaceType:self.placeType unitId:adLoader.adUnitID];
 }
 
 - (void)adLoader:(nonnull GADAdLoader *)adLoader

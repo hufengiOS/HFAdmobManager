@@ -9,6 +9,7 @@
 //#import <VungleAdapter/VungleAdapter.h>
 //#import <GoogleMobileAdsMediationTestSuite/GoogleMobileAdsMediationTestSuite.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import <HFAdmobManager/HFAdmobManager.h>
 
 
 @interface VSAdIntLoader ()<GADInterstitialDelegate>
@@ -24,7 +25,7 @@
 - (void)loadAdsWithUnitId:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType completionHander:(VSAdIntLoadCompletionHandler)completionHandler {
     _loadCompletionHandler = completionHandler;
     self.interstitial = [self interstitialWithAdUnit:adUnit];
-//    [VSEventManager logAdsRequestWithPlaceType:placeType unitId:adUnit];
+    [[HFAdmobManager shareInstance] eventWithEventName:@"start_request" placeType:placeType unitId:adUnit];
 }
 
 #pragma mark - private
