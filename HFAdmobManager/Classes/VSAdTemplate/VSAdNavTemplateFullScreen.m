@@ -154,9 +154,13 @@
     [self.mainController dismissViewControllerAnimated:YES completion:nil];
 }
 
-
 #pragma mark - VSAdNavTemplateLayoutDelegate
 - (void)layoutTemplateWithNativeAdView:(GADUnifiedNativeAdView *)nativeAdView {
+    
+    // title
+    ((UILabel *)nativeAdView.headlineView).textAlignment = NSTextAlignmentCenter;
+    // 内容
+    ((UILabel *)nativeAdView.bodyView).textAlignment = NSTextAlignmentCenter;
     
     [self.nativeAdView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.trailing.equalTo(self.mainController.view);
