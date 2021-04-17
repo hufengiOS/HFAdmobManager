@@ -16,6 +16,7 @@
 
 
 @property (nonatomic, copy)VSAdIntLoadCompletionHandler loadCompletionHandler;
+@property (nonatomic, assign) VSAdShowPlaceType placeType;
 
 @end
 
@@ -25,6 +26,7 @@
 - (void)loadAdsWithUnitId:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType completionHander:(VSAdIntLoadCompletionHandler)completionHandler {
     _loadCompletionHandler = completionHandler;
     self.interstitial = [self interstitialWithAdUnit:adUnit];
+    self.placeType = placeType;
     [[HFAdmobManager shareInstance] eventWithEventName:@"start_request" placeType:placeType unitId:adUnit];
 }
 
@@ -46,12 +48,16 @@
 - (void)interstitialDidReceiveAd:(nonnull GADInterstitial *)ad {
     HFAd_DebugLog(@"*广告数据* adUnitId(int):%@ %@",ad.adUnitID, ad.responseInfo.adNetworkClassName)
 
+    [[HFAdmobManager shareInstance] eventWithEventName:@"receiveAd" placeType:self.placeType unitId:ad.adUnitID];
+
+    
     !_loadCompletionHandler ? : _loadCompletionHandler(ad, nil);
 }
 
 - (void)interstitial:(nonnull GADInterstitial *)ad
 didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
     HFAd_DebugLog(@"*广告数据* adUnitId(int):%@, %@", ad.adUnitID, error.debugDescription)
+    [[HFAdmobManager shareInstance] eventWithEventName:@"receiveAd" placeType:self.placeType unitId:ad.adUnitID];
     
     !_loadCompletionHandler ? : _loadCompletionHandler(nil, error);
 }

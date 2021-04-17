@@ -61,11 +61,10 @@ Pod::Spec.new do |s|
     
   
     s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  
+    
     s.static_framework = true
     
-    s.dependency 'Google-Mobile-Ads-SDK'
+    s.dependency 'Google-Mobile-Ads-SDK', '~> 7.69.0'
     s.dependency 'Masonry'
     s.dependency 'MJExtension'
     

@@ -86,7 +86,7 @@
     
     // 先处理数据，在根据数据调整布局
     [self layoutTemplateWithNativeAdView:self.nativeAdView];
-
+    
 }
 
 #pragma mark - VSAdNavTemplateLayoutDelegate
@@ -96,26 +96,19 @@
 
 #pragma mark - GADUnifiedNativeAdDelegate
 - (void)nativeAdDidRecordImpression:(nonnull GADUnifiedNativeAd *)nativeAd {
-//    [VSEventManager logAdsClickWithPlaceType:self.placeType unitId:self.adUnitId];
-
+    
 }
 
 - (void)nativeAdDidRecordClick:(nonnull GADUnifiedNativeAd *)nativeAd {
-//    [VSEventManager logAdsClickWithPlaceType:self.placeType unitId:self.adUnitId];
-    
-    
-//    [VPNEventManager logEventWithName:kFireEvent_Ads_AdClick param:@{@"adUnitId": self.adUnitId, @"place": self.showAdPlaceId}];
-//    [LNToolManager addClickAdsWithAdPlaceId:self.showAdPlaceId];
-    
-    [VSAdShowClickAdsManager addClickAdsWithPlaceType:self.placeType];
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adClick placeType:self.placeType unitId:self.adUnitId];
 }
 
 - (void)nativeAdWillPresentScreen:(nonnull GADUnifiedNativeAd *)nativeAd {
-//    [VSEventManager logAdsShowStartWithPlace:self.placeType];
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:self.placeType unitId:self.adUnitId];
 }
 
 - (void)nativeAdWillDismissScreen:(nonnull GADUnifiedNativeAd *)nativeAd {
-//    [VSEventManager logAdsShowEndWithPlace:self.placeType unitId:self.adUnitId];
+    
 }
 
 - (void)nativeAdDidDismissScreen:(nonnull GADUnifiedNativeAd *)nativeAd {
@@ -123,6 +116,9 @@
 }
 
 - (void)nativeAdWillLeaveApplication:(nonnull GADUnifiedNativeAd *)nativeAd {
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adClick placeType:self.placeType unitId:self.adUnitId];
+    
+    
     if (self.placeType == VSAdShowPlaceTypePartHome) {
         // 首页的广告被点击
         if ([self.homeBottomClickdelgate respondsToSelector:@selector(clickAdInHomeBottomAds:)]) {

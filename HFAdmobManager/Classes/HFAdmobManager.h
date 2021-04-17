@@ -15,6 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 static NSString *kNotificationNamePartAdLoadSuccussKey = @"kNotificationNamePartAdLoadSuccussKey";
 static NSString *kNotificationNameFullScreenAdLoadSuccussKey = @"kNotificationNameFullScreenAdLoadSuccussKey";
 
+
+static NSString *kHFAdmobEvent_startRequest = @"startRequest";
+static NSString *kHFAdmobEvent_receiveAdFail = @"receiveAdFail";
+static NSString *kHFAdmobEvent_receiveAd = @"receiveAd";
+
+static NSString *kHFAdmobEvent_adClick = @"adClick";
+static NSString *kHFAdmobEvent_adHidden = @"adHidden";
+static NSString *kHFAdmobEvent_adShow = @"adShow";
+
+
 typedef BOOL (^OpenDebugModeHandler)(void);
 
 
