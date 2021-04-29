@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '1.0.5'
-    s.summary          = '修改admob 依赖版本'
+    s.version          = '1.0.6'
+    s.summary          = '修改admob 默认配置的问题'
     
     s.description      = <<-DESC
   TODO: Add long description of the pod here.

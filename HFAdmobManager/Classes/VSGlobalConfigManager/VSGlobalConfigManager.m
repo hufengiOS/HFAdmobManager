@@ -56,8 +56,8 @@ static NSString *const kGlobalConfigFileName = @"kGlobalConfigFileName";
         } else {
             model = [VSGlobalConfigModel mj_objectWithKeyValues:cacheDic];
         }
-        
-        return model;
+        _model = model;
+        return _model;
     }
 }
 
