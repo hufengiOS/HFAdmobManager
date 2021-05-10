@@ -24,7 +24,7 @@
   "frameworks": "UIKit",
   "static_framework": true,
   "ios": {
-    "vendored_frameworks": "Frameworks/HFAdmobManager.framework"
+    "vendored_frameworks": "HFAdmobManager/HFAdmobManager.framework"
   },
   "dependencies": {
     "Google-Mobile-Ads-SDK": [

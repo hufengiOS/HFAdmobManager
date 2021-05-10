@@ -68,8 +68,11 @@ Pod::Spec.new do |s|
     s.static_framework = true
 #    s.vendored_framework = 'SDK'
     
-    s.ios.vendored_frameworks = 'Frameworks/HFAdmobManager.framework'
+    s.ios.vendored_frameworks = 'HFAdmobManager/HFAdmobManager.framework'
 #    s.vendored_frameworks = 'SDK/HFAdmobManager.framework'
+
+
+
     s.frameworks = 'UIKit'
     
     s.dependency 'Google-Mobile-Ads-SDK'
