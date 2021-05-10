@@ -1,7 +1,7 @@
 {
   "name": "HFAdmobManager",
-  "version": "1.0.6",
-  "summary": "修改admob 默认配置的问题",
+  "version": "1.2.0",
+  "summary": "更新 admob SDK 到8.5.0版本",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hufengiOS/HFAdmobManager",
   "license": {
@@ -13,15 +13,19 @@
   },
   "source": {
     "git": "https://github.com/hufengiOS/HFAdmobManager.git",
-    "tag": "1.0.6"
+    "tag": "1.2.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
   "requires_arc": true,
   "source_files": "HFAdmobManager/Classes/*",
+  "public_header_files": "Headers/Public/*.h",
   "frameworks": "UIKit",
   "static_framework": true,
+  "ios": {
+    "vendored_frameworks": "Frameworks/HFAdmobManager.framework"
+  },
   "dependencies": {
     "Google-Mobile-Ads-SDK": [
 

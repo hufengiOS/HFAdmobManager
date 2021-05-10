@@ -28,6 +28,9 @@ Pod::Spec.new do |s|
     
   
     s.source_files = 'HFAdmobManager/Classes/*'
+    s.public_header_files = 'Headers/Public/*.h'
+    
+    
     s.subspec 'VSAdCache' do |ss|
         ss.source_files = 'HFAdmobManager/Classes/VSAdCache/*.{h,m}'
     end
@@ -65,6 +68,9 @@ Pod::Spec.new do |s|
     s.static_framework = true
 #    s.vendored_framework = 'SDK'
     
+    s.ios.vendored_frameworks = 'Frameworks/HFAdmobManager.framework'
+#    s.vendored_frameworks = 'SDK/HFAdmobManager.framework'
+    s.frameworks = 'UIKit'
     
     s.dependency 'Google-Mobile-Ads-SDK'
     s.dependency 'Masonry'
