@@ -113,7 +113,7 @@ static NSString *const kGlobalConfigFileName = @"kGlobalConfigFileName";
     }];
     
     array = [array sortedArrayUsingComparator:^NSComparisonResult(VSGlobalConfigAdsConfigAdPlaceModel *_Nonnull obj1, VSGlobalConfigAdsConfigAdPlaceModel *_Nonnull obj2) {
-        return obj1.adWeight > obj2.adWeight;
+        return obj1.adWeight < obj2.adWeight;
     }];
     return array;
 }

@@ -10,14 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class GADInterstitial;
-typedef void(^VSAdIntLoadCompletionHandler)(GADInterstitial * _Nullable interstitial, NSError * _Nullable error);
+@class GADInterstitialAd;
+typedef void(^VSAdIntLoadCompletionHandler)(GADInterstitialAd * _Nullable interstitial, NSError * _Nullable error);
 
 @interface VSAdIntLoader : NSObject
 
-@property (nonatomic, strong) GADInterstitial *interstitial;
+@property (nonatomic, strong, nullable) GADInterstitialAd *interstitial;
 
-- (void)loadAdsWithUnitId:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType completionHander:(VSAdIntLoadCompletionHandler)completionHandler;
+- (void)loadAdsWithUnitId:(NSString *)adUnit
+                placeType:(VSAdShowPlaceType)placeType
+         completionHander:(VSAdIntLoadCompletionHandler)completionHandler;
 
 @end
 

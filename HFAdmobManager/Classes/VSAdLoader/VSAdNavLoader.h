@@ -10,12 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class GADUnifiedNativeAd;
-typedef void(^VSAdLoadCompletionHandler)(GADUnifiedNativeAd * _Nullable nativeAd, VSAdShowPlaceType placeType, NSError *_Nullable error);
+@class GADNativeAd;
+typedef void(^VSAdLoadCompletionHandler)(GADNativeAd * _Nullable nativeAd, VSAdShowPlaceType placeType, NSError *_Nullable error);
 
 @interface VSAdNavLoader : NSObject
 
-@property (nonatomic, strong) GADUnifiedNativeAd *nativeAd;
+@property (nonatomic, strong) GADNativeAd *nativeAd;
 @property (nonatomic, assign) BOOL isLoadFinish;
 - (void)loadAdsWithUnitId:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType completionHandler:(VSAdLoadCompletionHandler)completionHandler;
 

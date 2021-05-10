@@ -10,7 +10,7 @@
 #import <HFAdmobManager/HFAdmobManager.h>
 
 
-@interface VSAdNavLoader()<GADUnifiedNativeAdLoaderDelegate>
+@interface VSAdNavLoader()<GADNativeAdLoaderDelegate, GADAdLoaderDelegate>
 
 @property (nonatomic, strong) GADAdLoader *adLoader;
 
@@ -23,6 +23,7 @@
 @implementation VSAdNavLoader
 
 - (void)loadAdsWithUnitId:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType completionHandler:(VSAdLoadCompletionHandler)completionHandler {
+    
     self.adLoader = [self adLoaderWithUnitId:adUnit placeType:placeType];
     GADRequest *request = [GADRequest request];
     self.adLoader.delegate = self;
@@ -51,13 +52,12 @@
     GADNativeMuteThisAdLoaderOptions *muteOptions = [GADNativeMuteThisAdLoaderOptions new];
     GADAdLoader *adLoader = [[GADAdLoader alloc] initWithAdUnitID:adUnit
                                                rootViewController:[UIApplication sharedApplication].keyWindow.rootViewController
-                                                          adTypes:@[kGADAdLoaderAdTypeUnifiedNative]
+                                                          adTypes:@[kGADAdLoaderAdTypeNative]
                                                           options:@[multipleAdsOptions,
                                                                     adViewOptions,
                                                                     adLoaderOptions,
                                                                     adVideoOptions,
                                                                     muteOptions]];
-    adLoader.delegate = self;
     return adLoader;
 }
 
@@ -74,27 +74,26 @@
     [self.adLoader loadRequest:request];
 }
 
-#pragma mark - GADUnifiedNativeAdLoaderDelegate
-- (void)adLoader:(nonnull GADAdLoader *)adLoader
-didReceiveUnifiedNativeAd:(nonnull GADUnifiedNativeAd *)nativeAd {
-    HFAd_DebugLog(@"*广告数据* adUnitId(nav):%@, %@, %@", adLoader.adUnitID, nativeAd.headline, nativeAd.body)
+#pragma mark - GADNativeAdLoaderDelegate
+- (void)adLoader:(nonnull GADAdLoader *)adLoader didReceiveNativeAd:(nonnull GADNativeAd *)nativeAd {
+    
     self.nativeAd = nativeAd;
     self.isLoadFinish = YES;
     // 用数组存储
     !_loadCompletionHandler ? : _loadCompletionHandler(nativeAd, _placeType, nil);
     
     [[HFAdmobManager shareInstance] eventWithEventName:@"end_request" placeType:_placeType unitId:adLoader.adUnitID];
-    
 }
 
+#pragma mark - GADAdLoaderDelegate
+/// Called when adLoader fails to load an ad.
 - (void)adLoader:(nonnull GADAdLoader *)adLoader
-didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
-    HFAd_DebugLog(@"*广告数据* adUnitId(nav):%@, %@", adLoader.adUnitID, error.localizedDescription)
+didFailToReceiveAdWithError:(nonnull NSError *)error {
     !_loadCompletionHandler ? : _loadCompletionHandler(nil, _placeType, error);
 }
 
+/// Called after adLoader has finished loading.
 - (void)adLoaderDidFinishLoading:(nonnull GADAdLoader *)adLoader {
     
 }
-
 @end

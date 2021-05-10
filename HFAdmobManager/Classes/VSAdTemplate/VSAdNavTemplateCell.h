@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VSAdNavTemplateCell : VSAdNavTemplateBase
 
-//- (void)showAdsInCell:(UITableViewCell *)cell nativeAd:(GADUnifiedNativeAd *)nativeAd;
-- (BOOL)showAdsInCell:(UITableViewCell *)cell nativeAd:(GADUnifiedNativeAd *)nativeAd;
+//- (void)showAdsInCell:(UITableViewCell *)cell nativeAd:(GADNativeAd *)nativeAd;
+- (BOOL)showAdsInCell:(UITableViewCell *)cell nativeAd:(GADNativeAd *)nativeAd;
 + (CGFloat)heightOfAdCell;
 @end
 

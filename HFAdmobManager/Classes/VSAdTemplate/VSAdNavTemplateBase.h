@@ -20,24 +20,22 @@ typedef NS_ENUM(NSUInteger, AdsNavTemplateType) {
 @class VSAdNavTemplateHomeBottom;
 
 @protocol VSAdNavTemplateHomeBottomClickDelegate <NSObject>
-- (void)clickAdInHomeBottomAds:(VSAdNavTemplateHomeBottom *)homeBottomAds;
+- (void)clickAdInHomeBottomAds:(VSAdNavTemplateHomeBottom * _Nullable)homeBottomAds;
 @end
 
 
 @interface VSAdNavTemplateBase : NSObject {
-//    GADUnifiedNativeAdView *_nativeAdView;
+//    GADNativeAdView *_nativeAdView;
 }
 
 @property (nonatomic, weak) id<VSAdNavTemplateHomeBottomClickDelegate> homeBottomClickdelgate;
 
 @property (nonatomic, assign) VSAdShowPlaceType placeType;
 @property (nonatomic, strong) NSString *adUnitId;
-@property (nonatomic, strong) GADUnifiedNativeAdView *nativeAdView;
+@property (nonatomic, strong) GADNativeAdView *nativeAdView;
 @property (nonatomic, strong) UILabel *adLogoLabel;
 
-//@property (nonatomic, weak) id<GADUnifiedNativeAdDelegate, GADVideoControllerDelegate> delegate;
-
-- (void)configWithNativeAd:(GADUnifiedNativeAd *)nativeAd;
+- (void)configWithNativeAd:(GADNativeAd *)nativeAd;
 @end
 
 NS_ASSUME_NONNULL_END

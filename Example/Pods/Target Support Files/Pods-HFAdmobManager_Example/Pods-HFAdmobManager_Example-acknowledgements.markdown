@@ -51,7 +51,7 @@ SOFTWARE.
 
 ## Google-Mobile-Ads-SDK
 
-Copyright 2020 Google
+Copyright 2021 Google
 
 ## GoogleAppMeasurement
 
@@ -59,7 +59,7 @@ Copyright 2021 Google
 
 ## GoogleUserMessagingPlatform
 
-Copyright 2020 Google
+Copyright 2021 Google
 
 ## GoogleUtilities
 

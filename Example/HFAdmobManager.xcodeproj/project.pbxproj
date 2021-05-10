@@ -17,6 +17,7 @@
 		4F8FC13625C3D94E006D609C /* VSAdNavTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FC13525C3D94E006D609C /* VSAdNavTemplateView.xib */; };
 		4F8FC20C25C403E5006D609C /* close_ads@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FC20A25C403E5006D609C /* close_ads@2x.png */; };
 		4F8FC20D25C403E5006D609C /* close_ads@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8FC20B25C403E5006D609C /* close_ads@3x.png */; };
+		4FC80B3B2648E0F20012208D /* kGlobalConfigFileName.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4FC80B3A2648E0F20012208D /* kGlobalConfigFileName.txt */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -64,6 +65,7 @@
 		4F8FC13525C3D94E006D609C /* VSAdNavTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VSAdNavTemplateView.xib; sourceTree = "<group>"; };
 		4F8FC20A25C403E5006D609C /* close_ads@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_ads@2x.png"; sourceTree = "<group>"; };
 		4F8FC20B25C403E5006D609C /* close_ads@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_ads@3x.png"; sourceTree = "<group>"; };
+		4FC80B3A2648E0F20012208D /* kGlobalConfigFileName.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kGlobalConfigFileName.txt; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* HFAdmobManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFAdmobManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,6 +172,7 @@
 		4F8FC20925C403D4006D609C /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				4FC80B3A2648E0F20012208D /* kGlobalConfigFileName.txt */,
 				4F8FC20A25C403E5006D609C /* close_ads@2x.png */,
 				4F8FC20B25C403E5006D609C /* close_ads@3x.png */,
 			);
@@ -334,7 +337,7 @@
 				ORGANIZATIONNAME = hufengiOS;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 8Z57UX9583;
+						DevelopmentTeam = 6H9LKYK6VH;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -370,6 +373,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				4F8FC20D25C403E5006D609C /* close_ads@3x.png in Resources */,
+				4FC80B3B2648E0F20012208D /* kGlobalConfigFileName.txt in Resources */,
 				4F8FC13625C3D94E006D609C /* VSAdNavTemplateView.xib in Resources */,
 				4F8933CD25A4545900E7D9A6 /* GoogleService-Info.plist in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -622,7 +626,7 @@
 			baseConfigurationReference = 31FE20593071D3AF68BA545F /* Pods-HFAdmobManager_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8Z57UX9583;
+				DEVELOPMENT_TEAM = 6H9LKYK6VH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFAdmobManager/HFAdmobManager-Prefix.pch";
 				INFOPLIST_FILE = "HFAdmobManager/HFAdmobManager-Info.plist";
@@ -639,7 +643,7 @@
 			baseConfigurationReference = 9E012B462FEA8689F9848B6C /* Pods-HFAdmobManager_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8Z57UX9583;
+				DEVELOPMENT_TEAM = 6H9LKYK6VH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFAdmobManager/HFAdmobManager-Prefix.pch";
 				INFOPLIST_FILE = "HFAdmobManager/HFAdmobManager-Info.plist";

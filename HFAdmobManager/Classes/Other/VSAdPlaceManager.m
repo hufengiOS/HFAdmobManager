@@ -88,7 +88,7 @@
         if ([HFAdmobManager shareInstance].isDEBUGMode) {
             adUnit = @"ca-app-pub-3940256099942544/3986624511";
         }
-        [self.navLoader loadAdsWithUnitId:adUnit placeType:placeType completionHandler:^(GADUnifiedNativeAd * _Nullable nativeAd, VSAdShowPlaceType placeType, NSError * _Nullable error) {
+        [self.navLoader loadAdsWithUnitId:adUnit placeType:placeType completionHandler:^(GADNativeAd * _Nullable nativeAd, VSAdShowPlaceType placeType, NSError * _Nullable error) {
             if (nativeAd) {
                 [VSAdCacheManager saveAdsWithAdsType:type placeType:placeType adUnitId:adUnit adWeight:adWeight obj:nativeAd];
             }
@@ -98,7 +98,7 @@
         if ([HFAdmobManager shareInstance].isDEBUGMode) {
             adUnit = @"ca-app-pub-3940256099942544/4411468910";
         }
-        [self.intLoader loadAdsWithUnitId:adUnit placeType:placeType completionHander:^(GADInterstitial * _Nullable interstitial, NSError * _Nullable error) {
+        [self.intLoader loadAdsWithUnitId:adUnit placeType:placeType completionHander:^(GADInterstitialAd * _Nullable interstitial, NSError * _Nullable error) {
             if (!error) {
                 [VSAdCacheManager saveAdsWithAdsType:type placeType:placeType adUnitId:adUnit adWeight:adWeight obj:interstitial];
             }
@@ -110,7 +110,7 @@
 }
 
 - (BOOL)isloadFinish {
-    return self.intLoader.interstitial.isReady;
+    return nil != self.intLoader.interstitial;
 }
 
 #pragma mark - lazy

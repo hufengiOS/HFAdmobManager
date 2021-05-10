@@ -13,7 +13,7 @@
 #import <HFAdmobManager/HFAdmobManager.h>
 
 
-@interface VSAdIntShowManager()<GADInterstitialDelegate>
+@interface VSAdIntShowManager()<GADFullScreenContentDelegate>
 
 @property (nonatomic, assign) VSAdShowPlaceType placeType;
 
@@ -30,11 +30,11 @@
     return manager;
 }
 
-+ (BOOL)showIntAdWithController:(UIViewController *)viewController placeType:(VSAdShowPlaceType)placeType interstitial:(GADInterstitial *)interstitial {
++ (BOOL)showIntAdWithController:(UIViewController *)viewController placeType:(VSAdShowPlaceType)placeType interstitial:(GADInterstitialAd *)interstitial {
     
     if ([interstitial canPresentFromRootViewController:viewController error:nil] && ![viewController.presentedViewController isKindOfClass:[VSFullScreenAdsController class]]) {
         [interstitial presentFromRootViewController:viewController];
-        interstitial.delegate = [VSAdIntShowManager shareInstance];
+        interstitial.fullScreenContentDelegate = [VSAdIntShowManager shareInstance];
         [VSAdIntShowManager shareInstance].placeType = placeType;
         
         return YES;
@@ -82,41 +82,31 @@
     return vc;
 }
 
-#pragma mark - GADInterstitialDelegate
-#pragma mark Ad Request Lifecycle Notifications
-- (void)interstitialDidReceiveAd:(nonnull GADInterstitial *)ad {
-    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAd placeType:self.placeType unitId:ad.adUnitID];
-
-}
-
-- (void)interstitial:(nonnull GADInterstitial *)ad
-didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
-    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAdFail placeType:self.placeType unitId:ad.adUnitID];
-}
-
-#pragma mark Display-Time Lifecycle Notifications
-- (void)interstitialWillPresentScreen:(nonnull GADInterstitial *)ad {
-    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:self.placeType unitId:ad.adUnitID];
-
-}
-
-/// Called when |ad| fails to present.
-- (void)interstitialDidFailToPresentScreen:(nonnull GADInterstitial *)ad {
+#pragma mark - GADFullScreenContentDelegate
+/// Tells the delegate that an impression has been recorded for the ad.
+- (void)adDidRecordImpression:(nonnull id<GADFullScreenPresentingAd>)ad {
     
 }
 
-/// Called before the interstitial is to be animated off the screen.
-- (void)interstitialWillDismissScreen:(nonnull GADInterstitial *)ad {
-    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adHidden placeType:self.placeType unitId:ad.adUnitID];
-}
-
-/// Called just after dismissing an interstitial and it has animated off the screen.
-- (void)interstitialDidDismissScreen:(nonnull GADInterstitial *)ad {
+/// Tells the delegate that the ad failed to present full screen content.
+- (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
+didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
     
 }
 
-- (void)interstitialWillLeaveApplication:(nonnull GADInterstitial *)ad {
-    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adClick placeType:self.placeType unitId:ad.adUnitID];
-    [VSAdShowClickAdsManager addClickAdsWithPlaceType:self.placeType];
+/// Tells the delegate that the ad presented full screen content.
+- (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
+    
 }
+
+/// Tells the delegate that the ad will dismiss full screen content.
+- (void)adWillDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
+//    [VSAdShowClickAdsManager addClickAdsWithPlaceType:self.placeType];
+}
+
+/// Tells the delegate that the ad dismissed full screen content.
+- (void)adDidDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
+    
+}
+
 @end

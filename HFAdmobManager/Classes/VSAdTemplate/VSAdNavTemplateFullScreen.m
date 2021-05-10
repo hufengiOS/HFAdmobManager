@@ -68,7 +68,7 @@
 }
 
 #pragma mark - public
-- (void)showInController:(UIViewController *)controller placeType:(VSAdShowPlaceType)placeType nativeAd:(GADUnifiedNativeAd *)nativeAd {
+- (void)showInController:(UIViewController *)controller placeType:(VSAdShowPlaceType)placeType nativeAd:(GADNativeAd *)nativeAd {
     
     if (!self.mainController.presentingViewController && ![controller.presentedViewController isKindOfClass:NSClassFromString(@"GADFullScreenAdViewController")]) {
         self.placeType = placeType;
@@ -155,7 +155,7 @@
 }
 
 #pragma mark - VSAdNavTemplateLayoutDelegate
-- (void)layoutTemplateWithNativeAdView:(GADUnifiedNativeAdView *)nativeAdView {
+- (void)layoutTemplateWithNativeAdView:(GADNativeAdView *)nativeAdView {
     
     // title
     ((UILabel *)nativeAdView.headlineView).textAlignment = NSTextAlignmentCenter;

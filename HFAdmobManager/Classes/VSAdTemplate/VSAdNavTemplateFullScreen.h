@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VSAdNavTemplateFullScreen : VSAdNavTemplateBase
 
-- (void)showInController:(UIViewController *)controller placeType:(VSAdShowPlaceType)placeType nativeAd:(GADUnifiedNativeAd *)nativeAd;
+- (void)showInController:(UIViewController *)controller placeType:(VSAdShowPlaceType)placeType nativeAd:(GADNativeAd *)nativeAd;
 - (void)closeFullscreenAds;
 
 @end

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VSAdNavTemplateHomeBottom : VSAdNavTemplateBase
 
 - (void)showInContainView:(UIView *)containView
-                 nativeAd:(GADUnifiedNativeAd *)nativeAd
+                 nativeAd:(GADNativeAd *)nativeAd
                  delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate;
 
 @end

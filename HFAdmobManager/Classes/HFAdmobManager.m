@@ -92,8 +92,6 @@
                 [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationNameFullScreenAdLoadSuccussKey object:@(placeType)];
             }            
         }
-        
-        
     }];
 }
 
@@ -122,7 +120,7 @@
     VSAdCacheData *data = [VSAdCacheManager adsWithPlaceType:placeType];
     BOOL showSuccess = YES;
     if (VSAdUnitTypeInt == data.unitType) {
-        [VSAdIntShowManager showIntAdWithController:controller placeType:placeType interstitial:(GADInterstitial *)data.obj];
+        [VSAdIntShowManager showIntAdWithController:controller placeType:placeType interstitial:(GADInterstitialAd *)data.obj];
     } else if (VSAdUnitTypeNav == data.unitType) {
         if (VSAdShowPlaceTypePartHome == data.placeType || VSAdShowPlaceTypePartOther == data.placeType) {
             if (VSAdShowPlaceTypePartOther == placeType) {
@@ -166,7 +164,6 @@
         [[HFAdmobManager shareInstance].delegate admobManagerEventName:@"start_request" placeType:placeType unitId:unitId];
     }
 }
-
 
 #pragma mark - connectVpnLimit
 + (void)finishConnectAuthor {

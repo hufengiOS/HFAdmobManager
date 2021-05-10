@@ -40,13 +40,13 @@
 /// 展示原生全屏广告
 /// @param nativeAd 广告数据
 /// @param controller 展示的控制器
-+ (void)showNavAdWithNav:(GADUnifiedNativeAd *)nativeAd adUnit:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller {
++ (void)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller {
     VSAdNavTemplateFullScreen *fullScreen = [VSAdNavShowManager shareInstance].fullScreen;
     fullScreen.adUnitId = adUnit;
     [fullScreen showInController:controller placeType:placeType nativeAd:nativeAd];
 }
 
-+ (void)showNavAdWithNav:(GADUnifiedNativeAd *)nativeAd adUnit:(NSString *)adUnit containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate>)delegate {
++ (void)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate>)delegate {
     VSAdNavTemplateHomeBottom *homeBottom = [VSAdNavShowManager shareInstance].homeBottom;
     homeBottom.adUnitId = adUnit;
     [homeBottom showInContainView:containView nativeAd:nativeAd delegate:delegate];
@@ -54,7 +54,7 @@
 //    [VSAdNavShowManager shareInstance].homeBottomClickdelgate = delegate;
 }
 
-+ (BOOL)showNavAdWithNav:(GADUnifiedNativeAd *)nativeAd adUnit:(NSString *)adUnit cell:(UITableViewCell *)cell {
++ (BOOL)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit cell:(UITableViewCell *)cell {
     VSAdNavTemplateCell *cellTemplate = [VSAdNavShowManager shareInstance].cellTemplate;
     cellTemplate.adUnitId = adUnit;
     return [cellTemplate showAdsInCell:cell nativeAd:nativeAd];

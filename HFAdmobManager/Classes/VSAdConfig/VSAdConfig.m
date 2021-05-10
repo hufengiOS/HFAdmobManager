@@ -42,7 +42,8 @@ static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
         @"729bb2d6e735f8ca7e3c51f6030129a4", // 小丽 iPhone 7
         @"7bfe45c23f3ef5b4eb1f8b4d9be2504b", // 小丽 iPhone 12
         @"159311b664bc129ed22f968861065c4c", // 测试机 iPad Air
-        @"4acaaf36dbfec66fda7a226d22855bfe"  // 测试机 XR
+        @"4acaaf36dbfec66fda7a226d22855bfe",  // 测试机 XR,
+        kGADSimulatorID
     ];
 }
 
@@ -55,7 +56,9 @@ static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
     }
     for (VSGlobalConfigAdsConfigModel *model in [VSGlobalConfigManager shareInstance].configModel.adCfgs) {
         if (model.adNameType == placeType) {
-            return model.isReq && (model.adNameType == placeType);
+            return model.isReq;
+        } else {
+            continue;
         }
     }
     return NO;

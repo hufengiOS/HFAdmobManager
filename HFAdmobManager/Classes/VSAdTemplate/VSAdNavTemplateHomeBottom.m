@@ -25,7 +25,7 @@
 
 #pragma mark - public
 - (void)showInContainView:(UIView *)containView
-                 nativeAd:(GADUnifiedNativeAd *)nativeAd
+                 nativeAd:(GADNativeAd *)nativeAd
                  delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate {
     
     if (containView) {
@@ -57,7 +57,7 @@
 }
 
 #pragma mark - VSAdNavTemplateLayoutDelegate
-- (void)layoutTemplateWithNativeAdView:(GADUnifiedNativeAdView *)nativeAdView {
+- (void)layoutTemplateWithNativeAdView:(GADNativeAdView *)nativeAdView {
 
     
     CGFloat topSpace = HF_kFrameValueForDevice(HF_kScaleWidth(20), HF_kScaleWidth(30));

@@ -12,7 +12,7 @@
 #import <HFAdmobManager/HFAdmobManager.h>
 
 
-@interface VSAdIntLoader ()<GADInterstitialDelegate>
+@interface VSAdIntLoader ()<GADFullScreenContentDelegate>
 
 
 @property (nonatomic, copy)VSAdIntLoadCompletionHandler loadCompletionHandler;
@@ -25,61 +25,49 @@
 #pragma mark - public
 - (void)loadAdsWithUnitId:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType completionHander:(VSAdIntLoadCompletionHandler)completionHandler {
     _loadCompletionHandler = completionHandler;
-    self.interstitial = [self interstitialWithAdUnit:adUnit];
+    
+    GADRequest *request = [GADRequest request];
+    __weak typeof(self) weakself = self;
+    [GADInterstitialAd loadWithAdUnitID:adUnit request:request completionHandler:^(GADInterstitialAd * _Nullable interstitialAd, NSError * _Nullable error) {
+        if (error) {
+            !weakself.loadCompletionHandler ? : weakself.loadCompletionHandler(nil, error);
+            weakself.interstitial = nil;
+        } else {
+            weakself.interstitial = interstitialAd;
+            weakself.interstitial.fullScreenContentDelegate = weakself;
+            !weakself.loadCompletionHandler ? : weakself.loadCompletionHandler(interstitialAd, nil);
+        }
+    }];
+    
     self.placeType = placeType;
     [[HFAdmobManager shareInstance] eventWithEventName:@"start_request" placeType:placeType unitId:adUnit];
 }
 
-#pragma mark - private
-- (GADInterstitial *)interstitialWithAdUnit:(NSString *)adUnit {
-    GADInterstitial *interstitial =
-      [[GADInterstitial alloc] initWithAdUnitID:adUnit];
-    interstitial.delegate = self;
-    
-    GADRequest *request = [GADRequest request];
-    
-    [interstitial loadRequest:request];
-    
-
-    return interstitial;
-}
-
-#pragma mark - GADInterstitialDelegate
-- (void)interstitialDidReceiveAd:(nonnull GADInterstitial *)ad {
-    HFAd_DebugLog(@"*广告数据* adUnitId(int):%@ %@",ad.adUnitID, ad.responseInfo.adNetworkClassName)
-
-    [[HFAdmobManager shareInstance] eventWithEventName:@"receiveAd" placeType:self.placeType unitId:ad.adUnitID];
-
-    
-    !_loadCompletionHandler ? : _loadCompletionHandler(ad, nil);
-}
-
-- (void)interstitial:(nonnull GADInterstitial *)ad
-didFailToReceiveAdWithError:(nonnull GADRequestError *)error {
-    HFAd_DebugLog(@"*广告数据* adUnitId(int):%@, %@", ad.adUnitID, error.debugDescription)
-    [[HFAdmobManager shareInstance] eventWithEventName:@"receiveAd" placeType:self.placeType unitId:ad.adUnitID];
-    
-    !_loadCompletionHandler ? : _loadCompletionHandler(nil, error);
-}
-
-#pragma mark - Display-Time Lifecycle Notifications
-- (void)interstitialWillPresentScreen:(nonnull GADInterstitial *)ad {
+#pragma mark - GADFullScreenContentDelegate
+/// Tells the delegate that an impression has been recorded for the ad.
+- (void)adDidRecordImpression:(nonnull id<GADFullScreenPresentingAd>)ad {
     
 }
 
-- (void)interstitialDidFailToPresentScreen:(nonnull GADInterstitial *)ad {
+/// Tells the delegate that the ad failed to present full screen content.
+- (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
+didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
     
 }
 
-- (void)interstitialWillDismissScreen:(nonnull GADInterstitial *)ad {
+/// Tells the delegate that the ad presented full screen content.
+- (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     
 }
 
-- (void)interstitialDidDismissScreen:(nonnull GADInterstitial *)ad {
+/// Tells the delegate that the ad will dismiss full screen content.
+- (void)adWillDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     
 }
 
-- (void)interstitialWillLeaveApplication:(nonnull GADInterstitial *)ad {
+/// Tells the delegate that the ad dismissed full screen content.
+- (void)adDidDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     
 }
+
 @end

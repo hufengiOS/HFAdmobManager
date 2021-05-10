@@ -1,0 +1,136 @@
+{
+  "message" : "请求成功",
+  "data" : {
+    "adCfgs" : [
+      {
+        "adSources" : [
+          {
+            "adPlaceID" : "ca-app-pub-8378788380020007/5460855567",
+            "adWeight" : 4,
+            "adFormatType" : "nav"
+          },
+          {
+            "adPlaceID" : "ca-app-pub-8378788380020007/3680964526",
+            "adWeight" : 6,
+            "adFormatType" : "nav"
+          },
+          {
+            "adPlaceID" : "a-app-pub-7856983145839071/2979206347",
+            "adWeight" : 10,
+            "adFormatType" : "int"
+          }
+        ],
+        "isShow" : true,
+        "navCloseBtn" : {
+          "isIcon" : true,
+          "iconType" : "small"
+        },
+        "adName" : "AD_EXTRA",
+        "isReq" : true
+      },
+      {
+        "adSources" : [
+          {
+            "adPlaceID" : "a-app-pub-7856983145839071/2979206347",
+            "adWeight" : 3,
+            "adFormatType" : "nav"
+          }
+        ],
+        "isShow" : true,
+        "navCloseBtn" : {
+          "isIcon" : true,
+          "iconType" : "small"
+        },
+        "adName" : "AD_START",
+        "isReq" : true
+      },
+      {
+        "adSources" : [
+          {
+            "adPlaceID" : "ca-app-pub-8378788380020007/3680964526",
+            "adWeight" : 0,
+            "adFormatType" : "nav"
+          }
+        ],
+        "isShow" : true,
+        "navCloseBtn" : {
+          "isIcon" : true,
+          "iconType" : "normal"
+        },
+        "adName" : "AD_CONNECT",
+        "isReq" : true
+      },
+      {
+        "adSources" : [
+          {
+            "adPlaceID" : "ca-app-pub-8378788380020007/3680964526",
+            "adWeight" : 0,
+            "adFormatType" : "nav"
+          }
+        ],
+        "isShow" : true,
+        "navCloseBtn" : {
+          "textEdgeSpace" : 1,
+          "isIcon" : false,
+          "iconType" : ""
+        },
+        "adName" : "AD_HOME",
+        "isReq" : true
+      }
+    ],
+    "vgfCkLimit" : 5,
+    "connectModes" : [
+      {
+        "configs" : [
+          {
+            "type" : 2
+          }
+        ],
+        "mode" : 2
+      }
+    ],
+    "vpnGlobalSubConfig" : {
+      "defaultSelect" : "1001",
+      "openPay" : false,
+      "paymentIntroduce_productId" : "1002",
+      "itemList" : [
+        {
+          "saveInfo" : "",
+          "itemDescription" : "周费",
+          "localPrice" : "3.99$",
+          "placeholderStr" : "Per Week",
+          "productId" : "1001"
+        },
+        {
+          "saveInfo" : "",
+          "itemDescription" : "月费",
+          "localPrice" : "9.99$",
+          "placeholderStr" : "Per Month",
+          "productId" : "1002"
+        },
+        {
+          "saveInfo" : "",
+          "itemDescription" : "年费",
+          "localPrice" : "59.99$",
+          "placeholderStr" : "Per Year",
+          "productId" : "1003"
+        }
+      ],
+      "payPassword" : "d326cb52604e47d5b3d964e28931c21f",
+      "itemOrder" : [
+        "1001",
+        "1002"
+      ]
+    },
+    "vgfConnOpAd" : true,
+    "vgfOpTime" : 10,
+    "vgfCountryConn" : "UK,AF,JP",
+    "vgfInterval" : 0,
+    "vgfName" : "优先级-16",
+    "vpnGlobalUptConfig" : {
+      "vgfUpt" : false,
+      "vgfUptText" : ""
+    }
+  },
+  "status" : 200
+}

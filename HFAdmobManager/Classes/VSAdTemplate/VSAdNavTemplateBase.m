@@ -10,7 +10,7 @@
 #import <HFAdmobManager/HFAdmobManager.h>
 
 
-@interface VSAdNavTemplateBase ()<GADUnifiedNativeAdDelegate, GADVideoControllerDelegate>
+@interface VSAdNavTemplateBase ()<GADCustomNativeAdDelegate, GADVideoControllerDelegate>
 
 
 @end
@@ -27,9 +27,9 @@
 
 #pragma mark - public
 #pragma mark - private
-- (void)configWithNativeAd:(GADUnifiedNativeAd *)nativeAd {
+- (void)configWithNativeAd:(GADNativeAd *)nativeAd {
     
-    GADUnifiedNativeAdView *nativeAdView = self.nativeAdView;
+    GADNativeAdView *nativeAdView = self.nativeAdView;
     nativeAdView.nativeAd = nativeAd;
     nativeAd.delegate = self;
     
@@ -90,34 +90,42 @@
 }
 
 #pragma mark - VSAdNavTemplateLayoutDelegate
-- (void)layoutTemplateWithNativeAdView:(GADUnifiedNativeAdView *)nativeAdView {
+- (void)layoutTemplateWithNativeAdView:(GADNativeAdView *)nativeAdView {
     
 }
 
-#pragma mark - GADUnifiedNativeAdDelegate
-- (void)nativeAdDidRecordImpression:(nonnull GADUnifiedNativeAd *)nativeAd {
+#pragma mark Ad Lifecycle Events
+/// Called when an impression is recorded for a custom native ad.
+- (void)customNativeAdDidRecordImpression:(nonnull GADCustomNativeAd *)nativeAd; {
     
 }
 
-- (void)nativeAdDidRecordClick:(nonnull GADUnifiedNativeAd *)nativeAd {
+/// Called when a click is recorded for a custom native ad.
+- (void)customNativeAdDidRecordClick:(nonnull GADCustomNativeAd *)nativeAd {
     [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adClick placeType:self.placeType unitId:self.adUnitId];
 }
 
-- (void)nativeAdWillPresentScreen:(nonnull GADUnifiedNativeAd *)nativeAd {
+#pragma mark Click-Time Lifecycle Notifications
+
+/// Called just before presenting the user a full screen view, such as a browser, in response to
+/// clicking on an ad. Use this opportunity to stop animations, time sensitive interactions, etc.
+///
+/// Normally the user looks at the ad, dismisses it, and control returns to your application with
+/// the customNativeAdDidDismissScreen: message. However, if the user hits the Home button or clicks
+/// on an App Store link, your application will end. The next method called will be the
+/// applicationWillResignActive: of your UIApplicationDelegate object.
+- (void)customNativeAdWillPresentScreen:(nonnull GADCustomNativeAd *)nativeAd {
     [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:self.placeType unitId:self.adUnitId];
+
 }
 
-- (void)nativeAdWillDismissScreen:(nonnull GADUnifiedNativeAd *)nativeAd {
+/// Called just before dismissing a full screen view.
+- (void)customNativeAdWillDismissScreen:(nonnull GADCustomNativeAd *)nativeAd {
     
 }
 
-- (void)nativeAdDidDismissScreen:(nonnull GADUnifiedNativeAd *)nativeAd {
-    
-}
-
-- (void)nativeAdWillLeaveApplication:(nonnull GADUnifiedNativeAd *)nativeAd {
+- (void)customNativeAdDidDismissScreen:(nonnull GADCustomNativeAd *)nativeAd {
     [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adClick placeType:self.placeType unitId:self.adUnitId];
-    
     
     if (self.placeType == VSAdShowPlaceTypePartHome) {
         // 首页的广告被点击
@@ -125,10 +133,6 @@
             [self.homeBottomClickdelgate clickAdInHomeBottomAds:nil];
         }
     }
-}
-
-- (void)nativeAdIsMuted:(nonnull GADUnifiedNativeAd *)nativeAd {
-    
 }
 
 #pragma mark - GADVideoControllerDelegate
@@ -164,7 +168,7 @@
     return _adLogoLabel;
 }
 
-- (GADUnifiedNativeAdView *)nativeAdView {
+- (GADNativeAdView *)nativeAdView {
     if (!_nativeAdView) {
         NSArray *nibs = [MYBUNDLE loadNibNamed:@"VSAdNavTemplateView" owner:nil options:nil];
         _nativeAdView = nibs.firstObject;

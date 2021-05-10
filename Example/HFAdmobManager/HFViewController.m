@@ -9,7 +9,7 @@
 #import "HFViewController.h"
 #import <HFAdmobManager/HFAdmobManagerHeader.h>
 #import "SCRequest.h"
-
+#import "VSSerializationData.h"
 
 
 @interface HFViewController ()<HFAdmobManagerEventDelegate>
@@ -27,6 +27,13 @@
     [super viewDidLoad];
     
     
+    VSGlobalConfigManager.shareInstance.defaultConfigHandler = ^NSDictionary * _Nullable{
+        // 项目本地广告的默认配置 kGlobalConfigFileName
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"kGlobalConfigFileName" ofType:@"txt"];
+        NSString *configStr = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        NSDictionary *localDic = [VSSerializationData objectWithJsonString:configStr];
+        return localDic;
+    };
     
     [[HFAdmobManager shareInstance] openDebugModeWithHandler:^BOOL{
         return YES;
@@ -55,9 +62,10 @@
 
 #pragma mark - private
 - (void)showAdAction {
-//    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullStart controller:self];
+    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullConnect controller:self];
     
-    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypePartHome containView:self.adContentView delegate:nil];
+    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullConnect containView:self.adContentView delegate:nil];
+    
     
 }
 
@@ -84,7 +92,7 @@
 
 #pragma mark - HFAdmobManagerEventDelegate
 - (void)admobManagerEventName:(NSString *)eventName placeType:(VSAdShowPlaceType)placeType unitId:(NSString *)unitId {
-    HFAd_DebugLog(@"jjjjjjjj %@ %tu %@", eventName, placeType, unitId)
+//    HFAd_DebugLog(@"jjjjjjjj %@ %tu %@", eventName, placeType, unitId)
 }
 
 #pragma mark - lazy

@@ -19,11 +19,11 @@
 @implementation VSAdNavTemplateCell
 
 #pragma mark - public
-- (BOOL)showAdsInCell:(UITableViewCell *)cell nativeAd:(GADUnifiedNativeAd *)nativeAd {
+- (BOOL)showAdsInCell:(UITableViewCell *)cell nativeAd:(GADNativeAd *)nativeAd {
     __block BOOL failure = NO;
     // 已经展示了广告，就不展示了
     [cell.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isMemberOfClass:[GADUnifiedNativeAdView class]]) {
+        if ([obj isMemberOfClass:[GADNativeAdView class]]) {
             failure = YES;
             *stop = YES;
         }
@@ -49,7 +49,7 @@
 }
 
 #pragma mark - VSAdNavTemplateLayoutDelegate
-- (void)layoutTemplateWithNativeAdView:(GADUnifiedNativeAdView *)nativeAdView {
+- (void)layoutTemplateWithNativeAdView:(GADNativeAdView *)nativeAdView {
         
     [self.nativeAdView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.containView.mas_leading);

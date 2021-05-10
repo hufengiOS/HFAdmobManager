@@ -1,7 +1,7 @@
 {
   "name": "HFAdmobManager",
-  "version": "0.0.5",
-  "summary": "修改原生广告的布局",
+  "version": "1.0.6",
+  "summary": "修改admob 默认配置的问题",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hufengiOS/HFAdmobManager",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hufengiOS/HFAdmobManager.git",
-    "tag": "0.0.5"
+    "tag": "1.0.6"
   },
   "platforms": {
     "ios": "9.0"
@@ -24,7 +24,7 @@
   "static_framework": true,
   "dependencies": {
     "Google-Mobile-Ads-SDK": [
-      "~> 7.69.0"
+
     ],
     "Masonry": [
 
