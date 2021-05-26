@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '1.2.2'
-    s.summary          = '自定义广告名称的对应关系'
+    s.version          = '1.2.3'
+    s.summary          = 'cell 广告 支持 UICollectionViewCell'
     
     s.description      = <<-DESC
   TODO: Add long description of the pod here.
