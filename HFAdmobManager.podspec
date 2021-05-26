@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '1.2.1'
+    s.version          = '1.2.2'
     s.summary          = '自定义广告名称的对应关系'
     
     s.description      = <<-DESC
