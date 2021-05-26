@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     
   
     s.source_files = 'HFAdmobManager/Classes/*'
-    s.public_header_files = 'Headers/Public/*.h'
+    s.public_header_files = 'Headers/Public/**/*.h'
     
     
     s.subspec 'VSAdCache' do |ss|
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
     s.static_framework = true
 #    s.vendored_framework = 'SDK'
     
-    s.ios.vendored_frameworks = 'HFAdmobManager/HFAdmobManager.framework'
+#    s.ios.vendored_frameworks = 'HFAdmobManager/Classes/HFAdmobManager.framework'
 #    s.vendored_frameworks = 'SDK/HFAdmobManager.framework'
 
 

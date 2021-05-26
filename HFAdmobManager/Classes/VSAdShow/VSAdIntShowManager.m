@@ -32,8 +32,13 @@
 
 + (BOOL)showIntAdWithController:(UIViewController *)viewController placeType:(VSAdShowPlaceType)placeType interstitial:(GADInterstitialAd *)interstitial {
     
-    if ([interstitial canPresentFromRootViewController:viewController error:nil] && ![viewController.presentedViewController isKindOfClass:[VSFullScreenAdsController class]]) {
-        [interstitial presentFromRootViewController:viewController];
+    if (![viewController.presentedViewController isKindOfClass:[VSFullScreenAdsController class]]) {
+        if ([interstitial canPresentFromRootViewController:viewController error:nil]) {
+            [interstitial presentFromRootViewController:viewController];
+        } else if ([interstitial canPresentFromRootViewController:viewController.navigationController error:nil]) {
+            /// 防止因为层级关系，部分控制器不能弹出 modal控制器
+            [interstitial presentFromRootViewController:viewController.navigationController];
+        }
         interstitial.fullScreenContentDelegate = [VSAdIntShowManager shareInstance];
         [VSAdIntShowManager shareInstance].placeType = placeType;
         
