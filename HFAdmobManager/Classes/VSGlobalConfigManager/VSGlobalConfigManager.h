@@ -38,6 +38,8 @@ typedef NSDictionary * _Nullable (^kDefaultConfigHandler)(void);
 + (NSString *)VPNOptimalConnectCountry;
 
 @property (nonatomic, copy) kDefaultConfigHandler defaultConfigHandler;
+/// 后台参数和具体类型的对应关系
+@property (nonatomic, copy) VSAdShowPlaceType (^keyAndValueHandler)(NSString *adName);
 
 @end
 

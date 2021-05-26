@@ -26,6 +26,13 @@
 {
     [super viewDidLoad];
     
+    VSGlobalConfigManager.shareInstance.keyAndValueHandler = ^VSAdShowPlaceType(NSString * _Nonnull adName) {
+        if ([@"AD_REPORT" isEqualToString:adName.uppercaseString]) {
+            return VSAdShowPlaceTypePartOther;
+        }
+        return VSAdShowPlaceTypeUnknown;
+    };
+    
     
     VSGlobalConfigManager.shareInstance.defaultConfigHandler = ^NSDictionary * _Nullable{
         // 项目本地广告的默认配置 kGlobalConfigFileName
@@ -62,9 +69,9 @@
 
 #pragma mark - private
 - (void)showAdAction {
-    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullConnect controller:self];
+    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypePartOther controller:self];
     
-    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullConnect containView:self.adContentView delegate:nil];
+//    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullConnect containView:self.adContentView delegate:nil];
     
     
 }

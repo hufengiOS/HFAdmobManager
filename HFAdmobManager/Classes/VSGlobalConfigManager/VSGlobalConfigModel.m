@@ -7,6 +7,8 @@
 
 #import "VSGlobalConfigModel.h"
 #import "VSAdMacro.h"
+#import "VSGlobalConfigManager.h"
+
 @implementation VSGlobalConfigModel
 
 + (NSDictionary *)mj_objectClassInArray {
@@ -21,11 +23,19 @@
 }
 
 - (VSAdShowPlaceType)adNameType {
-    NSDictionary *dic = [self dicNameKey];
-    if ([dic.allKeys containsObject:self.adName.uppercaseString]) {
-        return [dic[self.adName.uppercaseString] intValue];
+    VSAdShowPlaceType type = VSAdShowPlaceTypeUnknown;
+    if (VSGlobalConfigManager.shareInstance.keyAndValueHandler) {
+        type = VSGlobalConfigManager.shareInstance.keyAndValueHandler(_adName);
     }
-    return VSAdShowPlaceTypeUnknown;
+    if (type != VSAdShowPlaceTypeUnknown) {
+        return type;
+    } else {
+        NSDictionary *dic = [self dicNameKey];
+        if ([dic.allKeys containsObject:self.adName.uppercaseString]) {
+            return [dic[self.adName.uppercaseString] intValue];
+        }
+        return VSAdShowPlaceTypeUnknown;
+    }
 }
 
 - (NSDictionary *)dicNameKey {

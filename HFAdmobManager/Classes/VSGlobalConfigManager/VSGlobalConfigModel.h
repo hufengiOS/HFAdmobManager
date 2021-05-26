@@ -54,6 +54,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) VSGlobalConfigCloseBtnModel *navCloseBtn;
 
 - (VSAdShowPlaceType)adNameType;
+
+
 @end
 
 @interface VSGlobalConfigCloseBtnModel : NSObject
