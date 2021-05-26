@@ -35,6 +35,8 @@
     
     if ([cell isKindOfClass:[VSTableAdsCell class]]) {
         self.containView = ((VSTableAdsCell *)cell).mainView;
+    } else if ([cell isKindOfClass:[UICollectionViewCell class]] || [cell isKindOfClass:[UICollectionViewCell class]]) {
+        self.containView = cell.contentView;
     }
     [self.containView addSubview:self.nativeAdView];
     [self configWithNativeAd:nativeAd];
