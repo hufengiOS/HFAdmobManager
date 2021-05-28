@@ -79,7 +79,7 @@
 #pragma mark - private
 - (void)showAdAction {
     
-//    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullConnect containView:self.adContentView delegate:nil];
+    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullExtra controller:self];
     
 }
 
@@ -106,7 +106,7 @@
 
 #pragma mark - HFAdmobManagerEventDelegate
 - (void)admobManagerEventName:(NSString *)eventName placeType:(VSAdShowPlaceType)placeType unitId:(NSString *)unitId {
-//    HFAd_DebugLog(@"jjjjjjjj %@ %tu %@", eventName, placeType, unitId)
+    HFAd_DebugLog(@" %@ %@ %@", eventName, ADPlaceTypeString(placeType), unitId)
 }
 
 #pragma mark - lazy

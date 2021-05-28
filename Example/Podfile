@@ -16,5 +16,6 @@ target 'HFAdmobManager_Example' do
   pod 'GZIP', '~> 1.2'
   pod "MJExtension"
   
+#  pod 'SVGAPlayer'
   
 end

@@ -17,6 +17,8 @@
 
 @property (nonatomic, copy) VSAdBannerLoaderCompletionHandler completionHandler;
 
+@property (nonatomic, assign) VSAdShowPlaceType placeType;
+
 @end
 
 @implementation VSAdBannerLoader
@@ -39,6 +41,9 @@
     
     self.bannerView.delegate = self;
     self.completionHandler = completionHandler;
+    
+    self.placeType = placeType;
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_startRequest placeType:placeType unitId:adUnit];
 }
 
 #pragma mark - GADBannerViewDelegate
@@ -47,13 +52,15 @@
     bannerView.alpha = 0;
     [UIView animateWithDuration:1.0 animations:^{
         bannerView.alpha = 1;
-    }];    
+    }];
+    
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAd placeType:_placeType unitId:bannerView.adUnitID];
     !self.completionHandler ? nil : self.completionHandler(bannerView, nil);
 }
 
 - (void)bannerView:(nonnull GADBannerView *)bannerView
-didFailToReceiveAdWithError:(nonnull NSError *)error {
-    
+didFailToReceiveAdWithError:(nonnull NSError *)error {    
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAdFail placeType:_placeType unitId:bannerView.adUnitID];
 }
 
 - (void)bannerViewDidRecordImpression:(nonnull GADBannerView *)bannerView {
@@ -62,7 +69,7 @@ didFailToReceiveAdWithError:(nonnull NSError *)error {
 
 #pragma mark Click-Time Lifecycle Notifications
 - (void)bannerViewWillPresentScreen:(nonnull GADBannerView *)bannerView {
-    
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:_placeType unitId:bannerView.adUnitID];
 }
 
 - (void)bannerViewWillDismissScreen:(nonnull GADBannerView *)bannerView {
@@ -70,6 +77,5 @@ didFailToReceiveAdWithError:(nonnull NSError *)error {
 }
 
 - (void)bannerViewDidDismissScreen:(nonnull GADBannerView *)bannerView {
-    
 }
 @end

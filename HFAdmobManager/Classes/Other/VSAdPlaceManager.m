@@ -50,8 +50,6 @@
         VSGlobalConfigManager *globalConfig = [VSGlobalConfigManager shareInstance];
         NSArray <VSGlobalConfigAdsConfigAdPlaceModel *> *adPlaceArray = [globalConfig adPlacesWithPlaceType:placeType];
         // 加载第一个
-       
-        
         [self loadAdsWithConfigArray:adPlaceArray
                                index:0
                            placeType:placeType

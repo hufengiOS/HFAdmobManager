@@ -42,7 +42,6 @@
     [self configWithNativeAd:nativeAd];
     
     self.placeType = VSAdShowPlaceTypePartOther;
-
     return YES;
 }
 

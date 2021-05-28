@@ -62,21 +62,20 @@
         [self.mainController.view addSubview:self.closeBtn];
         [self.closeBtn addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
 
-        
     }
     return self;
 }
 
 #pragma mark - public
-- (void)showInController:(UIViewController *)controller placeType:(VSAdShowPlaceType)placeType nativeAd:(GADNativeAd *)nativeAd {
+- (void)showInController:(UIViewController *)controller
+                nativeAd:(GADNativeAd *)nativeAd {
     
     if (!self.mainController.presentingViewController && ![controller.presentedViewController isKindOfClass:NSClassFromString(@"GADFullScreenAdViewController")]) {
-        self.placeType = placeType;
-        [self configCloseBtnWithPlaceType:placeType];
+        [self configCloseBtnWithPlaceType:self.placeType];
         // 如果控制器已经被展示，则不弹出
         [self configWithNativeAd:nativeAd];
         self.backgroundImageView.image = [VSAdUnit createImageFromColors:[self fullScreenBackgroundColorArray] withFrame:CGSizeMake(HF_MainScreen_Width, HF_MainScreen_Height)];
-        [controller presentViewController:self.mainController animated:placeType != VSAdShowPlaceTypeFullStart completion:nil];
+        [controller presentViewController:self.mainController animated:self.placeType != VSAdShowPlaceTypeFullStart completion:nil];
     } else {
         
     }

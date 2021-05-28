@@ -43,12 +43,14 @@
 + (void)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller {
     VSAdNavTemplateFullScreen *fullScreen = [VSAdNavShowManager shareInstance].fullScreen;
     fullScreen.adUnitId = adUnit;
-    [fullScreen showInController:controller placeType:placeType nativeAd:nativeAd];
+    fullScreen.placeType = placeType;
+    [fullScreen showInController:controller nativeAd:nativeAd];
 }
 
 + (void)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate>)delegate {
     VSAdNavTemplateHomeBottom *homeBottom = [VSAdNavShowManager shareInstance].homeBottom;
     homeBottom.adUnitId = adUnit;
+    homeBottom.placeType = VSAdShowPlaceTypePartHome;
     [homeBottom showInContainView:containView nativeAd:nativeAd delegate:delegate];
     // 处理home广告点击的代理
 //    [VSAdNavShowManager shareInstance].homeBottomClickdelgate = delegate;
@@ -57,6 +59,7 @@
 + (BOOL)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit cell:(UITableViewCell *)cell {
     VSAdNavTemplateCell *cellTemplate = [VSAdNavShowManager shareInstance].cellTemplate;
     cellTemplate.adUnitId = adUnit;
+    cellTemplate.placeType = VSAdShowPlaceTypePartOther;
     return [cellTemplate showAdsInCell:cell nativeAd:nativeAd];
 }
 

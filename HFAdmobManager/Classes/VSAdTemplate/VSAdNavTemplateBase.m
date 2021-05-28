@@ -6,11 +6,10 @@
 //
 
 #import "VSAdNavTemplateBase.h"
-#import "VSAdShowClickAdsManager.h"
 #import <HFAdmobManager/HFAdmobManager.h>
 
 
-@interface VSAdNavTemplateBase ()<GADCustomNativeAdDelegate, GADVideoControllerDelegate>
+@interface VSAdNavTemplateBase ()<GADCustomNativeAdDelegate, GADVideoControllerDelegate, GADNativeAdDelegate>
 
 
 @end
@@ -28,6 +27,7 @@
 #pragma mark - public
 #pragma mark - private
 - (void)configWithNativeAd:(GADNativeAd *)nativeAd {
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:self.placeType unitId:self.adUnitId];
     
     GADNativeAdView *nativeAdView = self.nativeAdView;
     nativeAdView.nativeAd = nativeAd;
@@ -41,9 +41,8 @@
     nativeAdView.mediaView.backgroundColor = UIColor.clearColor;
     
     nativeAdView.backgroundColor = UIColor.clearColor;
-
-    
-    nativeAdView.userInteractionEnabled = NO;
+    // 这里需要设置，否者广告无法点击
+    nativeAdView.userInteractionEnabled = YES;
     
     
     // title
@@ -89,7 +88,6 @@
     
     // 先处理数据，在根据数据调整布局
     [self layoutTemplateWithNativeAdView:self.nativeAdView];
-    
 }
 
 #pragma mark - VSAdNavTemplateLayoutDelegate
@@ -105,31 +103,18 @@
 
 /// Called when a click is recorded for a custom native ad.
 - (void)customNativeAdDidRecordClick:(nonnull GADCustomNativeAd *)nativeAd {
-    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adClick placeType:self.placeType unitId:self.adUnitId];
+    
 }
 
 #pragma mark Click-Time Lifecycle Notifications
-
-/// Called just before presenting the user a full screen view, such as a browser, in response to
-/// clicking on an ad. Use this opportunity to stop animations, time sensitive interactions, etc.
-///
-/// Normally the user looks at the ad, dismisses it, and control returns to your application with
-/// the customNativeAdDidDismissScreen: message. However, if the user hits the Home button or clicks
-/// on an App Store link, your application will end. The next method called will be the
-/// applicationWillResignActive: of your UIApplicationDelegate object.
 - (void)customNativeAdWillPresentScreen:(nonnull GADCustomNativeAd *)nativeAd {
-    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:self.placeType unitId:self.adUnitId];
-
 }
 
-/// Called just before dismissing a full screen view.
 - (void)customNativeAdWillDismissScreen:(nonnull GADCustomNativeAd *)nativeAd {
     
 }
 
 - (void)customNativeAdDidDismissScreen:(nonnull GADCustomNativeAd *)nativeAd {
-    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adClick placeType:self.placeType unitId:self.adUnitId];
-    
     if (self.placeType == VSAdShowPlaceTypePartHome) {
         // 首页的广告被点击
         if ([self.homeBottomClickdelgate respondsToSelector:@selector(clickAdInHomeBottomAds:)]) {

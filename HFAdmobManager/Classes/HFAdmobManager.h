@@ -16,13 +16,13 @@ static NSString *kNotificationNamePartAdLoadSuccussKey = @"kNotificationNamePart
 static NSString *kNotificationNameFullScreenAdLoadSuccussKey = @"kNotificationNameFullScreenAdLoadSuccussKey";
 
 
-static NSString *kHFAdmobEvent_startRequest = @"startRequest";
-static NSString *kHFAdmobEvent_receiveAdFail = @"receiveAdFail";
-static NSString *kHFAdmobEvent_receiveAd = @"receiveAd";
+static NSString *kHFAdmobEvent_startRequest = @"event_startRequest";
+static NSString *kHFAdmobEvent_receiveAdFail = @"event_receiveAdFail";
+static NSString *kHFAdmobEvent_receiveAd = @"event_receiveAd";
 
-static NSString *kHFAdmobEvent_adClick = @"adClick";
-static NSString *kHFAdmobEvent_adHidden = @"adHidden";
-static NSString *kHFAdmobEvent_adShow = @"adShow";
+static NSString *kHFAdmobEvent_adClick = @"event_adClick";
+static NSString *kHFAdmobEvent_adHidden = @"event_adHidden";
+static NSString *kHFAdmobEvent_adShow = @"event_adShow";
 
 
 typedef BOOL (^OpenDebugModeHandler)(void);
@@ -85,9 +85,6 @@ typedef BOOL (^OpenDebugModeHandler)(void);
 - (BOOL)isDEBUGMode;
 
 - (void)eventWithEventName:(NSString *)eventName placeType:(VSAdShowPlaceType)placeType unitId:(NSString *)unitId;
-
-
-
 
 @end
 

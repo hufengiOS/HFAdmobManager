@@ -31,7 +31,7 @@
     _placeType = placeType;
     _loadCompletionHandler = completionHandler;
     
-    [[HFAdmobManager shareInstance] eventWithEventName:@"start_request" placeType:placeType unitId:adUnit];
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_startRequest placeType:placeType unitId:adUnit];
 }
 
 - (GADAdLoader *)adLoaderWithUnitId:(NSString *)adUnit placeType:(VSAdShowPlaceType)placeType {
@@ -76,19 +76,19 @@
 
 #pragma mark - GADNativeAdLoaderDelegate
 - (void)adLoader:(nonnull GADAdLoader *)adLoader didReceiveNativeAd:(nonnull GADNativeAd *)nativeAd {
-    
     self.nativeAd = nativeAd;
     self.isLoadFinish = YES;
     // 用数组存储
     !_loadCompletionHandler ? : _loadCompletionHandler(nativeAd, _placeType, nil);
     
-    [[HFAdmobManager shareInstance] eventWithEventName:@"end_request" placeType:_placeType unitId:adLoader.adUnitID];
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAd placeType:_placeType unitId:adLoader.adUnitID];
 }
 
 #pragma mark - GADAdLoaderDelegate
 /// Called when adLoader fails to load an ad.
 - (void)adLoader:(nonnull GADAdLoader *)adLoader
 didFailToReceiveAdWithError:(nonnull NSError *)error {
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAdFail placeType:_placeType unitId:adLoader.adUnitID];
     !_loadCompletionHandler ? : _loadCompletionHandler(nil, _placeType, error);
 }
 
@@ -96,4 +96,5 @@ didFailToReceiveAdWithError:(nonnull NSError *)error {
 - (void)adLoaderDidFinishLoading:(nonnull GADAdLoader *)adLoader {
     
 }
+
 @end

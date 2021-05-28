@@ -41,21 +41,11 @@
         }
         interstitial.fullScreenContentDelegate = [VSAdIntShowManager shareInstance];
         [VSAdIntShowManager shareInstance].placeType = placeType;
-        
         return YES;
     } else {
         return NO;
     }
 }
-
-//+ (void)closeIntAdsWithInterstitial:(GADInterstitial *)interstitial {
-//    NSError *error;
-//    if (![interstitial canPresentFromRootViewController:kKeyWindow.rootViewController error:&error]) {
-//        if ([NSStringFromClass(vc.class) isEqualToString:@"GADFullScreenAdViewController"]) {
-//            [vc dismissViewControllerAnimated:YES completion:nil];
-//        }
-//    }
-//}
 
 + (void)closeFullscreenAds {
     UIViewController *vc = [self getTopController];
@@ -101,12 +91,19 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 /// Tells the delegate that the ad presented full screen content.
 - (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
-    
+    if ([ad isKindOfClass:[GADInterstitialAd class]]) {
+        GADInterstitialAd *adData = (GADInterstitialAd *)ad;
+        [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:self.placeType unitId:adData.adUnitID];
+    }
 }
 
 /// Tells the delegate that the ad will dismiss full screen content.
 - (void)adWillDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
 //    [VSAdShowClickAdsManager addClickAdsWithPlaceType:self.placeType];
+    if ([ad isKindOfClass:[GADInterstitialAd class]]) {
+        GADInterstitialAd *adData = (GADInterstitialAd *)ad;
+        [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adHidden placeType:self.placeType unitId:adData.adUnitID];
+    }
 }
 
 /// Tells the delegate that the ad dismissed full screen content.

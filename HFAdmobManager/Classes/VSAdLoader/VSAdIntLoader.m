@@ -17,7 +17,7 @@
 
 @property (nonatomic, copy) VSAdIntLoadCompletionHandler loadCompletionHandler;
 @property (nonatomic, assign) VSAdShowPlaceType placeType;
-
+@property (nonatomic, strong) NSString *adUnit;
 @end
 
 @implementation VSAdIntLoader
@@ -32,7 +32,9 @@
         if (error) {
             !weakself.loadCompletionHandler ? : weakself.loadCompletionHandler(nil, error);
             weakself.interstitial = nil;
+            [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAdFail placeType:placeType unitId:adUnit];
         } else {
+            [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAd placeType:placeType unitId:adUnit];
             weakself.interstitial = interstitialAd;
             weakself.interstitial.fullScreenContentDelegate = weakself;
             !weakself.loadCompletionHandler ? : weakself.loadCompletionHandler(interstitialAd, nil);
@@ -40,7 +42,8 @@
     }];
     
     self.placeType = placeType;
-    [[HFAdmobManager shareInstance] eventWithEventName:@"start_request" placeType:placeType unitId:adUnit];
+    self.adUnit = adUnit;
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_startRequest placeType:placeType unitId:adUnit];
 }
 
 #pragma mark - GADFullScreenContentDelegate
@@ -57,7 +60,7 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 /// Tells the delegate that the ad presented full screen content.
 - (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
-    
+    [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:_placeType unitId:self.adUnit];
 }
 
 /// Tells the delegate that the ad will dismiss full screen content.
