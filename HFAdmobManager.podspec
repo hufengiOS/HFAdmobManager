@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '2.0.2'
-    s.summary          = '修改统计事件'
+    s.version          = '2.0.3'
+    s.summary          = '修改bug'
     
     s.description      = <<-DESC
   TODO: Add long description of the pod here.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
     
     s.requires_arc = true
     
-  
+    
     s.source_files = 'HFAdmobManager/Classes/*'
     s.public_header_files = 'Headers/Public/**/*.h'
     

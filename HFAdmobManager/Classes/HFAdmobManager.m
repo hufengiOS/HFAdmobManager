@@ -156,10 +156,7 @@
             [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId placeType:placeType controller:controller];
         }
     } else {
-        NSAssert(VSAdUnitTypeBanner == data.unitType, @"不支持banner广告");
-        HFAd_DebugLog(@"没有广告")
         // 重新拉取广告
-        
         [self reloadAdsWithPlaceType:placeType notify:YES];
         return NO;
     }
