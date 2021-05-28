@@ -26,13 +26,17 @@
 {
     [super viewDidLoad];
     
-    VSGlobalConfigManager.shareInstance.keyAndValueHandler = ^VSAdShowPlaceType(NSString * _Nonnull adName) {
-        if ([@"AD_REPORT" isEqualToString:adName.uppercaseString]) {
-            return VSAdShowPlaceTypePartOther;
-        }
-        return VSAdShowPlaceTypeUnknown;
-    };
     
+//    VSGlobalConfigManager.shareInstance.keyAndValueHandler = ^VSAdShowPlaceType(NSString * _Nonnull adName) {
+//        if ([@"AD_REPORT" isEqualToString:adName.uppercaseString]) {
+//            return VSAdShowPlaceTypePartOther;
+//        }
+//        return VSAdShowPlaceTypeUnknown;
+//    };
+    
+    [HFAdmobManager shareInstance].closeAdsHandler = ^BOOL{
+        return NO;
+    };
     
     VSGlobalConfigManager.shareInstance.defaultConfigHandler = ^NSDictionary * _Nullable{
         // 项目本地广告的默认配置 kGlobalConfigFileName
@@ -52,13 +56,18 @@
     [self.view addSubview:self.showAdsBtn];
     [self.view addSubview:self.adContentView];
     self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500) - 80, HF_MainScreen_Width, HF_kScaleWidth(250));
-    self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500) - 80, HF_MainScreen_Width, HF_kScaleWidth(250));
+    self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500) - 80, HF_MainScreen_Width, HF_kScaleWidth(50));
     
     [self.showAdsBtn addTarget:self action:@selector(showAdAction) forControlEvents:UIControlEventTouchUpInside];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeAdsLoadSuccess:) name:kNotificationNamePartAdLoadSuccussKey object:nil];
 
+    // 加载banner 广告
+    [HFAdmobManager reloadBannerAdsWithPlaceType:VSAdShowPlaceTypeBanner
+                                     containView:self.adContentView
+                                  rootController:self
+                               completionHandler:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,10 +78,8 @@
 
 #pragma mark - private
 - (void)showAdAction {
-    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypePartOther controller:self];
     
 //    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullConnect containView:self.adContentView delegate:nil];
-    
     
 }
 

@@ -27,8 +27,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)finishConnectAuthor;
 + (BOOL)getConnectAuthorStatus;
 
-+ (NSString *)nameWithPlaceType:(VSAdShowPlaceType)placeType;
-+ (NSString *)nameWithUnitType:(VSAdUnitType)unitType;
 @end
 
 NS_ASSUME_NONNULL_END

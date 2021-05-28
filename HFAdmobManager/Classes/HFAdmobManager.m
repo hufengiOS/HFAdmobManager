@@ -13,7 +13,6 @@
 #import "VSAdConfig.h"
 
 
-
 @interface HFAdmobManager() {
      
 }
@@ -23,6 +22,7 @@
 @property (nonatomic, strong) VSAdPlaceManager *extraPlaceManager;
 @property (nonatomic, strong) VSAdPlaceManager *homePlaceManager;
 @property (nonatomic, strong) VSAdPlaceManager *cellPlaceManager;
+@property (nonatomic, strong) VSAdPlaceManager *bannerPlaceManager;
 
 @property (nonatomic, copy) OpenDebugModeHandler openDebugModeHandler;
 
@@ -57,6 +57,10 @@
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypeFullExtra notify:notify];
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypePartOther notify:notify];
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypePartHome notify:notify];
+    
+    /**
+      banner 广告的加载需要获取到对应控制器，这里不做提前加载
+     */
 }
 
 + (void)preloadAllAds {
@@ -64,11 +68,26 @@
 }
 
 + (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType notify:(BOOL)notify {
-    
     [self reloadAdsWithPlaceType:placeType notify:notify completionHandler:nil];
 }
 
-+ (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType notify:(BOOL)notify completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler {
++ (void)reloadBannerAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                         containView:(UIView * _Nullable)containView
+                      rootController:(UIViewController *)rootController
+                   completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler {
+    HFAdmobManager *manager = [HFAdmobManager shareInstance];
+    VSAdPlaceManager *placeManager = manager.bannerPlaceManager;
+    [placeManager loadBannerAdsWithPlaceType:placeType
+                                 containView:containView
+                              rootController:rootController
+                           completionHandler:^(BOOL success) {
+        !completionHandler ? : completionHandler(success);
+    }];
+}
+
++ (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                        notify:(BOOL)notify
+             completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler {
     
     HFAdmobManager *manager = [HFAdmobManager shareInstance];
     VSAdPlaceManager *placeManager;
@@ -82,6 +101,8 @@
         placeManager = manager.connectPlaceManager;
     } else if (placeType == VSAdShowPlaceTypeFullExtra) {
         placeManager = manager.extraPlaceManager;
+    } else {
+        NSAssert(YES, @"没有适配的广告位类型");
     }
     [placeManager loadAdsWithPlaceType:placeType completionHandler:^(BOOL success) {
         !completionHandler ? : completionHandler(success);
@@ -96,6 +117,9 @@
 }
 
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller {
+    
+    NSAssert(placeType != VSAdShowPlaceTypeBanner && placeType != VSAdShowPlaceTypePartHome && placeType != VSAdShowPlaceTypePartOther, @"广告位类型不支持");
+    
     return [self showAdsWithPlaceType:placeType controller:controller cell:nil containView:nil containViewDelegate:nil];
 }
 
@@ -132,6 +156,7 @@
             [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId placeType:placeType controller:controller];
         }
     } else {
+        NSAssert(VSAdUnitTypeBanner == data.unitType, @"不支持banner广告");
         HFAd_DebugLog(@"没有广告")
         // 重新拉取广告
         
@@ -206,4 +231,10 @@
     return _cellPlaceManager;
 }
 
+- (VSAdPlaceManager *)bannerPlaceManager {
+    if (!_bannerPlaceManager) {
+        _bannerPlaceManager = [[VSAdPlaceManager alloc] init];
+    }
+    return _bannerPlaceManager;
+}
 @end

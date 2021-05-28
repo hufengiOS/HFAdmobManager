@@ -43,6 +43,9 @@
     nativeAdView.backgroundColor = UIColor.clearColor;
 
     
+    nativeAdView.userInteractionEnabled = NO;
+    
+    
     // title
     ((UILabel *)nativeAdView.headlineView).textAlignment = NSTextAlignmentNatural;
     // 内容

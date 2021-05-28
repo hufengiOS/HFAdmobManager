@@ -43,7 +43,9 @@
              @"AD_STATUS": @(VSAdShowPlaceTypePartOther),
              @"AD_START": @(VSAdShowPlaceTypeFullStart),
              @"AD_CONNECT": @(VSAdShowPlaceTypeFullConnect),
-             @"AD_EXTRA": @(VSAdShowPlaceTypeFullExtra)};
+             @"AD_EXTRA": @(VSAdShowPlaceTypeFullExtra),
+             @"AD_BANNER": @(VSAdShowPlaceTypeBanner)
+    };
 }
 
 @end
@@ -53,14 +55,9 @@
 
 @implementation VSGlobalConfigAdsConfigAdPlaceModel
 - (VSAdUnitType)adUnitType {
-    if ([self.adFormatType isEqualToString:@"nav"]) {
-        return VSAdUnitTypeNav;
-    } else if ([self.adFormatType isEqualToString:@"int"]) {
-        return VSAdUnitTypeInt;
-    } else {
-        return VSAdUnitTypeUnknown;
-    }
+    return ADUnitTypeStringToValue(self.adFormatType);
 }
+
 @end
 
 @implementation VSGlobalConfigPayItemModel

@@ -6,12 +6,12 @@
 //
 
 #import "VSAdConfig.h"
-//#import "HFPayListLoader.h"
 #import "VSGlobalConfigManager.h"
 #import "VSAdUnit.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import "VSAdMacro.h"
 #import "VSAdShowClickAdsManager.h"
+#import "HFAdmobManager.h"
 
 
 static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
@@ -48,9 +48,11 @@ static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
 }
 
 + (BOOL)allowRequestWithShowPlaceType:(VSAdShowPlaceType)placeType {
-//    if ([HFPayListLoader shareInstance].isVip) {
-//        return NO;
-//    }
+    // 处理会员情况
+    if (![HFAdmobManager shareInstance].closeAdsHandler ? NO : [HFAdmobManager shareInstance].closeAdsHandler()) {
+        return NO;
+    }
+    
     if (![VSAdShowClickAdsManager allowClickWithPlaceType:placeType]) {
         return NO;
     }
@@ -65,9 +67,10 @@ static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
 }
 
 + (BOOL)allowShowWithShowPlaceType:(VSAdShowPlaceType)placeType {
-//    if ([HFPayListLoader shareInstance].isVip) {
-//        return NO;
-//    }
+    // 处理会员情况
+    if (![HFAdmobManager shareInstance].closeAdsHandler ? NO : [HFAdmobManager shareInstance].closeAdsHandler()) {
+        return NO;
+    }
     
     if (![VSAdShowClickAdsManager allowClickWithPlaceType:placeType]) {
         return NO;
@@ -109,51 +112,6 @@ static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
 
 + (BOOL)getConnectAuthorStatus {
     return 1 == [VSAdUnit intValueForKey:kFinishAuthoreConnectKey];
-}
-
-+ (NSString *)nameWithPlaceType:(VSAdShowPlaceType)placeType {
-    NSString *placeTypeStr;
-    switch (placeType) {
-        case VSAdShowPlaceTypeUnknown:
-            placeTypeStr = @"VSAdShowPlaceTypeUnknown";
-            break;
-        case VSAdShowPlaceTypePartHome:
-            placeTypeStr = @"VSAdShowPlaceTypePartHome";
-            break;
-        case VSAdShowPlaceTypePartOther:
-            placeTypeStr = @"VSAdShowPlaceTypePartOther";
-            break;
-        case VSAdShowPlaceTypeFullStart:
-            placeTypeStr = @"VSAdShowPlaceTypeFullStart";
-            break;
-        case VSAdShowPlaceTypeFullConnect:
-            placeTypeStr = @"VSAdShowPlaceTypeFullConnect";
-            break;
-        case VSAdShowPlaceTypeFullExtra:
-            placeTypeStr = @"VSAdShowPlaceTypeFullExtra";
-            break;
-        default:
-            break;
-    }
-    return placeTypeStr;
-}
-
-+ (NSString *)nameWithUnitType:(VSAdUnitType)unitType {
-    NSString *unitTypeStr;
-    switch (unitType) {
-        case VSAdUnitTypeInt:
-            unitTypeStr = @"int";
-            break;
-        case VSAdUnitTypeNav:
-            unitTypeStr = @"nav";
-            break;
-        case VSAdUnitTypeUnknown:
-            unitTypeStr = @"unknown";
-            break;
-        default:
-            break;
-    }
-    return unitTypeStr;
 }
 
 @end

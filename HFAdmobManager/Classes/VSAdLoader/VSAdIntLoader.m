@@ -15,7 +15,7 @@
 @interface VSAdIntLoader ()<GADFullScreenContentDelegate>
 
 
-@property (nonatomic, copy)VSAdIntLoadCompletionHandler loadCompletionHandler;
+@property (nonatomic, copy) VSAdIntLoadCompletionHandler loadCompletionHandler;
 @property (nonatomic, assign) VSAdShowPlaceType placeType;
 
 @end

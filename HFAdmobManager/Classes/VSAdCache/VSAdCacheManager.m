@@ -42,15 +42,26 @@
     return [self adsWithPlaceType:placeType allowShare:YES];
 }
 
-+ (VSAdCacheData *)adsWithPlaceType:(VSAdShowPlaceType)placeType allowShare:(BOOL)allowShare {
+
+/// 获取广告数据
+/// @param placeType 广告位
+/// @param allowShare 是否允许广告位共享
++ (VSAdCacheData *)adsWithPlaceType:(VSAdShowPlaceType)placeType
+                         allowShare:(BOOL)allowShare {
     VSAdCacheManager *manager = [self shareInstance];
     
     NSArray *array = [VSAdUnit hf_sourceArray:manager.cahceArray filter:^BOOL(VSAdCacheData * _Nonnull element) {
-        if (allowShare) {
-            if (placeType == VSAdShowPlaceTypePartHome || placeType == VSAdShowPlaceTypePartOther) {
-                return element.placeType == VSAdShowPlaceTypePartOther || element.placeType == VSAdShowPlaceTypePartHome;
-            } else if (placeType == VSAdShowPlaceTypeFullStart || placeType == VSAdShowPlaceTypeFullConnect || placeType == VSAdShowPlaceTypeFullExtra) {
-                return element.placeType == VSAdShowPlaceTypeFullStart || element.placeType == VSAdShowPlaceTypeFullConnect || element.placeType == VSAdShowPlaceTypeFullExtra;
+        if (allowShare && placeType != VSAdShowPlaceTypeBanner) {
+            if (placeType == VSAdShowPlaceTypePartHome ||
+                placeType == VSAdShowPlaceTypePartOther) {
+                return element.placeType == VSAdShowPlaceTypePartOther ||
+                element.placeType == VSAdShowPlaceTypePartHome;
+            } else if (placeType == VSAdShowPlaceTypeFullStart ||
+                       placeType == VSAdShowPlaceTypeFullConnect ||
+                       placeType == VSAdShowPlaceTypeFullExtra) {
+                return element.placeType == VSAdShowPlaceTypeFullStart ||
+                element.placeType == VSAdShowPlaceTypeFullConnect ||
+                element.placeType == VSAdShowPlaceTypeFullExtra;
             } else {
                 return NO;
             }
@@ -94,7 +105,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@ %@ adWeight = %lf obj = %@", [VSAdConfig nameWithUnitType:_unitType], [VSAdConfig nameWithPlaceType:_placeType], self.adWeight, self.obj];
+    return [NSString stringWithFormat:@"%@ %@ adWeight = %lf obj = %@", ADUnitTypeString(_unitType), ADPlaceTypeString(_placeType), self.adWeight, self.obj];    
 }
 
 

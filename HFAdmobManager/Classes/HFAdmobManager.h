@@ -50,12 +50,23 @@ typedef BOOL (^OpenDebugModeHandler)(void);
 
 #pragma mark - load
 + (void)preloadAllAds;
-+ (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType notify:(BOOL)notify;
-+ (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType notify:(BOOL)notify completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler;
++ (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                        notify:(BOOL)notify;
++ (void)reloadAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                        notify:(BOOL)notify
+             completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler;
 
++ (void)reloadBannerAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                         containView:(UIView * _Nullable)containView
+                      rootController:(UIViewController *)rootController
+                   completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler;
 #pragma mark - show
-+ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller;
-+ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate;
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                  controller:(UIViewController *)controller;
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                 containView:(UIView *)containView
+                    delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate;
+
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType cell:(UITableViewCell *)cell;
 + (BOOL)isReadyWithPlaceType:(VSAdShowPlaceType)placeType;
 
@@ -65,6 +76,9 @@ typedef BOOL (^OpenDebugModeHandler)(void);
 #pragma mark - connectVpnLimit
 + (void)finishConnectAuthor;
 
+
+/// 是关闭广告，处理VIP 情况
+@property (nonatomic, copy) BOOL (^closeAdsHandler)(void);
 
 /// 打开测试模式，用测试ID拉取广告
 - (void)openDebugModeWithHandler:(OpenDebugModeHandler)handler;

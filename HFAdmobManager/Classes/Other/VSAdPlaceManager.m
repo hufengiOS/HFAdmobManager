@@ -8,12 +8,14 @@
 #import "VSAdPlaceManager.h"
 #import "VSAdNavLoader.h"
 #import "VSAdIntLoader.h"
+#import "VSAdBannerLoader.h"
 #import "VSAdCacheManager.h"
 #import "VSGlobalConfigManager.h"
 #import "VSAdConfig.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
 #import <HFAdmobManager/HFAdmobManager.h>
+#import "VSAdBannerShowManager.h"
 
 
 /*
@@ -28,6 +30,8 @@
 @interface VSAdPlaceManager ()
 @property (nonatomic, strong) VSAdNavLoader *navLoader;
 @property (nonatomic, strong) VSAdIntLoader *intLoader;
+
+@property (nonatomic, strong) VSAdBannerLoader *bannerLoader;
 
 @property (nonatomic, assign) BOOL isLoading;
 
@@ -46,9 +50,37 @@
         VSGlobalConfigManager *globalConfig = [VSGlobalConfigManager shareInstance];
         NSArray <VSGlobalConfigAdsConfigAdPlaceModel *> *adPlaceArray = [globalConfig adPlacesWithPlaceType:placeType];
         // 加载第一个
-        [self loadAdsWithConfigArray:adPlaceArray index:0 placeType:placeType completionHandler:^(BOOL success) {
+       
+        
+        [self loadAdsWithConfigArray:adPlaceArray
+                               index:0
+                           placeType:placeType
+                         containView:nil
+                      rootController:nil
+                   completionHandler:^(BOOL success) {
             !completionHandler ? : completionHandler(success);
-            
+        }];
+    }
+}
+
+- (void)loadBannerAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                       containView:(UIView * _Nullable)containView
+                    rootController:(UIViewController *)rootController
+                 completionHandler:(void (^ _Nullable)(BOOL success))completionHandler {
+    VSAdCacheData *data = [VSAdCacheManager adsWithPlaceType:placeType allowShare:NO];
+    if (data) {
+        !completionHandler ? : completionHandler(YES);
+    } else {
+        VSGlobalConfigManager *globalConfig = [VSGlobalConfigManager shareInstance];
+        NSArray <VSGlobalConfigAdsConfigAdPlaceModel *> *adPlaceArray = [globalConfig adPlacesWithPlaceType:placeType];
+        // 加载第一个
+        [self loadAdsWithConfigArray:adPlaceArray
+                               index:0
+                           placeType:placeType
+                         containView:containView
+                      rootController:rootController
+                   completionHandler:^(BOOL success) {
+            !completionHandler ? : completionHandler(success);
         }];
     }
 }
@@ -57,6 +89,8 @@
 - (void)loadAdsWithConfigArray:(NSArray<VSGlobalConfigAdsConfigAdPlaceModel *> *)configArray
                          index:(NSInteger)index
                      placeType:(VSAdShowPlaceType)placeType
+                   containView:(UIView * _Nullable)containView
+                rootController:(UIViewController *_Nullable)rootController
              completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler {
     
     if (index < configArray.count && [VSAdConfig allowRequestWithShowPlaceType:placeType]) {
@@ -66,10 +100,21 @@
             
             __weak typeof(self) weakself = self;
             __block NSInteger currentIndex = index;
-            [self loadAdsWithAdUnit:configModel.adPlaceID type:configModel.adUnitType adWeight:configModel.adWeight placeType:placeType completionHandler:^(BOOL success) {
+            [self loadAdsWithAdUnit:configModel.adPlaceID
+                               type:configModel.adUnitType
+                        containView:containView
+                     rootController:rootController
+                           adWeight:configModel.adWeight
+                          placeType:placeType
+                  completionHandler:^(BOOL success) {
                 currentIndex ++;
                 if (!success) {
-                    [weakself loadAdsWithConfigArray:configArray index:currentIndex placeType:placeType completionHandler:completionHandler];
+                    [weakself loadAdsWithConfigArray:configArray
+                                               index:currentIndex
+                                           placeType:placeType
+                                         containView:containView
+                                      rootController:rootController
+                                   completionHandler:completionHandler];
                 } else {
                     !completionHandler ? : completionHandler(success);
                     weakself.isLoading = NO;
@@ -82,9 +127,14 @@
     }
 }
 
-- (void)loadAdsWithAdUnit:(NSString *)adUnit type:(VSAdUnitType)type adWeight:(float)adWeight placeType:(VSAdShowPlaceType)placeType completionHandler:(void (^)(BOOL success)) completionHandler {
+- (void)loadAdsWithAdUnit:(NSString *)adUnit
+                     type:(VSAdUnitType)type
+              containView:(UIView * _Nullable)containView
+           rootController:(UIViewController * _Nullable)rootController
+                 adWeight:(float)adWeight
+                placeType:(VSAdShowPlaceType)placeType
+        completionHandler:(void (^)(BOOL success)) completionHandler {
     if (type == VSAdUnitTypeNav) {
-        
         if ([HFAdmobManager shareInstance].isDEBUGMode) {
             adUnit = @"ca-app-pub-3940256099942544/3986624511";
         }
@@ -104,7 +154,21 @@
             }
             !completionHandler ? : completionHandler(!error);
         }];
+    } else if (type == VSAdUnitTypeBanner) {
+        if ([HFAdmobManager shareInstance].isDEBUGMode) {
+            adUnit = @"ca-app-pub-3940256099942544/2934735716";
+        }
+        [self.bannerLoader loadAdsWithUnitId:adUnit
+                                 containView:containView
+                              rootController:rootController
+                                   placeType:placeType
+                           completionHandler:^(GADBannerView * _Nullable bannerView, NSError * _Nullable error) {
+            [VSAdBannerShowManager showAdWithContainView:containView placeType:placeType bannerView:bannerView];
+            !completionHandler ? : completionHandler(!error);
+        }];
+        
     } else {
+        NSAssert(YES, @"广告类型不支持");
         !completionHandler ? : completionHandler(NO);
     }
 }
@@ -128,4 +192,10 @@
     return _intLoader;
 }
 
+- (VSAdBannerLoader *)bannerLoader {
+    if (!_bannerLoader) {
+        _bannerLoader = [[VSAdBannerLoader alloc] init];
+    }
+    return _bannerLoader;
+}
 @end

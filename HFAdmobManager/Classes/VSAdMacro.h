@@ -12,8 +12,24 @@
 typedef NS_ENUM(NSUInteger, VSAdUnitType) {
     VSAdUnitTypeUnknown,
     VSAdUnitTypeNav,
-    VSAdUnitTypeInt
+    VSAdUnitTypeInt,
+    VSAdUnitTypeBanner
 };
+
+// 枚举 转 字符串
+#define ADUnitTypeString(enum) [\
+@[@"unknown",\
+@"nav",\
+@"int",\
+@"ban"] objectAtIndex:enum]
+
+// 字符串 转 枚举
+#define ADUnitTypeStringToValue(enum) [[@{\
+@"nav": @(VSAdUnitTypeNav),\
+@"int": @(VSAdUnitTypeInt),\
+@"ban": @(VSAdUnitTypeBanner),\
+@"": @(VSAdUnitTypeUnknown)\
+} objectForKey:self.adFormatType] intValue]
 
 typedef NS_ENUM(NSUInteger, VSAdShowPlaceType) {
     VSAdShowPlaceTypeUnknown,           // 未知
@@ -21,8 +37,23 @@ typedef NS_ENUM(NSUInteger, VSAdShowPlaceType) {
     VSAdShowPlaceTypePartHome,          // 局部首页广告
     VSAdShowPlaceTypeFullConnect,       // 全屏连接广告
     VSAdShowPlaceTypeFullExtra,         // 全屏返回广告
-    VSAdShowPlaceTypePartOther          // 局部其他广告
+    VSAdShowPlaceTypePartOther,         // 局部其他广告
+    VSAdShowPlaceTypeBanner             // Banner广告
 };
+
+// 枚举 转 字符串
+#define ADPlaceTypeString(enum) [\
+@[@"VSAdShowPlaceTypeUnknown",\
+@"VSAdShowPlaceTypeFullStart",\
+@"VSAdShowPlaceTypePartHome",\
+@"VSAdShowPlaceTypeFullConnect",\
+@"VSAdShowPlaceTypeFullExtra",\
+@"VSAdShowPlaceTypePartOther",\
+@"VSAdShowPlaceTypeBanner"] objectAtIndex:enum]
+
+
+
+
 
 #ifdef DEBUG
 

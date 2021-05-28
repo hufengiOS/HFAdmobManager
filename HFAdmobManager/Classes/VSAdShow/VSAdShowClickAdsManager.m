@@ -25,45 +25,38 @@ static NSString *const kShowAdsNumber = @"kShowAdsNumber";
 
 + (BOOL)allowClickWithPlaceType:(VSAdShowPlaceType)placeType {
     
-    HFAd_DebugLog(@"%@ click number = %ld %ld",[VSAdConfig nameWithPlaceType:placeType], (long)[VSAdShowClickAdsManager numberOfClickAdsWithPlaceType:placeType], (long)[VSAdShowClickAdsManager adClickLimitCount])
+    HFAd_DebugLog(@"%@ click number = %ld %ld", ADPlaceTypeString(placeType), (long)[VSAdShowClickAdsManager numberOfClickAdsWithPlaceType:placeType], (long)[VSAdShowClickAdsManager adClickLimitCount])
     return [VSAdShowClickAdsManager adClickLimitCount] == 0 ||
     [VSAdShowClickAdsManager numberOfClickAdsWithPlaceType:placeType] < [VSAdShowClickAdsManager adClickLimitCount];
 }
 
 #pragma mark - 广告点击次数的限制
 + (NSInteger)numberOfClickAdsWithPlaceType:(VSAdShowPlaceType)placeType {
-    NSString *adPlaceId = [VSAdConfig nameWithPlaceType:placeType];
-    return [self numberOfItemWithSaveKey:[kClickAdsNumber stringByAppendingString:adPlaceId]];
+    return [self numberOfItemWithSaveKey:[kClickAdsNumber stringByAppendingString:ADPlaceTypeString(placeType)]];
 }
 
 + (void)cleanNumberOfClickAdsWithPlaceType:(VSAdShowPlaceType)placeType {
-    NSString *adPlaceId = [VSAdConfig nameWithPlaceType:placeType];
-    [self cleanNumberOfItemWithSaveKey:[kClickAdsNumber stringByAppendingString:adPlaceId]];
+    [self cleanNumberOfItemWithSaveKey:[kClickAdsNumber stringByAppendingString:ADPlaceTypeString(placeType)]];
 }
 
 + (NSInteger)addClickAdsWithPlaceType:(VSAdShowPlaceType)placeType {
     
     NSAssert(placeType != VSAdShowPlaceTypeUnknown, @"");
-    NSString *adPlaceId = [VSAdConfig nameWithPlaceType:placeType];
-    return [self addCountOfItemWithSaveKey:[kClickAdsNumber stringByAppendingString:adPlaceId]];
+    return [self addCountOfItemWithSaveKey:[kClickAdsNumber stringByAppendingString:ADPlaceTypeString(placeType)]];
 }
 
 #pragma mark - 广告展示次数的限制
 + (NSInteger)numberOfShowAdsWithPlaceType:(VSAdShowPlaceType)placeType {
-    NSString *adPlaceId = [VSAdConfig nameWithPlaceType:placeType];
-    return [self numberOfItemWithSaveKey:[kShowAdsNumber stringByAppendingString:adPlaceId]];
+    return [self numberOfItemWithSaveKey:[kShowAdsNumber stringByAppendingString:ADPlaceTypeString(placeType)]];
 }
 
 + (void)cleanNumberOfShowAdsWithPlaceType:(VSAdShowPlaceType)placeType {
-    NSString *adPlaceId = [VSAdConfig nameWithPlaceType:placeType];
-    [self cleanNumberOfItemWithSaveKey:[kShowAdsNumber stringByAppendingString:adPlaceId]];
+    [self cleanNumberOfItemWithSaveKey:[kShowAdsNumber stringByAppendingString:ADPlaceTypeString(placeType)]];
 }
 
 + (NSInteger)addNumberOfShowAdsWithPlaceType:(VSAdShowPlaceType)placeType {
-    NSString *adPlaceId = [VSAdConfig nameWithPlaceType:placeType];
-    return [self addCountOfItemWithSaveKey:[kShowAdsNumber stringByAppendingString:adPlaceId]];
+    return [self addCountOfItemWithSaveKey:[kShowAdsNumber stringByAppendingString:ADPlaceTypeString(placeType)]];
 }
-
 
 #pragma mark - ------- 管理广告点击次数 ---------
 + (NSInteger)numberOfItemWithSaveKey:(NSString *)saveKey {
