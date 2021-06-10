@@ -11,7 +11,6 @@
 #import "VSAdNavTemplateHomeBottom.h"
 #import "VSAdNavTemplateCell.h"
 
-
 @interface VSAdNavShowManager () {
     
 }
@@ -54,6 +53,7 @@
     [homeBottom showInContainView:containView nativeAd:nativeAd delegate:delegate];
     // 处理home广告点击的代理
 //    [VSAdNavShowManager shareInstance].homeBottomClickdelgate = delegate;
+    
 }
 
 + (BOOL)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit cell:(UITableViewCell *)cell {

@@ -8,8 +8,9 @@
 #import "VSAdCacheManager.h"
 #import "VSAdConfig.h"
 #import "VSAdUnit.h"
+#import "HFAdsDisplayRatio.h"
 
-//static nsinterger
+
 
 @interface VSAdCacheManager ()
 
@@ -34,6 +35,9 @@
     VSAdCacheManager *manager = [self shareInstance];
     VSAdCacheData *data = [VSAdCacheData cacheDataWithUnitType:unitType placeType:placeType adUnitId:adUnitId adWeight:adWeigth obj:obj];
     @synchronized (manager.cahceArray) {
+#ifdef DEBUG
+        [HFAdsDisplayRatio addRequestWithAdPlace:placeType unitType:unitType];
+#endif
         [manager.cahceArray addObject:data];
     };
 }
@@ -108,14 +112,4 @@
     return [NSString stringWithFormat:@"%@ %@ adWeight = %lf obj = %@", ADUnitTypeString(_unitType), ADPlaceTypeString(_placeType), self.adWeight, self.obj];    
 }
 
-
-
-//- (NSString *)cacheKey {
-//    return [NSString stringWithFormat:@"%ld-%ld-%lf", self.unitType , self.placeType, self.adWeight];
-//}
-//
-//- (NSString *)cacheKeyForObj:(id)obj {
-//    
-//    return @"";
-//}
 @end

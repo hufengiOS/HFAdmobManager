@@ -1,7 +1,7 @@
 {
   "name": "HFAdmobManager",
-  "version": "2.0.1",
-  "summary": "添加 admob 横幅广告",
+  "version": "2.0.3",
+  "summary": "修改bug",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hufengiOS/HFAdmobManager",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hufengiOS/HFAdmobManager.git",
-    "tag": "2.0.1"
+    "tag": "2.0.3"
   },
   "platforms": {
     "ios": "10.0"
@@ -61,7 +61,13 @@
     },
     {
       "name": "Other",
-      "source_files": "HFAdmobManager/Classes/Other/*.{h,m}"
+      "source_files": "HFAdmobManager/Classes/Other/*.{h,m}",
+      "subspecs": [
+        {
+          "name": "HFAdsDisplayRatio",
+          "source_files": "HFAdmobManager/Classes/Other/HFAdsDisplayRatio/*.{h,m}"
+        }
+      ]
     },
     {
       "name": "Resources",

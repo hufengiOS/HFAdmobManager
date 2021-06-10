@@ -7,7 +7,7 @@
 
 #import "VSAdNavTemplateBase.h"
 #import <HFAdmobManager/HFAdmobManager.h>
-
+#import "HFAdsDisplayRatio.h"
 
 @interface VSAdNavTemplateBase ()<GADCustomNativeAdDelegate, GADVideoControllerDelegate, GADNativeAdDelegate>
 
@@ -27,6 +27,10 @@
 #pragma mark - public
 #pragma mark - private
 - (void)configWithNativeAd:(GADNativeAd *)nativeAd {
+#ifdef DEBUG
+    [HFAdsDisplayRatio addShowWithAdPlace:self.placeType unitType:VSAdUnitTypeNav];
+#endif
+    
     [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:self.placeType unitId:self.adUnitId];
     
     GADNativeAdView *nativeAdView = self.nativeAdView;

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '2.0.3'
-    s.summary          = '修改bug'
+    s.version          = '2.0.4'
+    s.summary          = '添加 HFAdsDisplayRatio  统计展示率'
     
     s.description      = <<-DESC
   TODO: Add long description of the pod here.
@@ -55,6 +55,9 @@ Pod::Spec.new do |s|
     end
     s.subspec 'Other' do |ss|
         ss.source_files = 'HFAdmobManager/Classes/Other/*.{h,m}'
+        ss.subspec 'HFAdsDisplayRatio' do |fff|
+          fff.source_files = 'HFAdmobManager/Classes/Other/HFAdsDisplayRatio/*.{h,m}'  
+        end
     end
     
     s.subspec 'Resources' do |ss|

@@ -55,8 +55,9 @@
     
     [self.view addSubview:self.showAdsBtn];
     [self.view addSubview:self.adContentView];
+    
     self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500) - 80, HF_MainScreen_Width, HF_kScaleWidth(250));
-    self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500) - 80, HF_MainScreen_Width, HF_kScaleWidth(50));
+    self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500), HF_MainScreen_Width, HF_kScaleWidth(50));
     
     [self.showAdsBtn addTarget:self action:@selector(showAdAction) forControlEvents:UIControlEventTouchUpInside];
     

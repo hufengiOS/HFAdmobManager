@@ -11,6 +11,7 @@
 #import "VSAdMacro.h"
 #import "VSAdShowClickAdsManager.h"
 #import <HFAdmobManager/HFAdmobManager.h>
+#import "HFAdsDisplayRatio.h"
 
 
 @interface VSAdIntShowManager()<GADFullScreenContentDelegate>
@@ -92,6 +93,11 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 /// Tells the delegate that the ad presented full screen content.
 - (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     if ([ad isKindOfClass:[GADInterstitialAd class]]) {
+#ifdef DEBUG
+        // 统计展示率
+        [HFAdsDisplayRatio addShowWithAdPlace:self.placeType unitType:VSAdUnitTypeInt];
+#endif
+        
         GADInterstitialAd *adData = (GADInterstitialAd *)ad;
         [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_adShow placeType:self.placeType unitId:adData.adUnitID];
     }

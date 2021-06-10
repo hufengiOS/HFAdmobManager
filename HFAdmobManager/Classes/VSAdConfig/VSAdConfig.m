@@ -38,7 +38,7 @@ static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
         @"5ea6ccde6ffa92dee9f51c3d2cc259b9",// 测试机 6
         @"23ba95524019f147cbd29761b55fd036", // Snake iPhone 8
         @"", // 王峰 iPhone 8
-        @"c3c7dbb0800fff474b2f6a61b025b2d5", // 测试机 iPhone 8P
+        @"1a0ef024ff7175f8a2dfcf6fe9a56b92", // 测试机 iPhone 8P
         @"729bb2d6e735f8ca7e3c51f6030129a4", // 小丽 iPhone 7
         @"7bfe45c23f3ef5b4eb1f8b4d9be2504b", // 小丽 iPhone 12
         @"159311b664bc129ed22f968861065c4c", // 测试机 iPad Air

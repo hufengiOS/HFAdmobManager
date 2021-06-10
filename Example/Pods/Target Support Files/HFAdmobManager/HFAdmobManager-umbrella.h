@@ -17,6 +17,7 @@
 #import "NSArray+ad_Map.h"
 #import "VSAdPlaceManager.h"
 #import "VSAdUnit.h"
+#import "HFAdsDisplayRatio.h"
 #import "VSAdCacheManager.h"
 #import "VSAdConfig.h"
 #import "VSAdBannerLoader.h"
