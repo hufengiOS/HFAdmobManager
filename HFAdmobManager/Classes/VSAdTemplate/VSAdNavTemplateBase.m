@@ -102,8 +102,12 @@
     nativeAdView.mediaView.userInteractionEnabled = NO;
     nativeAdView.adChoicesView.userInteractionEnabled = NO;
     
-    // 先处理数据，在根据数据调整布局
-    [self layoutTemplateWithNativeAdView:self.nativeAdView];
+    if ([self.navLayoutDelegate respondsToSelector:@selector(layoutTemplateWithNativeAdView:)]) {
+        [self.navLayoutDelegate layoutTemplateWithNativeAdView:nativeAdView];
+    } else {
+        // 先处理数据，在根据数据调整布局
+        [self layoutTemplateWithNativeAdView:self.nativeAdView];        
+    }
 }
 
 #pragma mark - VSAdNavTemplateLayoutDelegate
@@ -133,8 +137,8 @@
 - (void)customNativeAdDidDismissScreen:(nonnull GADCustomNativeAd *)nativeAd {
     if (self.placeType == VSAdShowPlaceTypePartHome) {
         // 首页的广告被点击
-        if ([self.homeBottomClickdelgate respondsToSelector:@selector(clickAdInHomeBottomAds:)]) {
-            [self.homeBottomClickdelgate clickAdInHomeBottomAds:nil];
+        if ([self.homeBottomClickdelegate respondsToSelector:@selector(clickAdInHomeBottomAds:)]) {
+            [self.homeBottomClickdelegate clickAdInHomeBottomAds:nil];
         }
     }
 }

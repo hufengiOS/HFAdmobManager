@@ -31,6 +31,7 @@
 #import "VSAdNavTemplateCell.h"
 #import "VSAdNavTemplateFullScreen.h"
 #import "VSAdNavTemplateHomeBottom.h"
+#import "VSAdNavTemplateLayoutDelegate.h"
 #import "VSTableAdsCell.h"
 #import "VSGlobalConfigManager.h"
 #import "VSGlobalConfigModel.h"

@@ -41,52 +41,52 @@ PODS:
   - GoogleUtilities/Reachability (7.4.1):
     - GoogleUtilities/Logger
   - GZIP (1.3.0)
-  - HFAdmobManager (2.0.4):
+  - HFAdmobManager (2.0.5):
     - Google-Mobile-Ads-SDK
-    - HFAdmobManager/Other (= 2.0.4)
-    - HFAdmobManager/Resources (= 2.0.4)
-    - HFAdmobManager/VSAdCache (= 2.0.4)
-    - HFAdmobManager/VSAdConfig (= 2.0.4)
-    - HFAdmobManager/VSAdLoader (= 2.0.4)
-    - HFAdmobManager/VSAdShow (= 2.0.4)
-    - HFAdmobManager/VSAdTemplate (= 2.0.4)
-    - HFAdmobManager/VSGlobalConfigManager (= 2.0.4)
+    - HFAdmobManager/Other (= 2.0.5)
+    - HFAdmobManager/Resources (= 2.0.5)
+    - HFAdmobManager/VSAdCache (= 2.0.5)
+    - HFAdmobManager/VSAdConfig (= 2.0.5)
+    - HFAdmobManager/VSAdLoader (= 2.0.5)
+    - HFAdmobManager/VSAdShow (= 2.0.5)
+    - HFAdmobManager/VSAdTemplate (= 2.0.5)
+    - HFAdmobManager/VSGlobalConfigManager (= 2.0.5)
     - Masonry
     - MJExtension
-  - HFAdmobManager/Other (2.0.4):
+  - HFAdmobManager/Other (2.0.5):
     - Google-Mobile-Ads-SDK
-    - HFAdmobManager/Other/HFAdsDisplayRatio (= 2.0.4)
+    - HFAdmobManager/Other/HFAdsDisplayRatio (= 2.0.5)
     - Masonry
     - MJExtension
-  - HFAdmobManager/Other/HFAdsDisplayRatio (2.0.4):
-    - Google-Mobile-Ads-SDK
-    - Masonry
-    - MJExtension
-  - HFAdmobManager/Resources (2.0.4):
+  - HFAdmobManager/Other/HFAdsDisplayRatio (2.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdCache (2.0.4):
+  - HFAdmobManager/Resources (2.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdConfig (2.0.4):
+  - HFAdmobManager/VSAdCache (2.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdLoader (2.0.4):
+  - HFAdmobManager/VSAdConfig (2.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdShow (2.0.4):
+  - HFAdmobManager/VSAdLoader (2.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSAdTemplate (2.0.4):
+  - HFAdmobManager/VSAdShow (2.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
-  - HFAdmobManager/VSGlobalConfigManager (2.0.4):
+  - HFAdmobManager/VSAdTemplate (2.0.5):
+    - Google-Mobile-Ads-SDK
+    - Masonry
+    - MJExtension
+  - HFAdmobManager/VSGlobalConfigManager (2.0.5):
     - Google-Mobile-Ads-SDK
     - Masonry
     - MJExtension
@@ -132,7 +132,7 @@ SPEC CHECKSUMS:
   GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
   GoogleUtilities: f8a43108b38a68eebe8b3540e1f4f2d28843ce20
   GZIP: 416858efbe66b41b206895ac6dfd5493200d95b3
-  HFAdmobManager: e102fdfaaff072dec19eb72bcee70cbb95102ae1
+  HFAdmobManager: a226493fd73c05ead7815f05bfe44007bad85ec2
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 88e0900751b6cac8de1cf724ca9838a0b28d5acb
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96

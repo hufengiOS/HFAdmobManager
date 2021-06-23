@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "VSAdMacro.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import "VSAdNavTemplateLayoutDelegate.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -28,7 +29,9 @@ typedef NS_ENUM(NSUInteger, AdsNavTemplateType) {
 //    GADNativeAdView *_nativeAdView;
 }
 
-@property (nonatomic, weak) id<VSAdNavTemplateHomeBottomClickDelegate> homeBottomClickdelgate;
+@property (nonatomic, weak) id<VSAdNavTemplateHomeBottomClickDelegate> homeBottomClickdelegate;
+
+@property (nonatomic, weak) id<VSAdNavTemplateLayoutDelegate> navLayoutDelegate;
 
 @property (nonatomic, assign) VSAdShowPlaceType placeType;
 @property (nonatomic, strong) NSString *adUnitId;

@@ -39,7 +39,7 @@
         self.closeBtn.hidden = YES;
         
         self.placeType = VSAdShowPlaceTypePartHome;
-        self.homeBottomClickdelgate = delegate;
+        self.homeBottomClickdelegate = delegate;
         self.closeDelegate = delegate;
     }
 }

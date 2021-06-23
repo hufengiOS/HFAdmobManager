@@ -47,18 +47,33 @@
 }
 
 + (void)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate>)delegate {
-    VSAdNavTemplateHomeBottom *homeBottom = [VSAdNavShowManager shareInstance].homeBottom;
-    homeBottom.adUnitId = adUnit;
-    homeBottom.placeType = VSAdShowPlaceTypePartHome;
-    [homeBottom showInContainView:containView nativeAd:nativeAd delegate:delegate];
-    // 处理home广告点击的代理
-//    [VSAdNavShowManager shareInstance].homeBottomClickdelgate = delegate;
-    
+    [self showNavAdWithNav:nativeAd adUnit:adUnit containView:containView delegate:delegate layoutDelegate:nil];
 }
 
 + (BOOL)showNavAdWithNav:(GADNativeAd *)nativeAd adUnit:(NSString *)adUnit cell:(UITableViewCell *)cell {
+    return [self showNavAdWithNav:nativeAd adUnit:adUnit cell:cell layoutDelegate:nil];
+}
+
++ (void)showNavAdWithNav:(GADNativeAd *)nativeAd
+                  adUnit:(NSString *)adUnit
+             containView:(UIView *)containView
+                delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate>)delegate
+          layoutDelegate:(id<VSAdNavTemplateLayoutDelegate> _Nullable)layoutDelegate {
+    VSAdNavTemplateHomeBottom *homeBottom = [VSAdNavShowManager shareInstance].homeBottom;
+    homeBottom.adUnitId = adUnit;
+    homeBottom.placeType = VSAdShowPlaceTypePartHome;
+    homeBottom.navLayoutDelegate = layoutDelegate;
+    homeBottom.homeBottomClickdelegate = delegate;
+    [homeBottom showInContainView:containView nativeAd:nativeAd delegate:delegate];
+}
+
++ (BOOL)showNavAdWithNav:(GADNativeAd *)nativeAd
+                  adUnit:(NSString *)adUnit
+                    cell:(UITableViewCell *)cell
+          layoutDelegate:(id<VSAdNavTemplateLayoutDelegate> _Nullable)layoutDelegate {
     VSAdNavTemplateCell *cellTemplate = [VSAdNavShowManager shareInstance].cellTemplate;
     cellTemplate.adUnitId = adUnit;
+    cellTemplate.navLayoutDelegate = layoutDelegate;
     cellTemplate.placeType = VSAdShowPlaceTypePartOther;
     return [cellTemplate showAdsInCell:cell nativeAd:nativeAd];
 }

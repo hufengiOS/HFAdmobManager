@@ -119,23 +119,51 @@
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller {
     
     NSAssert(placeType != VSAdShowPlaceTypeBanner && placeType != VSAdShowPlaceTypePartHome && placeType != VSAdShowPlaceTypePartOther, @"广告位类型不支持");
-    
-    return [self showAdsWithPlaceType:placeType controller:controller cell:nil containView:nil containViewDelegate:nil];
+    return [self showAdsWithPlaceType:placeType
+                           controller:controller
+                                 cell:nil
+                          containView:nil
+                  containViewDelegate:nil
+                       layoutDelegate:nil];
 }
 
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate {
-    return [self showAdsWithPlaceType:placeType controller:nil cell:nil containView:containView containViewDelegate:delegate];
+    return [self showAdsWithPlaceType:placeType containView:containView delegate:delegate layoutDelegate:nil];
 }
 
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType cell:(UITableViewCell *)cell {
-    return [self showAdsWithPlaceType:placeType controller:nil cell:cell containView:nil containViewDelegate:nil];
+    return [self showAdsWithPlaceType:placeType controller:nil cell:cell containView:nil containViewDelegate:nil layoutDelegate:nil];
+}
+
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                 containView:(UIView *)containView
+                    delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate
+              layoutDelegate:(id<VSAdNavTemplateLayoutDelegate> _Nullable)layoutDelegate {
+    return [self showAdsWithPlaceType:placeType
+                           controller:nil
+                                 cell:nil
+                          containView:containView
+                  containViewDelegate:delegate
+            layoutDelegate:layoutDelegate];
+}
+
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                        cell:(UITableViewCell *)cell
+              layoutDelegate:(id<VSAdNavTemplateLayoutDelegate> _Nullable)layoutDelegate {
+    return [self showAdsWithPlaceType:placeType
+                           controller:nil
+                                 cell:cell
+                          containView:nil
+                  containViewDelegate:nil
+                       layoutDelegate:layoutDelegate];
 }
 
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
                   controller:(UIViewController * _Nullable)controller
                         cell:(UITableViewCell * _Nullable)cell
                  containView:(UIView * _Nullable)containView
-         containViewDelegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate {
+         containViewDelegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate
+              layoutDelegate:(id<VSAdNavTemplateLayoutDelegate> _Nullable)layoutDelegate {
     
     if (![VSAdConfig allowShowWithShowPlaceType:placeType]) {
         return NO;
@@ -148,9 +176,9 @@
     } else if (VSAdUnitTypeNav == data.unitType) {
         if (VSAdShowPlaceTypePartHome == data.placeType || VSAdShowPlaceTypePartOther == data.placeType) {
             if (VSAdShowPlaceTypePartOther == placeType) {
-                showSuccess = [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId cell:cell];
+                showSuccess = [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId cell:cell layoutDelegate:layoutDelegate];
             } else {
-                [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId containView:containView delegate:delegate];
+                [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId containView:containView delegate:delegate layoutDelegate:layoutDelegate];
             }
         } else {
             [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId placeType:placeType controller:controller];

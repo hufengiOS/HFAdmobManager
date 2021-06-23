@@ -6,12 +6,16 @@
 //
 
 #import "VSAdNavTemplateBase.h"
+#import "VSAdNavTemplateLayoutDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VSAdNavTemplateCell : VSAdNavTemplateBase
 
 - (BOOL)showAdsInCell:(UITableViewCell *)cell nativeAd:(GADNativeAd *)nativeAd;
+
+
+
 + (CGFloat)heightOfAdCell;
 @end
 

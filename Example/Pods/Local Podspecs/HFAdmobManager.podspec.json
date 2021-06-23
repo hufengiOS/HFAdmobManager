@@ -1,7 +1,7 @@
 {
   "name": "HFAdmobManager",
-  "version": "2.0.4",
-  "summary": "添加 HFAdsDisplayRatio  统计展示率",
+  "version": "2.0.5",
+  "summary": "设置原生广告控件的 userInteractionEnabled = NO 处理警告问题",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hufengiOS/HFAdmobManager",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hufengiOS/HFAdmobManager.git",
-    "tag": "2.0.4"
+    "tag": "2.0.5"
   },
   "platforms": {
     "ios": "10.0"

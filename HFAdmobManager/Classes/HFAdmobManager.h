@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "VSAdNavTemplateHomeBottom.h"
+#import "VSAdNavTemplateLayoutDelegate.h"
 
 
 
@@ -63,11 +64,22 @@ typedef BOOL (^OpenDebugModeHandler)(void);
 #pragma mark - show
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
                   controller:(UIViewController *)controller;
+
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
                  containView:(UIView *)containView
                     delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate;
 
-+ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType cell:(UITableViewCell *)cell;
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                 containView:(UIView *)containView
+                    delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate
+              layoutDelegate:(id<VSAdNavTemplateLayoutDelegate> _Nullable)layoutDelegate;
+
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                        cell:(UITableViewCell *)cell;
++ (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
+                        cell:(UITableViewCell *)cell
+              layoutDelegate:(id<VSAdNavTemplateLayoutDelegate> _Nullable)layoutDelegate;
+
 + (BOOL)isReadyWithPlaceType:(VSAdShowPlaceType)placeType;
 
 + (void)closeFullScrenAds;

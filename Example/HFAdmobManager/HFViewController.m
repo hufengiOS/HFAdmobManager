@@ -12,7 +12,7 @@
 #import "VSSerializationData.h"
 
 
-@interface HFViewController ()<HFAdmobManagerEventDelegate>
+@interface HFViewController ()<HFAdmobManagerEventDelegate, VSAdNavTemplateLayoutDelegate>
 
 @property (nonatomic, strong) UIButton *showAdsBtn;
 
@@ -57,18 +57,20 @@
     [self.view addSubview:self.adContentView];
     
     self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500) - 80, HF_MainScreen_Width, HF_kScaleWidth(250));
-    self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500), HF_MainScreen_Width, HF_kScaleWidth(50));
+    self.adContentView.frame = CGRectMake(0, HF_MainScreen_Height - HF_kScaleWidth(500), HF_MainScreen_Width, HF_kScaleWidth(250));
     
     [self.showAdsBtn addTarget:self action:@selector(showAdAction) forControlEvents:UIControlEventTouchUpInside];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeAdsLoadSuccess:) name:kNotificationNamePartAdLoadSuccussKey object:nil];
-
+    
+    
     // 加载banner 广告
     [HFAdmobManager reloadBannerAdsWithPlaceType:VSAdShowPlaceTypeBanner
                                      containView:self.adContentView
                                   rootController:self
                                completionHandler:nil];
+    [HFAdmobManager reloadAdsWithPlaceType:(VSAdShowPlaceTypePartOther) notify:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,8 +82,9 @@
 #pragma mark - private
 - (void)showAdAction {
     
-    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullExtra controller:self];
     
+//    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullExtra controller:self];
+    [HFAdmobManager showAdsWithPlaceType:(VSAdShowPlaceTypePartOther) containView:self.adContentView delegate:nil layoutDelegate:self];
 }
 
 - (void)requestConfigInfo {
@@ -103,6 +106,12 @@
         
 //        [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypePartHome containView:self.adContentView delegate:nil];
     }
+}
+
+#pragma mark - VSAdNavTemplateLayoutDelegate
+- (void)layoutTemplateWithNativeAdView:(GADNativeAdView *)nativeAdView {
+    
+    
 }
 
 #pragma mark - HFAdmobManagerEventDelegate
