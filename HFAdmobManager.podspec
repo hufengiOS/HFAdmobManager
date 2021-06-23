@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '2.0.4'
-    s.summary          = '添加 HFAdsDisplayRatio  统计展示率'
+    s.version          = '2.0.5'
+    s.summary          = '设置原生广告控件的 userInteractionEnabled = NO 处理警告问题'
     
     s.description      = <<-DESC
   TODO: Add long description of the pod here.

@@ -90,6 +90,18 @@
     nativeAdView.priceView.hidden = YES;
     
     
+    nativeAdView.headlineView.userInteractionEnabled = NO;
+    nativeAdView.callToActionView.userInteractionEnabled = NO;
+    nativeAdView.iconView.userInteractionEnabled = NO;
+    nativeAdView.bodyView.userInteractionEnabled = NO;
+    nativeAdView.storeView.userInteractionEnabled = NO;
+    nativeAdView.priceView.userInteractionEnabled = NO;
+    nativeAdView.imageView.userInteractionEnabled = NO;
+    nativeAdView.starRatingView.userInteractionEnabled = NO;
+    nativeAdView.advertiserView.userInteractionEnabled = NO;
+    nativeAdView.mediaView.userInteractionEnabled = NO;
+    nativeAdView.adChoicesView.userInteractionEnabled = NO;
+    
     // 先处理数据，在根据数据调整布局
     [self layoutTemplateWithNativeAdView:self.nativeAdView];
 }
