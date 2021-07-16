@@ -19,28 +19,28 @@
 
 @property (nonatomic, assign) VSAdShowPlaceType placeType;
 
+@property (nonatomic, strong) UIViewController *tmpRootController;
 @end
 
 @implementation VSAdBannerLoader
 
 - (void)loadAdsWithUnitId:(NSString *)adUnit
-              containView:(UIView * _Nullable)containView
-           rootController:(UIViewController *)rootController
                 placeType:(VSAdShowPlaceType)placeType
         completionHandler:(VSAdBannerLoaderCompletionHandler)completionHandler {
     
     self.bannerView = [[GADBannerView alloc]
           initWithAdSize:kGADAdSizeBanner];
     self.bannerView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.bannerView.rootViewController = self.tmpRootController;
+    
     // 配置
     self.bannerView.adUnitID = adUnit;
-    NSAssert(rootController, @"必须设置rootController 否则拉不到banner广告");
-    self.bannerView.rootViewController = rootController;
     // 加载
     [self.bannerView loadRequest:[GADRequest request]];
     
     self.bannerView.delegate = self;
     self.completionHandler = completionHandler;
+        
     
     self.placeType = placeType;
     [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_startRequest placeType:placeType unitId:adUnit];
@@ -59,7 +59,8 @@
 }
 
 - (void)bannerView:(nonnull GADBannerView *)bannerView
-didFailToReceiveAdWithError:(nonnull NSError *)error {    
+didFailToReceiveAdWithError:(nonnull NSError *)error {
+    !self.completionHandler ? nil : self.completionHandler(nil, error);
     [[HFAdmobManager shareInstance] eventWithEventName:kHFAdmobEvent_receiveAdFail placeType:_placeType unitId:bannerView.adUnitID];
 }
 
@@ -77,5 +78,12 @@ didFailToReceiveAdWithError:(nonnull NSError *)error {
 }
 
 - (void)bannerViewDidDismissScreen:(nonnull GADBannerView *)bannerView {
+}
+
+- (UIViewController *)tmpRootController {
+    if (!_tmpRootController) {
+        _tmpRootController = [[UIViewController alloc] init];
+    }
+    return _tmpRootController;
 }
 @end

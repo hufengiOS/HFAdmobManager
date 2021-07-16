@@ -13,8 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VSAdBannerShowManager : NSObject
 
 + (BOOL)showAdWithContainView:(UIView *)containView
-                   placeType:(VSAdShowPlaceType)placeType
+           rootViewController:(UIViewController *)rootViewController
+                    placeType:(VSAdShowPlaceType)placeType
                    bannerView:(GADBannerView *)bannerView;
+
+@property (nonatomic, assign) VSAdShowPlaceType placeType;;
 
 @end
 

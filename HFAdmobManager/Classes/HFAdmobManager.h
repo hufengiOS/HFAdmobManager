@@ -58,9 +58,11 @@ typedef BOOL (^OpenDebugModeHandler)(void);
              completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler;
 
 + (void)reloadBannerAdsWithPlaceType:(VSAdShowPlaceType)placeType
-                         containView:(UIView * _Nullable)containView
-                      rootController:(UIViewController *)rootController
                    completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler;
++ (BOOL)showBannerWithPlaceType:(VSAdShowPlaceType)placeType
+                    containView:(UIView *)containView
+                     controller:(UIViewController *)controller;
+
 #pragma mark - show
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType
                   controller:(UIViewController *)controller;

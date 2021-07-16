@@ -17,8 +17,6 @@ typedef void(^VSAdBannerLoaderCompletionHandler)(GADBannerView * _Nullable banne
 @interface VSAdBannerLoader : NSObject
 
 - (void)loadAdsWithUnitId:(NSString *)adUnit
-              containView:(UIView * _Nullable)containView
-           rootController:(UIViewController *)rootController
                 placeType:(VSAdShowPlaceType)placeType
         completionHandler:(VSAdBannerLoaderCompletionHandler)completionHandler;
 

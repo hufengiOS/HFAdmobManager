@@ -51,6 +51,8 @@
     }];
     [HFAdmobManager shareInstance].delegate = self;
     
+    [HFAdmobManager preloadAllAds];
+    
     [self requestConfigInfo];
     
     [self.view addSubview:self.showAdsBtn];
@@ -66,11 +68,15 @@
     
     
     // 加载banner 广告
-    [HFAdmobManager reloadBannerAdsWithPlaceType:VSAdShowPlaceTypeBanner
-                                     containView:self.adContentView
-                                  rootController:self
-                               completionHandler:nil];
-    [HFAdmobManager reloadAdsWithPlaceType:(VSAdShowPlaceTypePartOther) notify:NO];
+//    [HFAdmobManager reloadBannerAdsWithPlaceType:VSAdShowPlaceTypeBanner
+//                               completionHandler:nil];
+    
+//    [HFAdmobManager reloadAdsWithPlaceType:(VSAdShowPlaceTypePartOther) notify:YES];
+    
+//    [HFAdmobManager reloadAdsWithPlaceType:(VSAdShowPlaceTypePartHome) notify:YES completionHandler:^(BOOL success) {
+//
+//    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,9 +88,11 @@
 #pragma mark - private
 - (void)showAdAction {
     
+    [HFAdmobManager showBannerWithPlaceType:(VSAdShowPlaceTypeBanner) containView:self.adContentView controller:self];
     
 //    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullExtra controller:self];
-    [HFAdmobManager showAdsWithPlaceType:(VSAdShowPlaceTypePartOther) containView:self.adContentView delegate:nil layoutDelegate:self];
+    
+//    [HFAdmobManager showAdsWithPlaceType:(VSAdShowPlaceTypePartHome) containView:self.adContentView delegate:nil layoutDelegate:self];
 }
 
 - (void)requestConfigInfo {
@@ -118,7 +126,7 @@
 - (void)admobManagerEventName:(NSString *)eventName placeType:(VSAdShowPlaceType)placeType unitId:(NSString *)unitId {
     HFAd_DebugLog(@" %@ %@ %@", eventName, ADPlaceTypeString(placeType), unitId)
 }
-
+     
 #pragma mark - lazy
 - (UIButton *)showAdsBtn {
     if (!_showAdsBtn) {

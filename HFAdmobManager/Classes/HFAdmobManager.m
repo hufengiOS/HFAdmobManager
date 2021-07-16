@@ -11,6 +11,7 @@
 #import "VSAdIntShowManager.h"
 #import "VSAdNavShowManager.h"
 #import "VSAdConfig.h"
+#import "VSAdBannerShowManager.h"
 
 
 @interface HFAdmobManager() {
@@ -57,6 +58,7 @@
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypeFullExtra notify:notify];
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypePartOther notify:notify];
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypePartHome notify:notify];
+    [self reloadAdsWithPlaceType:VSAdShowPlaceTypeBanner notify:notify];
     
     /**
       banner 广告的加载需要获取到对应控制器，这里不做提前加载
@@ -72,14 +74,10 @@
 }
 
 + (void)reloadBannerAdsWithPlaceType:(VSAdShowPlaceType)placeType
-                         containView:(UIView * _Nullable)containView
-                      rootController:(UIViewController *)rootController
                    completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler {
     HFAdmobManager *manager = [HFAdmobManager shareInstance];
     VSAdPlaceManager *placeManager = manager.bannerPlaceManager;
     [placeManager loadBannerAdsWithPlaceType:placeType
-                                 containView:containView
-                              rootController:rootController
                            completionHandler:^(BOOL success) {
         !completionHandler ? : completionHandler(success);
     }];
@@ -101,6 +99,8 @@
         placeManager = manager.connectPlaceManager;
     } else if (placeType == VSAdShowPlaceTypeFullExtra) {
         placeManager = manager.extraPlaceManager;
+    } else if (placeType == VSAdShowPlaceTypeBanner) {
+        placeManager = manager.bannerPlaceManager;
     } else {
         NSAssert(YES, @"没有适配的广告位类型");
     }
@@ -117,7 +117,6 @@
 }
 
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType controller:(UIViewController *)controller {
-    
     NSAssert(placeType != VSAdShowPlaceTypeBanner && placeType != VSAdShowPlaceTypePartHome && placeType != VSAdShowPlaceTypePartOther, @"广告位类型不支持");
     return [self showAdsWithPlaceType:placeType
                            controller:controller
@@ -126,6 +125,20 @@
                   containViewDelegate:nil
                        layoutDelegate:nil];
 }
+
++ (BOOL)showBannerWithPlaceType:(VSAdShowPlaceType)placeType
+                    containView:(UIView *)containView
+                     controller:(UIViewController *)controller {
+    NSAssert(placeType == VSAdShowPlaceTypeBanner, @"类型不对");
+    return [self showAdsWithPlaceType:placeType
+                           controller:controller
+                                 cell:nil
+                          containView:containView
+                  containViewDelegate:nil
+                       layoutDelegate:nil];
+}
+
+
 
 + (BOOL)showAdsWithPlaceType:(VSAdShowPlaceType)placeType containView:(UIView *)containView delegate:(id<VSAdNavTemplateHomeBottomDelegate, VSAdNavTemplateHomeBottomClickDelegate> _Nullable)delegate {
     return [self showAdsWithPlaceType:placeType containView:containView delegate:delegate layoutDelegate:nil];
@@ -183,12 +196,15 @@
         } else {
             [VSAdNavShowManager showNavAdWithNav:data.obj adUnit:data.adUnitId placeType:placeType controller:controller];
         }
+    } else if (VSAdUnitTypeBanner == data.unitType) {
+        [VSAdBannerShowManager showAdWithContainView:containView rootViewController:controller placeType:placeType bannerView:(GADBannerView *)data.obj];
+        // 不用重新加载数据
     } else {
         // 重新拉取广告
         [self reloadAdsWithPlaceType:placeType notify:YES];
         return NO;
     }
-    if (showSuccess) {
+    if (showSuccess && data.unitType != VSAdUnitTypeBanner) {
         [VSAdCacheManager removeAdsWithData:data];
         // 缓存数据
         [self reloadAdsWithPlaceType:placeType notify:NO];

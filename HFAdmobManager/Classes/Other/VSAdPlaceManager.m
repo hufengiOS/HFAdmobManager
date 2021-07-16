@@ -53,8 +53,6 @@
         [self loadAdsWithConfigArray:adPlaceArray
                                index:0
                            placeType:placeType
-                         containView:nil
-                      rootController:nil
                    completionHandler:^(BOOL success) {
             !completionHandler ? : completionHandler(success);
         }];
@@ -62,9 +60,7 @@
 }
 
 - (void)loadBannerAdsWithPlaceType:(VSAdShowPlaceType)placeType
-                       containView:(UIView * _Nullable)containView
-                    rootController:(UIViewController *)rootController
-                 completionHandler:(void (^ _Nullable)(BOOL success))completionHandler {
+                 completionHandler:(void (^ _Nullable)(BOOL status))completionHandler {
     VSAdCacheData *data = [VSAdCacheManager adsWithPlaceType:placeType allowShare:NO];
     if (data) {
         !completionHandler ? : completionHandler(YES);
@@ -75,8 +71,6 @@
         [self loadAdsWithConfigArray:adPlaceArray
                                index:0
                            placeType:placeType
-                         containView:containView
-                      rootController:rootController
                    completionHandler:^(BOOL success) {
             !completionHandler ? : completionHandler(success);
         }];
@@ -87,8 +81,6 @@
 - (void)loadAdsWithConfigArray:(NSArray<VSGlobalConfigAdsConfigAdPlaceModel *> *)configArray
                          index:(NSInteger)index
                      placeType:(VSAdShowPlaceType)placeType
-                   containView:(UIView * _Nullable)containView
-                rootController:(UIViewController *_Nullable)rootController
              completionHandler:(void (^ _Nullable)(BOOL success)) completionHandler {
     
     if (index < configArray.count && [VSAdConfig allowRequestWithShowPlaceType:placeType]) {
@@ -100,8 +92,6 @@
             __block NSInteger currentIndex = index;
             [self loadAdsWithAdUnit:configModel.adPlaceID
                                type:configModel.adUnitType
-                        containView:containView
-                     rootController:rootController
                            adWeight:configModel.adWeight
                           placeType:placeType
                   completionHandler:^(BOOL success) {
@@ -110,8 +100,6 @@
                     [weakself loadAdsWithConfigArray:configArray
                                                index:currentIndex
                                            placeType:placeType
-                                         containView:containView
-                                      rootController:rootController
                                    completionHandler:completionHandler];
                 } else {
                     !completionHandler ? : completionHandler(success);
@@ -127,8 +115,6 @@
 
 - (void)loadAdsWithAdUnit:(NSString *)adUnit
                      type:(VSAdUnitType)type
-              containView:(UIView * _Nullable)containView
-           rootController:(UIViewController * _Nullable)rootController
                  adWeight:(float)adWeight
                 placeType:(VSAdShowPlaceType)placeType
         completionHandler:(void (^)(BOOL success)) completionHandler {
@@ -157,11 +143,14 @@
             adUnit = @"ca-app-pub-3940256099942544/2934735716";
         }
         [self.bannerLoader loadAdsWithUnitId:adUnit
-                                 containView:containView
-                              rootController:rootController
                                    placeType:placeType
                            completionHandler:^(GADBannerView * _Nullable bannerView, NSError * _Nullable error) {
-            [VSAdBannerShowManager showAdWithContainView:containView placeType:placeType bannerView:bannerView];
+            if (!error) {
+                [VSAdCacheManager saveAdsWithAdsType:type placeType:placeType adUnitId:adUnit adWeight:adWeight obj:bannerView];
+            }
+            
+            
+//            [VSAdBannerShowManager showAdWithContainView:containView placeType:placeType bannerView:bannerView];
             !completionHandler ? : completionHandler(!error);
         }];
         

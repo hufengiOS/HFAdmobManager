@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
            completionHandler:(void (^ _Nullable)(BOOL success))completionHandler;
 
 - (void)loadBannerAdsWithPlaceType:(VSAdShowPlaceType)placeType
-                       containView:(UIView * _Nullable)containView
-                    rootController:(UIViewController *)rootController
                  completionHandler:(void (^ _Nullable)(BOOL success))completionHandler;
 @end
 
