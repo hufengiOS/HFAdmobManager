@@ -75,6 +75,7 @@
             !completionHandler ? : completionHandler(success);
         }];
     }
+    
 }
 
 /// 依次加载广告
@@ -148,9 +149,6 @@
             if (!error) {
                 [VSAdCacheManager saveAdsWithAdsType:type placeType:placeType adUnitId:adUnit adWeight:adWeight obj:bannerView];
             }
-            
-            
-//            [VSAdBannerShowManager showAdWithContainView:containView placeType:placeType bannerView:bannerView];
             !completionHandler ? : completionHandler(!error);
         }];
         
