@@ -58,11 +58,9 @@
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypeFullExtra notify:notify];
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypePartOther notify:notify];
     [self reloadAdsWithPlaceType:VSAdShowPlaceTypePartHome notify:notify];
+    // banner 广告手动预加载
 //    [self reloadAdsWithPlaceType:VSAdShowPlaceTypeBanner notify:notify];
     
-    /**
-      banner 广告的加载需要获取到对应控制器，这里不做提前加载
-     */
 }
 
 + (void)preloadAllAds {
