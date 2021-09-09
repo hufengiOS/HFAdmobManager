@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
     s.version          = '2.0.8'
-    s.summary          = ''
+    s.summary          = '针对统一后台的修改'
     
     s.description      = <<-DESC
   TODO: Add long description of the pod here.
