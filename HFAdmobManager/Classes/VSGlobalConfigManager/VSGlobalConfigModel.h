@@ -50,7 +50,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSArray <VSGlobalConfigAdsConfigAdPlaceModel *> *adSources;
 @property (nonatomic, assign) int isReq;
-@property (nonatomic, assign) int isShow;
+//@property (nonatomic, assign) int isShow;
+
 @property (nonatomic, strong) VSGlobalConfigCloseBtnModel *navCloseBtn;
 
 - (VSAdShowPlaceType)adNameType;
