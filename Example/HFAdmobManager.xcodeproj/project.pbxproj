@@ -626,6 +626,7 @@
 			baseConfigurationReference = 31FE20593071D3AF68BA545F /* Pods-HFAdmobManager_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 8.0;
 				DEVELOPMENT_TEAM = 6H9LKYK6VH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFAdmobManager/HFAdmobManager-Prefix.pch";
@@ -644,6 +645,7 @@
 			baseConfigurationReference = 9E012B462FEA8689F9848B6C /* Pods-HFAdmobManager_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 8.0;
 				DEVELOPMENT_TEAM = 6H9LKYK6VH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFAdmobManager/HFAdmobManager-Prefix.pch";

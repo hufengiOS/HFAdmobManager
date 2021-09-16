@@ -112,6 +112,11 @@ NSString *const kAPIDecryptKey = @"EspBeKf%o#Ls038D";
     [request setHTTPBody:postData];
     
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+#ifdef DEBUG
+    [request setValue:kdomainStr forHTTPHeaderField:@"domain"];
+#endif
+    
     NSURLSessionDataTask *task = [[HFNetwork shareInstance].manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         !callBackHandler ? : callBackHandler(responseObject, error);
     }];
@@ -138,14 +143,13 @@ NSString *const kAPIDecryptKey = @"EspBeKf%o#Ls038D";
 }
 
 + (NSString *)aesPostWithDict:(NSDictionary *)dict {
-    static NSString *kAESSignKey = @"com.sk.smartCleaner.SmartCleaner";
     
-    NSString *jsonString = [NSString stringWithFormat:@"%@%@", kAESSignKey, [dict mj_JSONString]];
+    NSString *jsonString = [NSString stringWithFormat:@"%@%@", kBuildIdentifyStr, [dict mj_JSONString]];
     NSData *testData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];//字符串转化成 data
     char *dataByte = (char *)[testData bytes];
     NSInteger len = testData.length + 1;
     char *newByte = malloc(sizeof(char)*(len));
-    newByte[0] = kAESSignKey.length; //增加签名长度
+    newByte[0] = kBuildIdentifyStr.length; //增加签名长度
     for (int i = 1; i <= [testData length]; i++)
     {
         newByte[i] = dataByte[i - 1];

@@ -107,13 +107,13 @@ static NSString *const kGlobalConfigFileName = @"kGlobalConfigFileName";
     __block NSArray <VSGlobalConfigAdsConfigAdPlaceModel *> *array = [[NSArray alloc] init];
     [configModel.adCfgs enumerateObjectsUsingBlock:^(VSGlobalConfigAdsConfigModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (obj.adNameType == placeType) {
-            array = obj.adSources;
+            array = obj.adSource;
             *stop = YES;
         }
     }];
     
     array = [array sortedArrayUsingComparator:^NSComparisonResult(VSGlobalConfigAdsConfigAdPlaceModel *_Nonnull obj1, VSGlobalConfigAdsConfigAdPlaceModel *_Nonnull obj2) {
-        return obj1.adWeight < obj2.adWeight;
+        return obj1.weight < obj2.weight;
     }];
     return array;
 }

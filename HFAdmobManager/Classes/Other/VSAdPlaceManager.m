@@ -91,9 +91,11 @@
             
             __weak typeof(self) weakself = self;
             __block NSInteger currentIndex = index;
-            [self loadAdsWithAdUnit:configModel.adPlaceID
+        
+            
+            [self loadAdsWithAdUnit:configModel.placeId
                                type:configModel.adUnitType
-                           adWeight:configModel.adWeight
+                           adWeight:configModel.weight
                           placeType:placeType
                   completionHandler:^(BOOL success) {
                 currentIndex ++;

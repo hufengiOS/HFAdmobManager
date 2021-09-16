@@ -95,11 +95,43 @@
 //    [HFAdmobManager showAdsWithPlaceType:(VSAdShowPlaceTypePartHome) containView:self.adContentView delegate:nil layoutDelegate:self];
 }
 
+/**
+ {
+   "adCfgs" : [
+     {
+       "adSwitch" : true,
+       "adPlace" : "start",
+       "adSource" : [
+         {
+           "placeId" : "sadfheehtrdhs5346",
+           "weight" : 1,
+           "closeSize" : 0,
+           "type" : "int"
+         }
+       ]
+     }
+   ],
+   "vgfCkLimit" : 5,
+   "status" : 200,
+   "vgfOpTime" : 5,
+   "vgfConnOpAd" : true,
+   "vgfCountryConn" : "US",
+   "configForceUpdate" : {
+     "appVerMax" : 0,
+     "isForce" : false,
+     "packageName" : "TSET1",
+     "title" : "TEST",
+     "appVerMin" : 0,
+     "message" : "TEST2"
+   },
+   "vgfInterval" : 6
+ }
+ */
 - (void)requestConfigInfo {
     [SCRequest requestGlobalConfigWithCallBackHandler:^(NSDictionary * _Nullable dataModel, NSError * _Nullable error) {
-        if ([dataModel isKindOfClass:[NSDictionary class]] && [dataModel.allKeys containsObject:@"data"]) {
-            
-            [[VSGlobalConfigManager shareInstance] configWithDic:dataModel[@"data"]];
+        VSGlobalConfigModel *model = [VSGlobalConfigModel mj_objectWithKeyValues:dataModel];
+        if (model.status == 200) {
+            [[VSGlobalConfigManager shareInstance] configWithDic:dataModel];
             [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationNameVSGlobalConfigManagerLoadSuccess object:nil];
         } else {
            [[VSGlobalConfigManager shareInstance] configModel];

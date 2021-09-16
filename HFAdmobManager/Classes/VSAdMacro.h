@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, VSAdUnitType) {
 @"int": @(VSAdUnitTypeInt),\
 @"ban": @(VSAdUnitTypeBanner),\
 @"": @(VSAdUnitTypeUnknown)\
-} objectForKey:self.adFormatType] intValue]
+} objectForKey:enum] intValue]
 
 typedef NS_ENUM(NSUInteger, VSAdShowPlaceType) {
     VSAdShowPlaceTypeUnknown,           // 未知

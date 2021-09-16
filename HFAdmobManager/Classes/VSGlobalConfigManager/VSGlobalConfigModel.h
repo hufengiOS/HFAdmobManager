@@ -16,8 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @class VSGlobalConfigAdsConfigAdPlaceModel;
 @class VSGlobalConfigPayItemModel;
 @class VSGlobalConfigPayModel;
+@class VSGlobalConfigVersionModel;
 
 @interface VSGlobalConfigModel : NSObject
+
+@property (nonatomic, assign) int status;
 
 @property (nonatomic, strong) NSArray <VSGlobalConfigAdsConfigModel *> *adCfgs;
 
@@ -40,19 +43,28 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @property (nonatomic, strong) VSGlobalConfigPayModel *vpnGlobalSubConfig;
-
+@property (nonatomic, strong) VSGlobalConfigVersionModel *configForceUpdate;
 @end
 
 
 @interface VSGlobalConfigAdsConfigModel : NSObject
 
-@property (nonatomic, strong) NSString *adName;
+//@property (nonatomic, strong) NSString *adName;
 
-@property (nonatomic, strong) NSArray <VSGlobalConfigAdsConfigAdPlaceModel *> *adSources;
-@property (nonatomic, assign) int isReq;
+//@property (nonatomic, assign) int isReq;
 //@property (nonatomic, assign) int isShow;
 
+
+
 @property (nonatomic, strong) VSGlobalConfigCloseBtnModel *navCloseBtn;
+
+
+
+@property (nonatomic, assign) BOOL adSwitch;
+@property (nonatomic, strong) NSString *adPlace;
+@property (nonatomic, strong) NSArray <VSGlobalConfigAdsConfigAdPlaceModel *> *adSource;
+
+
 
 - (VSAdShowPlaceType)adNameType;
 
@@ -70,12 +82,18 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface VSGlobalConfigAdsConfigAdPlaceModel : NSObject
-@property (nonatomic, strong) NSString *adFormatType;
-@property (nonatomic, strong) NSString *adPlaceID;
-@property (nonatomic, assign) int adWeight;
+//@property (nonatomic, strong) NSString *adFormatType;
+//@property (nonatomic, strong) NSString *adPlaceID;
+//@property (nonatomic, assign) int adWeight;
+
+
+@property (nonatomic, strong) NSString *placeId;
+@property (nonatomic, assign) int weight;
+@property (nonatomic, assign) int closeSize;
+
+@property (nonatomic, strong) NSString *type;
 
 - (VSAdUnitType)adUnitType;
-
 @end
 
 @interface VSGlobalConfigPayModel : NSObject
@@ -104,8 +122,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VSGlobalConfigVersionModel : NSObject
 
 /// 是否强制更新
-@property (nonatomic, assign) BOOL vgfUpt;
-@property (nonatomic, strong) NSString *vgfUptText;
+@property (nonatomic, assign) BOOL isForce;
+@property (nonatomic, assign) int appVerMax;
+@property (nonatomic, assign) int appVerMin;
+// 包名
+@property (nonatomic, strong) NSString *packageName;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *message;
 
 @end
 

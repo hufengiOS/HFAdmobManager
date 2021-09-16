@@ -58,7 +58,7 @@ static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
     }
     for (VSGlobalConfigAdsConfigModel *model in [VSGlobalConfigManager shareInstance].configModel.adCfgs) {
         if (model.adNameType == placeType) {
-            return model.isReq;
+            return model.adSwitch;
         } else {
             continue;
         }
@@ -83,7 +83,7 @@ static NSString *const kFinishAuthoreConnectKey = @"kFinishAuthoreConnectKey";
     
     for (VSGlobalConfigAdsConfigModel *model in [VSGlobalConfigManager shareInstance].configModel.adCfgs) {
         if (model.adNameType == placeType) {
-            return model.isReq && (model.adNameType == placeType);
+            return model.adSwitch && (model.adNameType == placeType);
         }
     }
     return NO;

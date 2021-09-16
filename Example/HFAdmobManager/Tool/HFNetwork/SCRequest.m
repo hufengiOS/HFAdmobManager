@@ -9,14 +9,7 @@
 #import "HFNetwork.h"
 #import "HFDeviceInfo.h"
 
-#ifdef DEBUG
-static NSString *kBuildIdentifyStr = @"com.yt.smartCleaner_debug";
-#else
-static NSString *kBuildIdentifyStr = @"com.yt.smartCleaner";
-#endif
 
-
-static NSString *kVPNServerPath = @"http://api.securevpn.club";
 
 
 
@@ -49,7 +42,7 @@ static NSString *kVPNServerPath = @"http://api.securevpn.club";
     [params setValue:[HFDeviceInfo getAPIVersion] forKey:@"ver"];
     
     // 客户端实际所在的国家，没获取到为空
-//    [params setValue:[self currentDeviceLocation] forKey:@"country"];
+    [params setValue:@"CN" forKey:@"country"];
     // VPN是否已链接
     // 当前手机使用的语言
     [params setValue:@"EN" forKey:@"lang"];

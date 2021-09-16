@@ -9,6 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+static NSString *kBuildIdentifyStr = @"com.sk.vpm.m208vpm";
+static NSString *kdomainStr = @"api.soloproxy.xyz";
+static NSString *kVPNServerPath = @"http://47.106.226.233:11000";
+
+
 static NSString *const VPNotificationNameNetworkStatus = @"VPNotificationNameNetworkStatus";
 typedef NS_ENUM(NSUInteger, HTTPMethodType) {
     HTTPMethodTypeGET,

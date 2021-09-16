@@ -25,14 +25,14 @@
 - (VSAdShowPlaceType)adNameType {
     VSAdShowPlaceType type = VSAdShowPlaceTypeUnknown;
     if (VSGlobalConfigManager.shareInstance.keyAndValueHandler) {
-        type = VSGlobalConfigManager.shareInstance.keyAndValueHandler(_adName);
+        type = VSGlobalConfigManager.shareInstance.keyAndValueHandler(_adPlace);
     }
     if (type != VSAdShowPlaceTypeUnknown) {
         return type;
     } else {
         NSDictionary *dic = [self dicNameKey];
-        if ([dic.allKeys containsObject:self.adName.uppercaseString]) {
-            return [dic[self.adName.uppercaseString] intValue];
+        if ([dic.allKeys containsObject:self.adPlace.uppercaseString]) {
+            return [dic[self.adPlace.uppercaseString] intValue];
         }
         return VSAdShowPlaceTypeUnknown;
     }
@@ -55,7 +55,7 @@
 
 @implementation VSGlobalConfigAdsConfigAdPlaceModel
 - (VSAdUnitType)adUnitType {
-    return ADUnitTypeStringToValue(self.adFormatType);
+    return ADUnitTypeStringToValue(self.type);
 }
 
 @end
