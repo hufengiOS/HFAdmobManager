@@ -9,7 +9,10 @@
 #import "VSAdNavTemplateHomeBottom.h"
 #import "VSAdNavTemplateLayoutDelegate.h"
 
-
+/**
+应用于统一后台
+ 
+ */
 
 NS_ASSUME_NONNULL_BEGIN
 
