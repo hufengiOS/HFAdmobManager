@@ -49,13 +49,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VSGlobalConfigAdsConfigModel : NSObject
 
-//@property (nonatomic, strong) NSString *adName;
-
-//@property (nonatomic, assign) int isReq;
-//@property (nonatomic, assign) int isShow;
-
-
-
 @property (nonatomic, strong) VSGlobalConfigCloseBtnModel *navCloseBtn;
 
 
@@ -82,9 +75,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface VSGlobalConfigAdsConfigAdPlaceModel : NSObject
-//@property (nonatomic, strong) NSString *adFormatType;
-//@property (nonatomic, strong) NSString *adPlaceID;
-//@property (nonatomic, assign) int adWeight;
 
 
 @property (nonatomic, strong) NSString *placeId;

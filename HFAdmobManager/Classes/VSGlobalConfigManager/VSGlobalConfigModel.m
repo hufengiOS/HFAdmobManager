@@ -19,7 +19,7 @@
 
 @implementation VSGlobalConfigAdsConfigModel
 + (NSDictionary *)mj_objectClassInArray {
-    return @{@"adSources": [VSGlobalConfigAdsConfigAdPlaceModel class]};
+    return @{@"adSource": [VSGlobalConfigAdsConfigAdPlaceModel class]};
 }
 
 - (VSAdShowPlaceType)adNameType {
