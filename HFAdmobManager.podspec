@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '3.0.1'
-    s.summary          = '统一后台专用'
+    s.version          = '3.0.2'
+    s.summary          = '修改 断网进入APP之后，一直拿不到广告的问题'
     
     s.description      = <<-DESC
   TODO: Add long description of the pod here.
