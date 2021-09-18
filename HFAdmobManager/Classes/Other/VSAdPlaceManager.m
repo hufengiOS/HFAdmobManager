@@ -109,6 +109,7 @@
             }];
         }
     } else {
+        self.isLoading = NO;
         // 加载失败
         !completionHandler ? : completionHandler(NO);
     }
