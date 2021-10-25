@@ -88,9 +88,9 @@
 #pragma mark - private
 - (void)showAdAction {
     
-    [HFAdmobManager showBannerWithPlaceType:(VSAdShowPlaceTypeBanner) containView:self.adContentView controller:self];
+//    [HFAdmobManager showBannerWithPlaceType:(VSAdShowPlaceTypeBanner) containView:self.adContentView controller:self];
     
-//    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullExtra controller:self];
+    [HFAdmobManager showAdsWithPlaceType:VSAdShowPlaceTypeFullExtra controller:self];
     
 //    [HFAdmobManager showAdsWithPlaceType:(VSAdShowPlaceTypePartHome) containView:self.adContentView delegate:nil layoutDelegate:self];
 }

@@ -1,7 +1,7 @@
 {
   "name": "HFAdmobManager",
-  "version": "2.0.5",
-  "summary": "设置原生广告控件的 userInteractionEnabled = NO 处理警告问题",
+  "version": "2.0.10",
+  "summary": "修改断网进入APP之后，请求不到广告的问题",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hufengiOS/HFAdmobManager",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hufengiOS/HFAdmobManager.git",
-    "tag": "2.0.5"
+    "tag": "2.0.10"
   },
   "platforms": {
     "ios": "10.0"

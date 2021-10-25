@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '2.0.9'
+    s.version          = '2.0.10'
     s.summary          = '修改断网进入APP之后，请求不到广告的问题'
     
     s.description      = <<-DESC
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
     end
     
     
-  
+    
     s.frameworks = 'UIKit'
     
     s.static_framework = true
