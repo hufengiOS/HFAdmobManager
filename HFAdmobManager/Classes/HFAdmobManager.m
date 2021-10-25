@@ -104,7 +104,7 @@
     }
     [placeManager loadAdsWithPlaceType:placeType completionHandler:^(BOOL success) {
         !completionHandler ? : completionHandler(success);
-        if (notify) {
+        if (notify && success) {
             if (placeType == VSAdShowPlaceTypePartHome || placeType == VSAdShowPlaceTypePartOther) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationNamePartAdLoadSuccussKey object:@(placeType)];
             } else if (placeType == VSAdShowPlaceTypeFullStart || placeType == VSAdShowPlaceTypeFullConnect || placeType == VSAdShowPlaceTypeFullExtra) {
