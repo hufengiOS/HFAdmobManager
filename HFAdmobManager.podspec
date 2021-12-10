@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HFAdmobManager'
-    s.version          = '2.0.10'
-    s.summary          = '修改断网进入APP之后，请求不到广告的问题'
+    s.version          = '2.0.11'
+    s.summary          = '更新token权限'
     
     s.description      = <<-DESC
   TODO: Add long description of the pod here.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
 
     s.frameworks = 'UIKit'
     
-#    s.dependency 'Google-Mobile-Ads-SDK'
+    s.dependency 'Google-Mobile-Ads-SDK'
     s.dependency 'Masonry'
     s.dependency 'MJExtension'
     
