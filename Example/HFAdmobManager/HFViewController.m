@@ -71,7 +71,7 @@
 //    [HFAdmobManager reloadBannerAdsWithPlaceType:VSAdShowPlaceTypeBanner
 //                               completionHandler:nil];
     
-//    [HFAdmobManager reloadAdsWithPlaceType:(VSAdShowPlaceTypePartOther) notify:YES];
+    [HFAdmobManager reloadAdsWithPlaceType:(VSAdShowPlaceTypePartOther) notify:YES];
     
 //    [HFAdmobManager reloadAdsWithPlaceType:(VSAdShowPlaceTypePartHome) notify:YES completionHandler:^(BOOL success) {
 //
@@ -82,6 +82,8 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    
     // Dispose of any resources that can be recreated.
 }
 
