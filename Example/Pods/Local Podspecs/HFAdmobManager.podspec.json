@@ -24,6 +24,9 @@
   "frameworks": "UIKit",
   "static_framework": true,
   "dependencies": {
+    "Google-Mobile-Ads-SDK": [
+
+    ],
     "Masonry": [
 
     ],
